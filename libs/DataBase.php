@@ -7,26 +7,31 @@ class DataBase
 {
   /**
    * Имя базы данных
+   * @var string
    */
   private $_dataBaseName = "cms";
 
   /**
    * Пользователь
+   * @var string
    */
   private $_userName = "usercms";
 
   /**
    * Пароль
+   * @var string
    */
   private $_password = "123456";
 
   /**
    * Хост
+   * @var string
    */
   private $_host = "localhost";
 
   /**
    * Кодировка базы данных
+   * @var string
    */
   private $_charset = "utf22";
 
