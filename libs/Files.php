@@ -21,13 +21,35 @@ class Files
   /**
    * Открыть файл только для чтения
    *
-   * @return открытый файл
+   * @return открытый файл для чтения
    */
-  public function OpenFileReadOnly ()
+  public function OpenReadOnly ()
   {
     return fopen($this->_filename, 'r');
   }
 
-  
+  /**
+   * Открыть файл для добавления в него данных. 
+   *
+   * @return открытый файл для добавления данных
+   */
+  private function OpenByAppend ()
+  {
+    return fopen($this->_filename, 'a');
+  }
+
+  /**
+   * Добавление данных конец файла
+   *
+   * @param string $data данный для добавления
+   * @return void
+   */
+  public function AppendData ($data)
+  {
+    $file = new Files($this->_filename);
+    $openFile = $file->OpenByAppend();
+    fwrite($openFile, $data);
+    fclose($openFile);
+  }
 }
 ?>
