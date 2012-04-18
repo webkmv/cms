@@ -36,7 +36,7 @@ class Logs
   {
     $dateNow = date("j.m.Y");
     $timeNow = date("H:i:s");
-    $logMessage = "|".$dateNow." ".$timeNow."| ".$errorMessage;
+    $logMessage = "|".$dateNow." ".$timeNow."| ".$errorMessage."\n";
     $this->_fileLogs->AppendData($logMessage);
   }
 }
