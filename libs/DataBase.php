@@ -28,7 +28,7 @@ class DataBase
   /**
    * Кодировка базы данных
    */
-  private $_charset = "utf8";
+  private $_charset = "utf22";
 
   /**
    * Подключение к базе данных
@@ -40,6 +40,7 @@ class DataBase
     try
       {
 	mysql_select_db ($this->_dataBaseName, mysql_connect ($this->_host, $this->_userName, $this->_password));
+	$this->SetCharset();
       }
     catch (Exception $error)
       {
@@ -60,7 +61,7 @@ class DataBase
       }
     catch (Exception $error)
       {
-	printf("Error set charset database. More: %s\n", $error->getMessage());
+	printf("Error set charset database. More: %s", $error->getMessage());
       }
   }
 }
