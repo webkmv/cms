@@ -1,5 +1,8 @@
 <?php
 
+require_once "libs/config.php";
+require_once "Logs.php";
+
 /**
  * Класс для работы с базой данных
  */
@@ -15,7 +18,7 @@ class DataBase
    * Пользователь
    * @var string
    */
-  private $_userName = "usercms";
+  private $_userName = "usercmss";
 
   /**
    * Пароль
@@ -36,6 +39,18 @@ class DataBase
   private $_charset = "utf22";
 
   /**
+   * Файл логов
+   *
+   * @var Logs
+   */
+  private $_logs = null;
+
+  public function __construct()
+  {
+    $this->_logs = new Logs("logs");
+  }
+
+  /**
    * Подключение к базе данных
    *
    * @return void
@@ -44,11 +59,13 @@ class DataBase
   {
     try
       {
-	mysql_select_db ($this->_dataBaseName, mysql_connect ($this->_host, $this->_userName, $this->_password));
+	if (! mysql_select_db ($this->_dataBaseName, mysql_connect ($this->_host, $this->_userName, $this->_password)))
+	  throw new Exception("Error connect to database.");
 	$this->SetCharset();
       }
     catch (Exception $error)
       {
+	$this->_logs->AddLog($error->getMessage());
 	printf("Error connect to database.");
       }
   }
@@ -62,10 +79,12 @@ class DataBase
   {
     try
       {
-	mysql_query ("SET NAMES '".$this->_charset."'");
+	if (!mysql_query ("SET NAMES '".$this->_charset."'"))
+	  throw new Exception ("Error setcharset database.");
       }
     catch (Exception $error)
       {
+	$this->_logs->AddLog($error->getMessage());
 	printf("Error set charset database. More: %s", $error->getMessage());
       }
   }
