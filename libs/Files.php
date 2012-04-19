@@ -25,7 +25,9 @@ class Files
    */
   public function OpenReadOnly ()
   {
-    return fopen($this->_filename, 'r');
+    if (($file = fopen($this->_filename, 'r')) == false)
+      throw new Exception ("File not found!");
+    return $file;
   }
 
   /**
