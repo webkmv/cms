@@ -12,31 +12,31 @@ class DataBase
    * Имя базы данных
    * @var string
    */
-  private $_dataBaseName = "cms";
+  private $_dataBaseName = DB_NAME;
 
   /**
    * Пользователь
    * @var string
    */
-  private $_userName = "usercms";
+  private $_userName = DB_USER;
 
   /**
    * Пароль
    * @var string
    */
-  private $_password = "123456";
+  private $_password = DB_PASSWORD;
 
   /**
    * Хост
    * @var string
    */
-  private $_host = "localhost";
+  private $_host = DB_HOST;
 
   /**
    * Кодировка базы данных
    * @var string
    */
-  private $_charset = "utf8";
+  private $_charset = DB_CHARSET;
 
   /**
    * Файл логов

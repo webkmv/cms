@@ -11,4 +11,11 @@ define ('DIR_ADMIN_MODELS', DIR_ADMIN_CORE."models/");
 // параметры загрузки файлов
 define ('UPLOAD_MAX_FILESIZE', 50); // максимальный размер загружаемого файла в мегабайтах
 
+// база данных
+define ('DB_HOST', "localhost");
+define ('DB_NAME', "cms");
+define ('DB_USER', "usercms");
+define ('DB_PASSWORD', "123456");
+define ('DB_CHARSET', "utf8");
+
 ?>
