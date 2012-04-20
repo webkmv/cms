@@ -1,9 +1,7 @@
 <?php
 
-require_once "libs/DataBase.php";
+require_once "admin/core/models/Templates.php";
 
-$file = new DataBase();
-$file->Connect();
-echo "Connect!\n";
+$t = new ModelTemplates();
 
 ?>

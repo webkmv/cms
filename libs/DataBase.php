@@ -1,7 +1,7 @@
 <?php
 
-require_once "libs/config.php";
-require_once "Logs.php";
+require_once "config.php";
+require_once DIR_LIBS."Logs.php";
 
 /**
  * Класс для работы с базой данных
@@ -18,7 +18,7 @@ class DataBase
    * Пользователь
    * @var string
    */
-  private $_userName = "usercmss";
+  private $_userName = "usercms";
 
   /**
    * Пароль
@@ -36,7 +36,7 @@ class DataBase
    * Кодировка базы данных
    * @var string
    */
-  private $_charset = "utf22";
+  private $_charset = "utf8";
 
   /**
    * Файл логов

@@ -1,7 +1,7 @@
 <?php
 
-require_once "libs/config.php";
-require_once "Files.php";
+require_once "config.php";
+require_once DIR_LIBS."Files.php";
 
 /**
  * Класс для ведения логов

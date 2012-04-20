@@ -1,7 +1,8 @@
 <?php
 
-require_once "libs/config.php";
-require_once "DataBase.php";
+require_once "../config.php";
+//require_once DIR_LIBS."config.php";
+require_once DIR_LIBS."DataBase.php";
 
 class ModelTemplates
 {
@@ -37,6 +38,18 @@ class ModelTemplates
                             created datetime,
                             sum_block int)";
     mysql_query($query) or die (mysql_error());
+  }
+
+  public function GetTemplates()
+  {
+    $sql = "SELECT * FROM templates";
+    $query = mysql_query($sql) or die (mysql_error);
+    $result = array();
+    while ($currentTemplate = mysql_fetch_array($query))
+      {
+	$result += array($currentTemplate);
+      }
+    return $result;
   }
 }
 
