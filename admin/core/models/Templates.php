@@ -28,17 +28,15 @@ class MmodelTemplates
    */
   public function CreateTableTemplates ()
   {
-    try
-      {
-	$query = "CREATE ";
-	if (!mysql_query($query))
-	  throw new Exception("Can't create table 'Templates'");
-      }
-    catch(Exception $error)
-      {
-	$this->_logs->AddLog($error->getMessage());
-	printf($error->getMessage());
-      }
+    
+    $query = "CREATE table templates
+                           (id int auto_increment primary key,
+                            id_user int not null,
+                            title varchar(255),
+                            path varchar(255),
+                            create datetime,
+                            sum_block int)";
+    mysql_query($query) or die (mysql_error());
   }
 }
 
