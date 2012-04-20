@@ -1,7 +1,7 @@
 <?php
 
-require_once "/var/www/html/cms/libs/config.php";
-require_once "Smarty/Smarty.class.php";
+require_once "../config.php";
+require_once DIR_LIBS."Smarty/Smarty.class.php";
 
 /**
  * Представления главной страницы админки
@@ -17,8 +17,8 @@ class ViewIndex extends Smarty
     $this->config_dir   = "core/templates/configs/";
     $this->cache_dir    = "core/templates/cache/";
 
-    $this->caching = false; // включаем кэширование шаблонов
-    $this->debugging = true; // выключаем отладку
+    $this->caching = CACHING; // выключаем кэширование шаблонов
+    $this->debugging = DEBUG; // выключаем отладку
   }
 }
 

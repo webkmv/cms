@@ -9,7 +9,8 @@ define ('DIR_ADMIN_VIEWS', DIR_ADMIN_CORE."views/");
 define ('DIR_ADMIN_MODELS', DIR_ADMIN_CORE."models/");
 
 // параметры загрузки файлов
-define ('UPLOAD_MAX_FILESIZE', 50); // максимальный размер загружаемого файла в мегабайтах
+// пока почему-то не работает...???
+define ('UPLOAD_MAX_FILESIZE', (1024 * 1024 * 50)); // максимальный размер загружаемого файла в мегабайтах
 
 // база данных
 define ('DB_HOST', "localhost");
@@ -18,4 +19,7 @@ define ('DB_USER', "usercms");
 define ('DB_PASSWORD', "123456");
 define ('DB_CHARSET', "utf8");
 
+// настроки системы шаблонов
+define ('DEBUG', false); // режим отладки шаблонов
+define ('CACHING', true); // кэширование шаблонов
 ?>

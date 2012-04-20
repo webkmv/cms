@@ -12,8 +12,9 @@ class Files
 
   /**
    * Максимельный размер загрузки файла в Mb
+   * @var integer
    */
-  private $_uploadMaxFilesize = 1024 * 1024 * UPLOAD_MAX_FILESIZE;
+  private $_uploadMaxFilesize = UPLOAD_MAX_FILESIZE;
 
   /**
    * Инициализируем новый объект файла
@@ -23,6 +24,11 @@ class Files
   public function __construct($filename)
   {
     $this->_filename = $filename;
+  }
+
+  private function Init ()
+  {
+    
   }
 
   /**

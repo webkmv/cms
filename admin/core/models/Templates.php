@@ -40,6 +40,10 @@ class ModelTemplates
     mysql_query($query) or die (mysql_error());
   }
 
+  /**
+   * Получить список шаблонов
+   * @return void
+   */
   public function GetTemplates()
   {
     $sql = "SELECT * FROM templates";
