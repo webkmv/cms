@@ -17,18 +17,20 @@ class Files
   private $_uploadMaxFilesize = UPLOAD_MAX_FILESIZE;
 
   /**
-   * Инициализируем новый объект файла
-   *
    * @param string $filename имя файла
    */
   public function __construct($filename)
   {
-    $this->_filename = $filename;
+    $this->Init($filename);
   }
 
-  private function Init ()
+  /**
+   * Инициализация
+   * @param string $filename имя файла
+   */
+  private function Init ($filename)
   {
-    
+  	$this->_filename = $filename;
   }
 
   /**
