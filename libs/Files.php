@@ -1,5 +1,7 @@
 <?php
 
+require_once "config.php";
+
 /**
  * Класс для работы с файлами
  */
@@ -9,9 +11,9 @@ class Files
   private $_filename;
 
   /**
-   * Максимельный размер загрузки файла
+   * Максимельный размер загрузки файла в Mb
    */
-  private $_uploadMaxFilesize = 1024 * 100 * 1024; // 100 Mb
+  private $_uploadMaxFilesize = 1024 * 1024 * UPLOAD_MAX_FILESIZE;
 
   /**
    * Инициализируем новый объект файла
