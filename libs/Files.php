@@ -53,5 +53,25 @@ class Files
     fwrite($openFile, $data);
     fclose($openFile);
   }
+
+  /**
+   * Загрузка файла на сервер
+   *
+   * @param string $pathToSave путь для хохранения файла
+   * @return void
+   */
+  public function Upload($pathToSave)
+  {
+    // Проверяем загружен ли файл
+   if(is_uploaded_file($_FILES[$this->_filename]["tmp_name"]))
+   {
+     // Если файл загружен успешно, перемещаем его из временной директории в конечную
+     move_uploaded_file($_FILES[$this->_filename]["tmp_name"], $pathToSave.$_FILES[$this->_filename]["name"]);
+   } 
+   else 
+     {
+      die("Ошибка загрузки файла");
+   }
+  }
 }
 ?>
