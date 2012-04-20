@@ -3,7 +3,7 @@
 require_once "libs/config.php";
 require_once "DataBase.php";
 
-class MmodelTemplates
+class ModelTemplates
 {
 
   /**
@@ -34,7 +34,7 @@ class MmodelTemplates
                             id_user int not null,
                             title varchar(255),
                             path varchar(255),
-                            create datetime,
+                            created datetime,
                             sum_block int)";
     mysql_query($query) or die (mysql_error());
   }
