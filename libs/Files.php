@@ -9,6 +9,11 @@ class Files
   private $_filename;
 
   /**
+   * Максимельный размер загрузки файла
+   */
+  private $_uploadMaxFilesize = 1024 * 100 * 1024; // 100 Mb
+
+  /**
    * Инициализируем новый объект файла
    *
    * @param string $filename имя файла
@@ -62,6 +67,12 @@ class Files
    */
   public function Upload($pathToSave)
   {
+
+    if($_FILES[$this->_filename]["size"] > $htis->_uploadMaxFilesize)
+      {
+	die("Размер файла превышает 100 мегабайт");
+      }
+
     // Проверяем загружен ли файл
    if(is_uploaded_file($_FILES[$this->_filename]["tmp_name"]))
    {
