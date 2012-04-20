@@ -47,7 +47,7 @@ class ModelTemplates
     $result = array();
     while ($currentTemplate = mysql_fetch_array($query))
       {
-	$result += array($currentTemplate);
+	$result[] = $currentTemplate;
       }
     return $result;
   }

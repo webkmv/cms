@@ -14,5 +14,6 @@
     </tr>
     {/foreach}
   </table>
+
 </div>
 {/block}
