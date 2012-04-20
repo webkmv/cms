@@ -10,7 +10,7 @@
    </tr>
    {foreach $templates as $template}
    <tr>
-      <td>{$template.title}</td><td>{$template.path}</td><td>{$template.created}</td><td>Удалить</td>
+      <td>{$template.title}</td><td>{$template.path}</td><td>{$template.created}</td><td><a href="delete_template.php?id={$template.id}">Удалить</a></td>
     </tr>
     {/foreach}
   </table>

@@ -9,7 +9,7 @@ $form = new Forms();
 
 if ($form->CheckAllInputs($_POST))
 {
-	$id_user = 0;
+	$idUser = 0;
 	$title = $_POST["title"];
 	$filename = $_POST["filename"];
 	$sumBlock = $_POST["sum_block"];
@@ -19,7 +19,7 @@ if ($form->CheckAllInputs($_POST))
 	$file->Upload(DIR_ADMIN_TEMPLATES);
 	
 	$template = new ModelTemplates();
-	$template->SaveTemplate($id_user, $title, $path, $created, $sumBlock);
+	$template->SaveTemplate($idUser, $title, $path, $created, $sumBlock);
 	
 	header('Location: tpls.php');
 }

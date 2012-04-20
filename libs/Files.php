@@ -79,19 +79,19 @@ class Files
   {
 
     if($_FILES[$this->_filename]["size"] > $htis->_uploadMaxFilesize)
-      {
-	die("Размер файла превышает 100 мегабайт");
-      }
+    {
+    	die("Размер файла превышает 100 мегабайт");
+    }
 
-    // Проверяем загружен ли файл
+   // Проверяем загружен ли файл
    if(is_uploaded_file($_FILES[$this->_filename]["tmp_name"]))
    {
      // Если файл загружен успешно, перемещаем его из временной директории в конечную
      move_uploaded_file($_FILES[$this->_filename]["tmp_name"], $pathToSave.$_FILES[$this->_filename]["name"]);
    } 
-   else 
-     {
-      die("Ошибка загрузки файла");
+   else
+   {
+   	die("Ошибка загрузки файла");
    }
   }
 }

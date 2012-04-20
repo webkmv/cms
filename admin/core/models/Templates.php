@@ -80,10 +80,32 @@ class ModelTemplates
    * @param datetime $created дата сохранения
    * @param int $sumBlock количество блоков
    */
-  public function SaveTemplate ($id_user, $title, $path, $created, $sumBlock)
+  public function SaveTemplate ($idUser, $title, $path, $created, $sumBlock)
   {
-  	$query = "INSERT INTO templates (id_user, title, path, created, sum_block) VALUES ($id_user, '$title' '$path', '$created', $sumBlock)";
+  	$query = "INSERT INTO templates (id_user, title, path, created, sum_block) VALUES ($idUser, '$title' '$path', '$created', $sumBlock)";
   	mysql_query($query) or die ("Не удалось сохранить шаблон");
+  }
+  
+  /**
+   * Удаление шаблонв
+   * @param int $idTemplate id шаблона
+   */
+  public function DeleteTemplate($idTemplate)
+  {
+  	mysql_query("DELETE FROM templates WHERE id=$idTemplate") or die ("Не получается удалить шаблон. Попробуйте позже.");
+  }
+  
+  /**
+   * Порлучить шаблон по его идентификатору (id)
+   * @param int $id id шаблона
+   * @return associative array: хеш с данными шаблона
+   */
+  public function GetTemplateFromId ($id)
+  {
+  	$query = "SELECT * FROM templates WHERE id=$id";
+  	$result = mysql_query($query) or die (mysql_errno());
+  	return mysql_fetch_array($result);
+  	
   }
 }
 
