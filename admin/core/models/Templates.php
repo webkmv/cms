@@ -1,6 +1,6 @@
 <?php
 
-require_once "../config.php";
+require_once "core/configcore.php";
 require_once DIR_LIBS."DataBase.php";
 require_once DIR_LIBS.'Files.php';
 require_once DIR_LIBS.'Forms.php';
@@ -32,28 +32,11 @@ class ModelTemplates
    */
   private function Init ()
   {
-  	$this->_logs = new Logs("logs");
+  	$fileLog = DIR_ROOT.LOG_FILE;
+  	$this->_logs = new Logs($fileLog);
   	$this->_forms = new Forms();
   	$db = new DataBase();
   	$db->Connect();
-  }
-
-  /**
-   * Создание таблицы шаблонов
-   *
-   * @return void
-   */
-  public function CreateTableTemplates ()
-  {
-    
-    $query = "CREATE table templates
-                           (id int auto_increment primary key,
-                            id_user int not null,
-                            title varchar(255),
-                            path varchar(255),
-                            created datetime,
-                            sum_block int)";
-    mysql_query($query) or die (mysql_error());
   }
 
   /**
@@ -63,7 +46,12 @@ class ModelTemplates
   public function GetTemplates()
   {
     $sql = "SELECT * FROM templates";
-    $query = mysql_query($sql) or die (mysql_error);
+    $queryError = mysql_error();
+    if (!$query = mysql_query($sql))
+    {
+    	$this->_logs->AddLog($queryError);
+    	die ($queryError);
+    }
     $result = array();
     while ($currentTemplate = mysql_fetch_array($query))
     {
@@ -80,10 +68,15 @@ class ModelTemplates
    * @param datetime $created дата сохранения
    * @param int $sumBlock количество блоков
    */
-  public function SaveTemplate ($idUser, $title, $path, $created, $sumBlock)
+  public function SaveTemplate ($id_user, $title, $path, $created, $sumBlock)
   {
-  	$query = "INSERT INTO templates (id_user, title, path, created, sum_block) VALUES ($idUser, '$title' '$path', '$created', $sumBlock)";
-  	mysql_query($query) or die ("Не удалось сохранить шаблон");
+  	$query = "INSERT INTO templates (id_user, title, path, created, sum_block) VALUES ($id_user, '$title', '$path', '$created', '$sumBlock')";
+  	if (!mysql_query($query))
+  	{
+  		$error = "Не удалось сохранить шаблон. Подробнее: ".mysql_error();
+  		$this->_logs->AddLog($error);
+  		die ($error);
+  	}
   }
   
   /**
@@ -92,7 +85,12 @@ class ModelTemplates
    */
   public function DeleteTemplate($idTemplate)
   {
-  	mysql_query("DELETE FROM templates WHERE id=$idTemplate") or die ("Не получается удалить шаблон. Попробуйте позже.");
+  	if (!mysql_query("DELETE FROM templates WHERE id=$idTemplate"))
+  	{
+  		$error = "Не получается удалить шаблон. Подробнее: ".mysql_error();
+  		$this->_logs->AddLog($error);
+  		die ($error);
+  	}
   }
   
   /**
@@ -103,7 +101,11 @@ class ModelTemplates
   public function GetTemplateFromId ($id)
   {
   	$query = "SELECT * FROM templates WHERE id=$id";
-  	$result = mysql_query($query) or die (mysql_errno());
+  	if(!$result = mysql_query($query))
+  	{
+  		$this->_logs->AddLog(mysql_error());
+  		die (mysql_errno());
+  	}
   	return mysql_fetch_array($result);
   	
   }

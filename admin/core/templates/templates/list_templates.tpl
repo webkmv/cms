@@ -1,7 +1,7 @@
 {extends file="main.tpl"}
 {block name=title}Templates{/block}
 {block name=body}
-<a href="">Добавить</a><a href="">На главную</a>
+<a href="windowAddTemplate.php">Добавить</a> <a href="">На главную</a>
 
 <div>
   <table>

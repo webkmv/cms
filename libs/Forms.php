@@ -14,7 +14,7 @@ class Forms
 	 * @param associative array $arrayData массив данных формы
 	 * @return bool Возвращает true если все поля заполненны
 	 */
-	public function CheckAllInputs($arrayData)
+	public function CheckByEmptyAllInputs($arrayData)
 	{
 		foreach($arrayData as $key => $value)
 		{

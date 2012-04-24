@@ -7,7 +7,7 @@ define ('DIR_ADMIN', DIR_ROOT."admin/");
 define ('DIR_ADMIN_CORE', DIR_ADMIN."core/");
 define ('DIR_ADMIN_VIEWS', DIR_ADMIN_CORE."views/");
 define ('DIR_ADMIN_MODELS', DIR_ADMIN_CORE."models/");
-define ('DIR_ADMIN_TEMPLATES', DIR_ADMIN."templates/templates/");
+define ('DIR_ADMIN_TEMPLATES', DIR_ADMIN_CORE."templates/templates/");
 
 // параметры загрузки файлов
 // пока почему-то не работает...???
@@ -23,4 +23,7 @@ define ('DB_CHARSET', "utf8");
 // настроки системы шаблонов
 define ('DEBUG', false); // режим отладки шаблонов
 define ('CACHING', true); // кэширование шаблонов
+
+// настройка логгирования
+define('LOG_FILE', "log.txt");
 ?>

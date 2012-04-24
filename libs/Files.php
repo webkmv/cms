@@ -1,6 +1,7 @@
 <?php
 
 require_once "config.php";
+require_once 'Logs.php';
 
 /**
  * Класс для работы с файлами
@@ -10,11 +11,12 @@ class Files
 
   private $_filename;
 
+  private $_log;
   /**
    * Максимельный размер загрузки файла в Mb
    * @var integer
    */
-  private $_uploadMaxFilesize = UPLOAD_MAX_FILESIZE;
+  private $_uploadMaxFilesize = null;
 
   /**
    * @param string $filename имя файла
@@ -41,7 +43,10 @@ class Files
   public function OpenReadOnly ()
   {
     if (($file = fopen($this->_filename, 'r')) == false)
-      throw new Exception ("File not found!");
+    {
+    	$strError = "File not found";
+    	throw new Exception ($strError);
+    }
     return $file;
   }
 
@@ -75,23 +80,19 @@ class Files
    * @param string $pathToSave путь для хохранения файла
    * @return void
    */
-  public function Upload($pathToSave)
+  public function Upload($filenameToSave)
   {
 
-    if($_FILES[$this->_filename]["size"] > $htis->_uploadMaxFilesize)
+    /*if($_FILES[$this->_filename]["size"] > $htis->_uploadMaxFilesize)
     {
     	die("Размер файла превышает 100 мегабайт");
-    }
-
-   // Проверяем загружен ли файл
-   if(is_uploaded_file($_FILES[$this->_filename]["tmp_name"]))
+    }*/
+  	
+   if(!copy($this->_filename, $filenameToSave))
    {
-     // Если файл загружен успешно, перемещаем его из временной директории в конечную
-     move_uploaded_file($_FILES[$this->_filename]["tmp_name"], $pathToSave.$_FILES[$this->_filename]["name"]);
-   } 
-   else
-   {
-   	die("Ошибка загрузки файла");
+     $error = "Ошибка загрузки файла на сервер";
+   	die($error);
+     
    }
   }
 }

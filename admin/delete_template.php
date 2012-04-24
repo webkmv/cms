@@ -1,6 +1,6 @@
 <?php
 
-require_once '../config.php';
+require_once 'core/configcore.php';
 require_once DIR_ADMIN_MODELS."Templates.php";
 
 $template = new ModelTemplates();

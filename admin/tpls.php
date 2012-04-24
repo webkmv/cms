@@ -1,7 +1,8 @@
 <?php
 
-require_once "core/views/ViewIndex.php";
-require_once "core/models/Templates.php";
+require_once 'core/configcore.php';
+require_once DIR_ADMIN_VIEWS."ViewIndex.php";
+require_once DIR_ADMIN_MODELS."Templates.php";
 
 $model = new ModelTemplates();
 $indexPage = new ViewIndex();
