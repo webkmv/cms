@@ -10,6 +10,7 @@ if(!$form->CheckByEmptyAllInputs($_POST))
 	die ("Заполните все поля формы.");
 else 
 {
+	//данные формы
 	$title = $_POST["title"];
 	$sumBlocks = (int)$_POST["sum_blocks"];
 	$tmpFilename = $_FILES['filename']['tmp_name'];

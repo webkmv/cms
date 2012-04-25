@@ -45,7 +45,7 @@ class Files
     if (($file = fopen($this->_filename, 'r')) == false)
     {
     	$strError = "File not found";
-    	throw new Exception ($strError);
+    	die ($strError);
     }
     return $file;
   }
@@ -94,6 +94,22 @@ class Files
    	die($error);
      
    }
+  }
+  
+  /**
+   * Читать содержимое файла
+   * 
+   * @return string
+   */
+  public function ReadFile()
+  {
+  	$file = $this->OpenReadOnly();
+  	$result = "";
+  	while (!feof($file)) {
+  		$result .= fgets($file);
+  	}
+  	fclose($file);
+  	return $result;
   }
 }
 ?>

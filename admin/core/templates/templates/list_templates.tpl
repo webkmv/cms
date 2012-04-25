@@ -1,7 +1,7 @@
 {extends file="main.tpl"}
 {block name=title}Templates{/block}
 {block name=body}
-<a href="windowAddTemplate.php">Добавить</a> <a href="">На главную</a>
+<a href="windowAddTemplate.php" class="addTemplate">Добавить</a> <a href="">На главную</a>
 
 <div>
   <table>
@@ -10,10 +10,9 @@
    </tr>
    {foreach $templates as $template}
    <tr>
-      <td>{$template.title}</td><td>{$template.path}</td><td>{$template.created}</td><td><a href="delete_template.php?id={$template.id}">Удалить</a></td>
+      <td><a href="view_tpl.php?id={$template.id}">{$template.title}</a></td><td>{$template.path}</td><td>{$template.created}</td><td><a href="delete_template.php?id={$template.id}">Удалить</a></td>
     </tr>
     {/foreach}
   </table>
-
 </div>
 {/block}
