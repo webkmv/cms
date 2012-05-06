@@ -12,6 +12,7 @@ class Files
   private $_filename;
 
   private $_log;
+  
   /**
    * Максимельный размер загрузки файла в Mb
    * @var integer
@@ -49,7 +50,21 @@ class Files
     }
     return $file;
   }
-
+  
+  /**
+   * Открыть файл для записи
+   * @return возвращает открытый файл
+   */
+  public function OpenWriteOnly ()
+  {
+  	if (($file = fopen($this->_filename, 'w')) == false)
+  	{
+  		$strError = "File not found";
+  		die ($strError);
+  	}
+  	
+  	return $file;
+  }
   /**
    * Открыть файл для добавления в него данных. 
    *
@@ -110,6 +125,17 @@ class Files
   	}
   	fclose($file);
   	return $result;
+  }
+  
+  /**
+   * Создание нового файла и запись в него
+   * @param string $data данные для записи
+   */
+  public function Write ($data)
+  {
+  	$file = $this->OpenWriteOnly();
+  	fwrite($file, $data);
+  	fclose($file);
   }
 }
 ?>

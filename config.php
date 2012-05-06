@@ -23,7 +23,7 @@ define ('DB_CHARSET', "utf8");
 
 // настроки системы шаблонов
 define ('DEBUG', false); // режим отладки шаблонов
-define ('CACHING', true); // кэширование шаблонов
+define ('CACHING', false); // кэширование шаблонов
 
 // настройка логгирования
 define('LOG_FILE', "log.txt");

@@ -24,14 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '5002076314f91cef8999a63-85380934',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fa58e87686141_99489190',
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
+  'unifunc' => 'content_4fa6d4fc4e7779_66858851',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fa58e87686141_99489190')) {function content_4fa58e87686141_99489190($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fa6d4fc4e7779_66858851')) {function content_4fa6d4fc4e7779_66858851($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -127,6 +123,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<tbody>
       <tr>
       <td><a href="view_tpl.php?id=2">тестовый шаблон</a></td><td>/var/www/cms/admin/core/templates/templates/index.html</td><td>2012-04-25 12:56:58</td><td class="del"><a href="delete_template.php?id=2">-</a></td>
+    </tr>
+       <tr>
+      <td><a href="view_tpl.php?id=4">wwww</a></td><td>/var/www/cms/admin/core/templates/templates/index.html</td><td>2012-05-06 00:35:15</td><td class="del"><a href="delete_template.php?id=4">-</a></td>
+    </tr>
+       <tr>
+      <td><a href="view_tpl.php?id=5">scascascasc</a></td><td>/var/www/cms/templates/templates/index.html</td><td>2012-05-06 00:37:02</td><td class="del"><a href="delete_template.php?id=5">-</a></td>
     </tr>
         </tbody>
   </table>

@@ -24,7 +24,9 @@ else
 	
 	//сохраняем данные о шаблоне в базе
 	$model = new ModelTemplates();
-	$model->SaveTemplate(1, $title, $fileToSave, $dateNow, $sumBlocks);
+	$model->InsertTemplate(1, $title, $fileToSave, $dateNow, $sumBlocks);
+	
+	header('Location: tpls.php');
 }
 
 ?>

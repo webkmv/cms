@@ -1,9 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-07 00:49:50
+         compiled from "core/templates/templates/view_tpl.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:9483816714fa6d5444486e9-99325797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '13ffc7cfea86dce00573bb06f8354ff01afde76d' => 
+    array (
+      0 => 'core/templates/templates/view_tpl.tpl',
+      1 => 1336337360,
+      2 => 'file',
+    ),
+    '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
+    array (
+      0 => 'core/templates/templates/main_templates.tpl',
+      1 => 1336249720,
+      2 => 'file',
+    ),
+    'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
+    array (
+      0 => 'core/templates/templates/main.tpl',
+      1 => 1336336521,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '9483816714fa6d5444486e9-99325797',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fa6d5444a8051_17264122',
+  'variables' => 
+  array (
+    'nameSection' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_4fa6d5444a8051_17264122')) {function content_4fa6d5444a8051_17264122($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>{block name=title}default title{/block}</title>	
+    <title>View Templates</title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link href="core/media/css/style.css" rel="stylesheet" type="text/css" />
@@ -76,9 +113,32 @@
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path">{$nameSection}</div>
+				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
+</div>
 				<br />
-				{block name=body}default body{/block}					
+				
+		
+<a href="windowAddTemplate.php" class="addTemplate">Добавить</a>
+<div>
+ <form method="post" id="viewTplForm">
+ 	Название: <input type="text" name="title" value="<?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
+" id="titleViewTemplate"><br />
+ 	Количество блоков: <input type="text" name="sum_block" value="<?php echo $_smarty_tpl->tpl_vars['template']->value['sum_block'];?>
+"  id="blocksViewTemplate"/><br />
+ 	<textarea rows="10" cols="45" name="text"><?php echo $_smarty_tpl->tpl_vars['template']->value['text'];?>
+</textarea><br />
+ 	
+ 	<input type="hidden" name="idToFile" value="<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
+" />
+ 	<input type="hidden" name="pathToFile" value="<?php echo $_smarty_tpl->tpl_vars['template']->value['path'];?>
+" />
+ 	
+ 	<input type="submit" name="saveTpl" value="Сохранить" />
+ 	<input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'tpls.php'";/>
+ </form>
+</div>
+
+						
 			</div>
      </div></div>
 	<!-- CONTENT // -->
@@ -96,3 +156,4 @@
 	<!-- FOOTER // -->
 </body>
 </html>
+<?php }} ?>

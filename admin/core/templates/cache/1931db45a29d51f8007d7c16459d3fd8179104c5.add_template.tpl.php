@@ -12,10 +12,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '1695599024f96c02a88bb90-41131281',
   'cache_lifetime' => 3600,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fa58570f21712_83023469',
+  'unifunc' => 'content_4fa6d4ffd982a4_78140058',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fa58570f21712_83023469')) {function content_4fa58570f21712_83023469($_smarty_tpl) {?><form method="post" enctype="multipart/form-data" action="add_tpl.php">
+<?php if ($_valid && !is_callable('content_4fa6d4ffd982a4_78140058')) {function content_4fa6d4ffd982a4_78140058($_smarty_tpl) {?><form method="post" enctype="multipart/form-data" action="add_tpl.php">
 Название: <input type="text" name="title" /><br />
 Количество блоков: <input type="text" name="sum_blocks"><br />
 Файл: <input type="file" name="filename"><br />

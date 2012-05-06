@@ -61,16 +61,35 @@ class ModelTemplates
   }
   
   /**
-   * Сохранение шаблона
+   * Добавление шаблона
    * @param int $id_user id пользователя
    * @param string $title заголовок
    * @param string $path путь сохранения
    * @param datetime $created дата сохранения
    * @param int $sumBlock количество блоков
    */
-  public function SaveTemplate ($id_user, $title, $path, $created, $sumBlock)
+  public function InsertTemplate ($id_user, $title, $path, $created, $sumBlock)
   {
   	$query = "INSERT INTO templates (id_user, title, path, created, sum_block) VALUES ($id_user, '$title', '$path', '$created', '$sumBlock')";
+  	if (!mysql_query($query))
+  	{
+  		$error = "Не удалось добавить шаблон. Подробнее: ".mysql_error();
+  		$this->_logs->AddLog($error);
+  		die ($error);
+  	}
+  }
+  
+  /**
+   * Сохранение шаблона
+   * @param int $id id шаблона
+   * @param int $id_user id пользователя
+   * @param string $title заголовок
+   * @param string $path путь сохранения
+   * @param int $sumBlock количество блоков
+   */
+  public function SaveTemplate ($id, $id_user, $title, $path, $sumBlock)
+  {
+  	$query = "UPDATE templates SET id_user=$id_user, title='$title', path='$path', sum_block='$sumBlock' WHERE id=$id";
   	if (!mysql_query($query))
   	{
   		$error = "Не удалось сохранить шаблон. Подробнее: ".mysql_error();
