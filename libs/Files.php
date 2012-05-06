@@ -99,7 +99,7 @@ class Files
   /**
    * Читать содержимое файла
    * 
-   * @return string
+   * @return string возвращает содержимое файла
    */
   public function ReadFile()
   {

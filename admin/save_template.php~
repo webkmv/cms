@@ -1,6 +1,6 @@
 <?php
 
-require_once 'core/configcore.php';
+require_once '../core/configcore.php';
 require_once DIR_ADMIN_MODELS.'Templates.php';
 require_once DIR_LIBS.'Files.php';
 require_once DIR_LIBS.'Forms.php';
@@ -16,7 +16,7 @@ if ($form->CheckAllInputs($_POST))
 	$created = ("Y-m-j H:i:s");
 	
 	$file = new Files($filename);
-	$file->Upload(DIR_SITE_TEMPLATES);
+	$file->Upload(DIR_ADMIN_TEMPLATES);
 	
 	$template = new ModelTemplates();
 	$template->SaveTemplate($idUser, $title, $path, $created, $sumBlock);

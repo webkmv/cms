@@ -1,0 +1,12 @@
+*html .page {height: 100%;}
+
+.logo{left:0px;}
+p{font-size:14px;}
+.nav_menu a{font-size:16px;}
+.phone dt{width:175px; font-size:16px; margin-left:22px;}
+.phone dd span{font-size:22px; margin-right: 7px;}
+.phone dd {font-size:13px;}
+.quick_links a {font-size:13px;}
+.item .title p{margin-top:-4px;}
+.nav_menu ul{margin-left:-120px; margin-top:50px; min-width:180px; zoom:1;}
+.nav_menu ul li{float:left;}

@@ -1,0 +1,135 @@
+/* Default
+---------------------------------------- */
+html, body {height: 100%; min-width:985px; width: 100%;}
+body, html, p, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, form, fieldset, td, th, caption, address, textarea, legend, blockquote {margin: 0; padding: 0;}
+a img, fieldset {border: 0;}
+table {border-collapse: collapse;}
+td, th {vertical-align: top;}
+body {font: 15px/1.2 'PT Sans Narrow',Arial,Helvetica,sans-serif; color: #000; background-color:#fff;}
+input, textarea {font: 12px/1.2 'PT Sans Narrow',Arial,Helvetica,sans-serif; color: #000;}
+a{color: #000; text-decoration:underline;}
+a:hover {color:#a3238e;}
+a:active, a:focus {outline: none;}
+.clear{overflow:hidden;*zoom:1;clear:both;}
+p{font-size:15px;}
+.hr{border-top:1px #666 dotted; margin:40px 0px 20px;}
+
+/* Main
+---------------------------------------- */
+.page:after, .wrap:after, .select-container:after {content: ''; display: block; clear: both; visibility: hidden; height: 0; line-height: 0; font-size: 0;}
+.page {min-height: 100%; position: relative;  background: url(../img/bg_top.gif) repeat-x left top; }
+.wrap {padding: 0px 0px 60px;}
+.container {} /* overflow: hidden; */
+
+/* Header
+---------------------------------------- */
+.header_container{height:72px; position:relative; padding-top:2px; color:#737373;}
+.header_inner{background: url(../img/headbg.png) no-repeat left 2px #e6f0f9; height:72px;}
+.header_inner a{color:#737373!important; text-decoration:none;}
+.header_inner a:hover {color:#a3238e!important;}
+.header_inner i{font-style:normal; font-size:14px; float:left; padding:20px 0px 0px 20px;}
+
+
+
+/* Footer
+---------------------------------------- */
+.footer {margin: -60px auto 0; position: relative; background: url("../img/headerbg.png") repeat-x scroll left top transparent; border-top:1px #bebebe solid; height:59px;}
+.footer-inner {margin:0px auto; overflow: hidden; color:#000000;}
+.footer-inner ul{list-style:none;}
+
+/* H */
+h1, h2, h3, h4, h5, h6, b{color:#000000;}
+h1{font: 27px 'PT Sans Narrow',Arial,Helvetica,sans-serif;}
+h2{font: 24px 'PT Sans Narrow',Arial,Helvetica,sans-serif;}
+h3{font: 18px 'PT Sans Narrow',Arial,Helvetica,sans-serif;}
+h4{font: 14px 'PT Sans Narrow',Arial,Helvetica,sans-serif;}
+h5 {font: 12px 'PT Sans Narrow',Arial,Helvetica,sans-serif;}
+h6 {font: 10px 'PT Sans Narrow',Arial,Helvetica,sans-serif;}
+
+/* ul ol */
+.main_content li{margin-left:15px;}
+
+
+/* HEADER
+--------------------------------------- */
+.logo{background: url(../imglogo.png) no-repeat top left transparent; width:200px; height:29px; padding-left:60px; display:block; float:left; margin:20px 0px 0px 170px; padding-top:10px; -moz-text-shadow: 1px 1px 0px #ffffff; -webkit-text-shadow: 1px 1px 0px #ffffff; text-shadow: 1px 1px 0px #ffffff;}
+
+
+.adm_button, .adm_icon{float:right; -moz-text-shadow: 1px 1px 0px #ffffff; -webkit-text-shadow: 1px 1px 0px #ffffff; text-shadow: 1px 1px 0px #ffffff;  margin-top: 20px; }
+.adm_icon{ background: url("../img/admin.png") no-repeat scroll left top transparent;   display: block;  height: 29px;    padding-left: 35px;   padding-top: 2px;   width: 40px; }
+.adm_button{margin: 20px 20px 0 100px;}
+
+
+
+
+
+/* BANNER
+--------------------------------------- */
+
+
+/* Navigation menu
+--------------------------------------- */
+.left_container{float:left;  width:240px; margin: 10px 0px 0px 10px; }
+.left_container h1{margin:20px 0px 15px;}
+.left_container p{margin-bottom:15px;}
+.content_menu{padding-bottom:10px; margin-left:10px; margin-top:55px; margin-bottom:30px;}
+.content_menu a{font-size:20px; display:block; padding: 3px 0px 3px 50px; text-decoration:none; margin-top:10px;}
+.content_menu a.ico1{background: url("../img/ico1.png") no-repeat 10px 5px; }
+.content_menu a.ico2{background: url("../img/ico2.png") no-repeat 10px 5px;}
+.content_menu a.ico3{background: url("../img/ico3.png") no-repeat 10px 5px;}
+.content_menu a.ico4{background: url("../img/ico4.png") no-repeat 10px 5px;}
+.content_menu a.ico5{background: url("../img/ico5.png") no-repeat 10px 2px;}
+.content_menu a.activated{ background: url("../img/arrow_down.jpg") no-repeat 10px 0px;}
+.content_hover{margin: 15px 0px 25px 0px; display:none;}
+.content_hover a{font-size:16px!important; padding:5px 0 9px 22px !important; border-bottom:1px #b1b1b1 solid; background:none; margin:0px!important; font-size:18px; display:block; padding: 3px 0px 3px 45px; text-decoration:none;}
+.content_hover a:hover { background-color:#7aaedf; color:#fff;}
+
+/* Main Content
+--------------------------------------- */
+.main_content{min-height:300px; margin:10px 0px 0px 275px;}
+.path{color:#fff; background-color:#7aaedf; padding:3px 100px 3px 10px; border-radius: 0px 5px 0px 0px; display:inline;}
+.helper{background-color:#7aaedf; color:#fff; padding:10px 20px 20px;}
+.helper h3{font-size:20px; color:#fff; background: url("../img/ico6.png") no-repeat 0px 5px; padding-left:40px; }
+.helper p{font-size:13px;}
+.search{ border: 1px solid #CCCCCC;    border-radius: 5px 5px 5px 5px;    font-size: 18px;    height: 24px;    margin: 15px 0;    padding: 0 5px 3px;    width: 160px;}
+.search_button{ background: url("../img/ico7.png") no-repeat 0px 0px; border: 0px none; cursor:pointer; width:22px; height:22px;}
+
+
+.modul_table{width:100%; margin-top:6px;}
+.modul_table th{background-color:#d191c6; color:#fff; font-weight:normal; border-right:1px #fff solid; padding:5px 10px;}
+.modul_table th.large{}
+.modul_table th.middle{}
+.modul_table th.min{width:100px;}
+.modul_table td{color:#000; font-weight:normal; border-right:1px #fff solid; padding:5px 10px;}
+.modul_table td a{text-decoration:none;}
+.del, .add{font-size:30px; text-decoration:none; display:block; text-align:center; margin:0px; padding:0px; line-height:0.5;}
+.add{color:#03bd37;}
+.del{color:#ff0000;}
+
+.hint{min-height:30px;}
+
+
+
+/* FOOTER
+--------------------------------------- */
+.footer-inner{padding-top:15px; }
+.copyright{color:#666; padding:0px 15px 0px;}
+
+
+
+/* если ширина окна <= 700px ... */
+  /*открываем media query*/
+@media screen and (max-width: 700px) {
+
+}
+
+
+
+
+/* Print
+---------------------------------------- */
+@media print {
+	body {color: #000; background: #fff;}
+	a, a:link, a:visited {color: #000 !important; text-decoration: none !important; font-weight: bold;}
+	a:link:after, a:visited:after {content:" [" attr(href) "] "; font-size: 10pt;}
+}

@@ -1,3 +1,7 @@
+html, body {
+	height: 100%;
+}
+
 div#fancy_overlay {
 	position: fixed;
 	top: 0;

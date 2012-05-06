@@ -1,6 +1,6 @@
 <?php
 
-require_once 'core/configcore.php';
+require_once '../core/configcore.php';
 require_once DIR_LIBS.'Forms.php';
 require_once DIR_LIBS.'Files.php';
 require_once DIR_ADMIN_MODELS.'Templates.php';
@@ -15,7 +15,7 @@ else
 	$sumBlocks = (int)$_POST["sum_blocks"];
 	$tmpFilename = $_FILES['filename']['tmp_name'];
 	$filename = $_FILES['filename']['name'];
-	$fileToSave = DIR_SITE_TEMPLATES.$filename;
+	$fileToSave = DIR_ADMIN_TEMPLATES.$filename;
 	$dateNow = date("Y-m-j H:i:s");
 	
 	//копируем файл на сервер
