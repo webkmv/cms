@@ -12,7 +12,7 @@ class Security
 
   public function __construct()
   {
-    $this->_logs = new Logs("logs");
+    $this->_logs = new Logs();
   }
 
 

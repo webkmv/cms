@@ -32,8 +32,7 @@ class ModelTemplates
    */
   private function Init ()
   {
-  	$fileLog = DIR_ROOT.LOG_FILE;
-  	$this->_logs = new Logs($fileLog);
+  	$this->_logs = new Logs();
   	$this->_forms = new Forms();
   	$db = new DataBase();
   	$db->Connect();

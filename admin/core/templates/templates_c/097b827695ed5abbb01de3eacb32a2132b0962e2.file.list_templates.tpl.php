@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-07 00:35:24
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-17 00:49:00
          compiled from "core/templates/templates/list_templates.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11942713534f911f9674d614-67102081%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1336336521,
+      1 => 1337201316,
       2 => 'file',
     ),
   ),
@@ -49,7 +49,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="core/media/js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="core/media/js/jquery.fancybox-1.2.1.pack.js"></script>
     <script type="text/javascript" src="core/media/js/configModals.js"></script>
-	<script type="text/javascript" src="core/media/js/interface.js"></script>
+	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 
 </head>

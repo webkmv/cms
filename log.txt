@@ -1,34 +1,4 @@
-|24.04.2012 20:21:22| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:01| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:01| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:02| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:02| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:02| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:02| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:02| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:03| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:03| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:03| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:24:03| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:02| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:03| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:03| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:03| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:04| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:20| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:21| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:25:31| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:33| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:34| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:34| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:34| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:34| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:35| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:35| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:35| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:35| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:35| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:35| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:36| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:36| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
-|24.04.2012 20:27:36| Не удалось сохранить шаблон. Подробнее: Column count doesn't match value count at row 1
+|21.05.2012 21:51:48| Ошибка создания таблицы 'templates'.
+Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'
+Строка: 40
+Ошибка: Table 'templates' already exists

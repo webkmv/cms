@@ -12,7 +12,7 @@
     <script type="text/javascript" src="core/media/js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="core/media/js/jquery.fancybox-1.2.1.pack.js"></script>
     <script type="text/javascript" src="core/media/js/configModals.js"></script>
-	<script type="text/javascript" src="core/media/js/interface.js"></script>
+	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 
 </head>

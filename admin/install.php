@@ -6,6 +6,10 @@ require_once DIR_ADMIN_MODELS.'ModelInstallerCMS.php';
 echo "Creating...";
 $model = new ModelInstallerCMS();
 $model->CreateTableTemplates();
-echo "Table 'Templates' created.";
+echo "Table 'Templates' created.<br />";
+
+$model->CreateTablePages();
+echo("Teble 'Pages' created.<br />");
+
 
 ?>

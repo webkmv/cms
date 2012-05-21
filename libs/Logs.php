@@ -14,16 +14,17 @@ class Logs
    *
    * @var string
    */
-  private $fileLogs;
+  private $_fileLogs;
 
   /**
    * Инициализируем новый объект логов
    *
    * @param string $filLogs файл для хранения логов
    */
-  public function __construct($fileLogs)
+  public function __construct()
   {
-    $this->_fileLogs = new Files($fileLogs);
+  	$this->_fileLogs =  DIR_ROOT.LOG_FILE;
+    $this->_fileLogs = new Files($this->_fileLogs);
   }
   
   /**
