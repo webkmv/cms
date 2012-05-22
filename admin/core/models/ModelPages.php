@@ -61,10 +61,10 @@ class ModelPages
 		$sql = "INSERT INTO pages (title, text, url, published, id_template, keywords, description, added) 
 		        VALUES ('$title', '$body', '$url', 1, '$idTemplate', '$keywords', '$description', '$date')";
 		
-		if (mysql_query($sql))
+		if (!mysql_query($sql))
 		{
 			$error = "Ошибка добавления новой страницы в базу.Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
-			$this->_log->AddLog($error);
+			$this->_logs->AddLog($error);
 			throw new Exception($error);
 		}
 	}

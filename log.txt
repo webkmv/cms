@@ -9,3 +9,4 @@
 |22.05.2012 22:41:25| Creating tables...
 |22.05.2012 22:41:25| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
 |22.05.2012 22:41:25| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
+|22.05.2012 23:32:19| Ошибка добавления новой страницы в базу.Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '66'. Ошибка: 

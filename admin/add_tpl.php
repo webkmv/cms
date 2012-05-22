@@ -13,8 +13,8 @@ else
 	//данные формы
 	$title = $_POST["title"];
 	$sumBlocks = (int)$_POST["sum_blocks"];
-	$tmpFilename = $_FILES['filename']['tmp_name'];
-	$filename = $_FILES['filename']['name'];
+	$tmpFilename = $_FILES["filename"]['tmp_name'];
+	$filename = $_FILES["filename"]['name'];
 	$fileToSave = DIR_SITE_TEMPLATES.$filename;
 	$dateNow = date("Y-m-j H:i:s");
 	
@@ -25,6 +25,8 @@ else
 	//сохраняем данные о шаблоне в базе
 	$model = new ModelTemplates();
 	$model->InsertTemplate(1, $title, $fileToSave, $dateNow, $sumBlocks);
+	
+	header('Location: tpls.php');
 }
 
 ?>
