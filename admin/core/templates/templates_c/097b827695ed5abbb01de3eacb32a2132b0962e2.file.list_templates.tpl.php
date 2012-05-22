@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-17 00:49:00
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-22 23:08:07
          compiled from "core/templates/templates/list_templates.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11942713534f911f9674d614-67102081%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '097b827695ed5abbb01de3eacb32a2132b0962e2' => 
     array (
       0 => 'core/templates/templates/list_templates.tpl',
-      1 => 1336249758,
+      1 => 1337712761,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337201316,
+      1 => 1337713595,
       2 => 'file',
     ),
   ),
@@ -51,6 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="core/media/js/configModals.js"></script>
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
+	<script type="text/javascript" src="core/media/js/pages.js"></script>
 
 </head>
 <body>
@@ -81,7 +82,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 			<!-- left menu -->
 			<div class="content_menu">
-				<a href="#" class="menu_head ico1">Страницы</a>
+				<a href="pages" class="menu_head ico1">Страницы</a>
 				<a href="#" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>
@@ -138,9 +139,12 @@ $_smarty_tpl->tpl_vars['template']->_loop = true;
    <tr>
       <td><a href="view_tpl.php?id=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
-</a></td><td><?php echo $_smarty_tpl->tpl_vars['template']->value['path'];?>
-</td><td><?php echo $_smarty_tpl->tpl_vars['template']->value['created'];?>
-</td><td class="del"><a href="delete_template.php?id=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
+</a></td>
+      <td><?php echo $_smarty_tpl->tpl_vars['template']->value['path'];?>
+</td>
+      <td><?php echo $_smarty_tpl->tpl_vars['template']->value['created'];?>
+</td>
+      <td class="del"><a href="delete_template.php?id=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
 ">-</a></td>
     </tr>
     <?php } ?>

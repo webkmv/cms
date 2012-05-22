@@ -15,7 +15,10 @@
 					<tbody>
    {foreach $templates as $template}
    <tr>
-      <td><a href="view_tpl.php?id={$template.id}">{$template.title}</a></td><td>{$template.path}</td><td>{$template.created}</td><td class="del"><a href="delete_template.php?id={$template.id}">-</a></td>
+      <td><a href="view_tpl.php?id={$template.id}">{$template.title}</a></td>
+      <td>{$template.path}</td>
+      <td>{$template.created}</td>
+      <td class="del"><a href="delete_template.php?id={$template.id}">-</a></td>
     </tr>
     {/foreach}
     </tbody>

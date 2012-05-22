@@ -35,9 +35,8 @@ $(document).ready(function(){
 	
 	$('.menu_head:last').next().css('margin-bottom', '0px');
 	$('.menu_head:last').next().children('a:last').css('border-bottom', 'none')
-
-	
-	
 });
+
+
 
 
