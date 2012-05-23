@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-22 23:28:35
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-23 18:22:33
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17740202254fbbe8e3e595d9-44684409%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1337708304,
+      1 => 1337782945,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fbbe8e3edc2d4_75364809',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbbe8e3edc2d4_75364809',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fbbe8e3edc2d4_75364809')) {function content_4fbbe8e3edc2d4_75364809($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
@@ -144,7 +144,7 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
 </td>
       			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['is_index'];?>
 </td>
-      			<td class="del"><a href="delete_template.php?id=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
+      			<td class="del"><a href="delete_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
 ">-</a></td>
     		</tr>
     	<?php } ?>

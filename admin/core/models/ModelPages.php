@@ -4,6 +4,7 @@ require_once "core/configcore.php";
 require_once DIR_LIBS."DataBase.php";
 require_once DIR_LIBS.'Files.php';
 require_once DIR_LIBS.'Forms.php';
+require_once DIR_ADMIN_MODELS.'Templates.php';
 
 class ModelPages 
 {
@@ -63,10 +64,54 @@ class ModelPages
 		
 		if (!mysql_query($sql))
 		{
-			$error = "Ошибка добавления новой страницы в базу.Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$error = "Ошибка добавления новой страницы в базу.  Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
 			$this->_logs->AddLog($error);
 			throw new Exception($error);
 		}
+	}
+	
+	/**
+	 * Удаление страницы
+	 * @param int $id Номер страницы
+	 * @throws Exception Не удается удалить файл
+	 */
+	public function DeletePage($id) 
+	{
+		$sql = "DELETE FROM pages WHERE id='$id'";
+		if (!mysql_query($sql))
+		{
+			$error = "Ошибка удаления страницы. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
+		}
+	}
+	
+	/**
+	 * Получить страницу для просмотра
+	 * @param int $idPage идентификатор страницы
+	 * @throws Exception
+	 * @return возвращает массив с 2 элементами (массивами). Первый - список шаблонов страницы; второй - сама страница
+	 */
+	public function GetPageByIdForView ($idPage)
+	{
+		$sql = "SELECT * FROM pages WHERE id='$idPage'";
+		if (!$query = mysql_query($sql))
+		{
+			$error = "Ошибка извлечения страницы. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
+		}
+		
+		$page = mysql_fetch_array($query);
+		
+		$modelTemplates = new ModelTemplates();
+		$templates = $modelTemplates->GetTemplaesByViewPage((int)$page["id_template"]);
+		
+		$result = array();
+		$result[] = $templates;
+		$result[] = $page;
+		
+		return $result;
 	}
 }
 

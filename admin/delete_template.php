@@ -7,4 +7,3 @@ $template = new ModelTemplates();
 $template->DeleteTemplate($_GET["id"]);
 header('Location: tpls.php');
 ?>
-

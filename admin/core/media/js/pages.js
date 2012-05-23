@@ -43,6 +43,9 @@ $(document).ready(function() {
 			url : "add_page.php",
 			data : str,
 			success : function(msg) {
+				if (msg == '') {
+					document.location.href = 'pages.php';
+				}
 				$("#addPageErrors").html("<p>" + msg + "</p>");
 			}
 		});
