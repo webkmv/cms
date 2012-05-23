@@ -2,53 +2,69 @@
 /*
 *	Ядро управления модулями
 */
-include '../config.php';
+include ('../config.php');
 
-class modules
-{
-    /*function __construct($dir)
+class Modules
+{ 
+    public function getModules($folders)
     {
-        $this -> dirs = $dir;
-    }*/
- 
-    function getModules($dir)
-    {
-        $m = Scan($dir);
-        print_r($m);
+        foreach ($folders as $fileName)
+        {
+            $path = '../modules/' . $fileName;
+            $dh = opendir($path);
+            
+            $index = $path . '/index.php';
+            $install = $path . '/install.php';
+            
+            if (file_exists($install))
+            {
+                echo $fileName . ' ' . "<a href='".$install."?action=install'>Установка</a><br />";
+            }
+            elseif (file_exists($index))
+            {
+                echo $fileName . ' module installed<br />';
+            }
+            closedir($dh);
+        }
     }
+    
 
-    function Scan($path)
+    public function scan($path)
     {
         if(is_dir($path))
         {
             $i = 0;
+            $folders = new ArrayObject;
             $dh = opendir($path); 
             while (false !== ($dir = readdir($dh)))
             {
                 if (is_dir($path . $dir) && $dir !== '.' && $dir !== '..')
                 {
-                    $subdir = $path . $dir . '/'; 
-                    $mod[$i] = $dir; 
-                    Scan($subdir); 
-                $i++;
+                    $subdir = $path . $dir . '/';
+                    $folders[$i] = $dir; 
+                    $this->scan($subdir);
+                    $i++;
                 }
                 else
                 {
-                    next; 
+                    continue;
                 }
-                
             }
-            return $mod;
-            closedir($dh); 
+            closedir($dh);
+            return $folders;
         }
         else
         {
             print "Директорий не найдено"; 
-        } 
+        }
     }
 }
-$mod = new modules();
-$mod ->getModules(DIR_MODULES);
+
+    
+$mod = new Modules();
+$var = $mod->scan(DIR_MODULES);
+$mod->getModules($var);
+        
 /*  $mod = Scan(DIR_MODULES);
         print_r($mod);*/
 ?>
