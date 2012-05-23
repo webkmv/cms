@@ -1,16 +1,54 @@
 <?php
 /*
 *	Ядро управления модулями
-*	пользовательский раздел
 */
+include '../config.php';
 
-// Вывод новостей
-function outNews()
+class modules
 {
-}
+    /*function __construct($dir)
+    {
+        $this -> dirs = $dir;
+    }*/
+ 
+    function getModules($dir)
+    {
+        $m = Scan($dir);
+        print_r($m);
+    }
 
-//чтение новости
-function readNews()
-{
+    function Scan($path)
+    {
+        if(is_dir($path))
+        {
+            $i = 0;
+            $dh = opendir($path); 
+            while (false !== ($dir = readdir($dh)))
+            {
+                if (is_dir($path . $dir) && $dir !== '.' && $dir !== '..')
+                {
+                    $subdir = $path . $dir . '/'; 
+                    $mod[$i] = $dir; 
+                    Scan($subdir); 
+                $i++;
+                }
+                else
+                {
+                    next; 
+                }
+                
+            }
+            return $mod;
+            closedir($dh); 
+        }
+        else
+        {
+            print "Директорий не найдено"; 
+        } 
+    }
 }
+$mod = new modules();
+$mod ->getModules(DIR_MODULES);
+/*  $mod = Scan(DIR_MODULES);
+        print_r($mod);*/
 ?>

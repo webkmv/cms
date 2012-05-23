@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <moduleName>Новости</moduleName>
+    <dirName>mod_news</dirName>
+    <description>Модуль новости</description>
+    <version>0.0.1</version>
+</settings>
