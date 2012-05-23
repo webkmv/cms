@@ -21,15 +21,20 @@ class ModelPages
 		$db->Connect();
 	}
 	
-	private function GetAllPages ()
+	/**
+	 * Все страницы
+	 * 
+	 * @result array Возвращает массив хэшей с данными стрниц
+	 */
+	public function GetAllPages ()
 	{
 		$sql = "SELECT * FROM pages";
-		$queryError = mysql_error();
 		
 		if (!$query = mysql_query($sql))
 		{
-			$this->_logs->AddLog($queryError);
-			die ($queryError);
+			$error = "Ошибка извлечения страниц из базы. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
 		}
 		
 		$result = array();
@@ -40,5 +45,29 @@ class ModelPages
 		
 		return $result;
 	}
+	
+	/**
+	 * Добавление страницы
+	 * 
+	 * @param string $title
+	 * @param string $url
+	 * @param int $idTemplate
+	 * @param string $keywords
+	 * @param string $description
+	 * @param string $body
+	 */
+	public function InsertPage ($title, $url, $idTemplate, $keywords, $description, $body, $date)
+	{
+		$sql = "INSERT INTO pages (title, text, url, published, id_template, keywords, description, added) 
+		        VALUES ('$title', '$body', '$url', 1, '$idTemplate', '$keywords', '$description', '$date')";
+		
+		if (!mysql_query($sql))
+		{
+			$error = "Ошибка добавления новой страницы в базу.Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
+		}
+	}
 }
+
 ?>

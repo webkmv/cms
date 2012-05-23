@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	/**
-	 * Сохранение шаблона
+	 * Сохранение страницы
 	 */
 	$("#viewTplForm").submit(function() {
 		if ($("#titleViewTemplate").val() == "") {
@@ -19,6 +19,9 @@ $(document).ready(function() {
 			url : "save_tpl.php",
 			data : str,
 			success : function(msg) {
+				if (msg == "") {
+					document.location.href = 'pages.php';
+				}
 				$(".hint").html("<p>" + msg + "</p>");
 			}
 		});
@@ -26,35 +29,21 @@ $(document).ready(function() {
 	});
 
 	/**
-	 * Добавление шаблона
+	 * Добавление страницы
 	 */
-	$("#formAddTemplate").submit(function() {
-		if ($("#titleAddTemplate").val() == "") {
-			$("#addTemplateErrors").html("<p>Укажите название шаблона.</p>");
-			return false;
-		}
-
-		if ($("#sumBlocksAddTemplate").val() == "") {
-			$("#addTemplateErrors").html("<p>Укажите количество блоков.</p>");
-			return false;
-		}
-
-		if ($("#filenameAddTemplate").val() == "") {
-			$("#addTemplateErrors").html("<p>Выберите файл.</p>");
+	$("#formAddPage").submit(function() {
+		if ($("#titleAddPage").val() == "") {
+			$("#addPageErrors").html("<p>Укажите title страницы.</p>");
 			return false;
 		}
 
 		var str = $(this).serialize();
 		$.ajax({
 			type : "POST",
-			url : "add_tpl.php",
+			url : "add_page.php",
 			data : str,
 			success : function(msg) {
-				/*if ($("#addTemplateErrors").val() == "") {
-					document.location.href = 'tpls.php';
-				}*/
-
-				$("#addTemplateErrors").html("<p>" + msg + "</p>");
+				$("#addPageErrors").html("<p>" + msg + "</p>");
 			}
 		});
 		return false;
