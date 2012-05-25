@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 14:19:40
-         compiled from "core/templates/templates/list_pages.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10649622144fbf5cbc27a625-46272913%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 14:19:35
+         compiled from "core/templates/templates/view_page.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:21200047044fbf5924728476-25891455%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
+    '0a48ee5a363dd003294e0394e806103642ed8494' => 
     array (
-      0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1337782945,
+      0 => 'core/templates/templates/view_page.tpl',
+      1 => 1337940215,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -23,24 +23,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10649622144fbf5cbc27a625-46272913',
+  'nocache_hash' => '21200047044fbf5924728476-25891455',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fbf59247b4291_01341568',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbf5cbc2f2d46_52702555',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fbf5cbc2f2d46_52702555')) {function content_4fbf5cbc2f2d46_52702555($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fbf59247b4291_01341568')) {function content_4fbf59247b4291_01341568($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>Страницы</title>	
+    <title>Страница <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link href="core/media/css/style.css" rel="stylesheet" type="text/css" />
@@ -120,36 +121,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				
 		
 <a href="windowAddPage.php" class="addPage">Создать</a>
-
-  <table class="modul_table">
-  <thead>
-  	<tr>
-  		<th>Название</th>
-		<th>Публиковать</th>
-		<th>Главная</th>
-		<th>Удалить</th>
-	</tr>
-	</thead>
-	<tbody>
-   		<?php  $_smarty_tpl->tpl_vars['page'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['page']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['pages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['page']->key => $_smarty_tpl->tpl_vars['page']->value){
-$_smarty_tpl->tpl_vars['page']->_loop = true;
+<div>
+<form method="post" enctype="multipart/form-data" id="formPage" action="save_page.php">
+	Title: <input type="text" name="title" id="titlePage" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+" /><br />
+	URL: <input type="text" name="url" id="urlPage" value="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
+"><br />    
+	Шаблон: <select name="template" id="listTemplates">
+	  <?php  $_smarty_tpl->tpl_vars['template'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['template']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['templates']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['template']->key => $_smarty_tpl->tpl_vars['template']->value){
+$_smarty_tpl->tpl_vars['template']->_loop = true;
 ?>
-   			<tr>
-      			<td><a href="view_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['page']->value['title'];?>
-</a></td>
-      			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['published'];?>
-</td>
-      			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['is_index'];?>
-</td>
-      			<td class="del"><a href="delete_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-">-</a></td>
-    		</tr>
-    	<?php } ?>
-    </tbody>
-  </table>
+	  	<option value=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
+><?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
+</option>
+	  <?php } ?>
+	</select>
+	Keywords: <input type="text" name="keywords" id="keywordsPage" value="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+" /><br />
+	Description: <textarea rows="10" cols="45" name="description" id="descriptionPage"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</textarea><br />
+	<textarea rows="10" cols="45" name="body" id="bodyPage"><?php echo $_smarty_tpl->tpl_vars['body']->value;?>
+</textarea><br />
+	<input type="hidden" name="idPage" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+"/>
+	<input type="submit" value="Добавить" id="btnPage" />
+</div>
 
 						
 			</div>

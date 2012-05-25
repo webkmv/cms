@@ -87,12 +87,12 @@ class ModelPages
 	}
 	
 	/**
-	 * Получить страницу для просмотра
+	 * Получить страницу по указанному id
 	 * @param int $idPage идентификатор страницы
 	 * @throws Exception
 	 * @return возвращает массив с 2 элементами (массивами). Первый - список шаблонов страницы; второй - сама страница
 	 */
-	public function GetPageByIdForView ($idPage)
+	public function GetPageById($idPage)
 	{
 		$sql = "SELECT * FROM pages WHERE id='$idPage'";
 		if (!$query = mysql_query($sql))
@@ -102,16 +102,16 @@ class ModelPages
 			throw new Exception($error);
 		}
 		
-		$page = mysql_fetch_array($query);
+		//$page = mysql_fetch_array($query);
 		
-		$modelTemplates = new ModelTemplates();
+		/*$modelTemplates = new ModelTemplates();
 		$templates = $modelTemplates->GetTemplaesByViewPage((int)$page["id_template"]);
 		
 		$result = array();
 		$result[] = $templates;
-		$result[] = $page;
+		$result[] = $page;*/
 		
-		return $result;
+		return mysql_fetch_array($query);
 	}
 }
 
