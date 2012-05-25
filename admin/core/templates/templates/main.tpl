@@ -15,6 +15,7 @@
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/news.js"></script>
 
 </head>
 <body>
@@ -46,7 +47,7 @@
 			<!-- left menu -->
 			<div class="content_menu">
 				<a href="pages" class="menu_head ico1">Страницы</a>
-				<a href="#" class="menu_head ico2">Модули</a>			
+				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>
 				<a href="tpls.php" class="menu_head ico5">Шаблоны</a>

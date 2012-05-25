@@ -1,19 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 11:29:28
-         compiled from "core/templates/templates/list_templates.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12380683794fbf34093cb973-23739610%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 12:05:45
+         compiled from "core/templates/templates/list_news.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:10571623374fbe18795c8be9-52227661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '097b827695ed5abbb01de3eacb32a2132b0962e2' => 
+    'b0ed43cb7cacaadc5e47a9158dac350e233f30aa' => 
     array (
-      0 => 'core/templates/templates/list_templates.tpl',
-      1 => 1337757961,
-      2 => 'file',
-    ),
-    '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
-    array (
-      0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1337685569,
+      0 => 'core/templates/templates/list_news.tpl',
+      1 => 1337928723,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
@@ -23,24 +17,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12380683794fbf34093cb973-23739610',
+  'nocache_hash' => '10571623374fbe18795c8be9-52227661',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbf340943c585_20501199',
+  'unifunc' => 'content_4fbe18796359c5_12374607',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fbf340943c585_20501199')) {function content_4fbf340943c585_20501199($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fbe18796359c5_12374607')) {function content_4fbe18796359c5_12374607($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>Шаблоны</title>	
+    <title>default title</title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link href="core/media/css/style.css" rel="stylesheet" type="text/css" />
@@ -119,40 +113,46 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 				<br />
 				
-		
-<a href="windowAddTemplate.php" class="addTemplate">Добавить</a>
+<a href="windowAddNews.php" class="addNews">Создать</a>
+<table class="modul_table">
+    <thead>
+	<tr>
+            <th class="middle">Заголовок</th>
+	    <th class="middle">Дата</th>
+	    <th class="min">Автор</th>
+	    <th class="min">Просмотров</th>
+            <th class="middle">Опубиковать</th>
+            <th class="middle">Ссылка</th>
+	</tr>
+    </thead>
 
-  <table class="modul_table">
-  <thead>
-					<tr>
-						<th class="large">Название</th>
-						<th class="middle">Путь</th>
-						<th class="min">Дата</th>
-						<th class="min">Удалить</th>
-					</tr>
-					</thead>
-					<tbody>
-   <?php  $_smarty_tpl->tpl_vars['template'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['template']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['templates']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['template']->key => $_smarty_tpl->tpl_vars['template']->value){
-$_smarty_tpl->tpl_vars['template']->_loop = true;
+    <tbody>
+        <?php  $_smarty_tpl->tpl_vars['new'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['new']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['news']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['new']->key => $_smarty_tpl->tpl_vars['new']->value){
+$_smarty_tpl->tpl_vars['new']->_loop = true;
 ?>
-   <tr>
-      <td><a href="view_tpl.php?id=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
+        <tr>
+            <td><a href="view_news.php?id=<?php echo $_smarty_tpl->tpl_vars['new']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['new']->value['title'];?>
 </a></td>
-      <td><?php echo $_smarty_tpl->tpl_vars['template']->value['path'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['new']->value['date'];?>
 </td>
-      <td><?php echo $_smarty_tpl->tpl_vars['template']->value['created'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['new']->value['author'];?>
 </td>
-      <td class="del"><a href="delete_template.php?id=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
-">-</a></td>
-    </tr>
-    <?php } ?>
+            <td><?php echo $_smarty_tpl->tpl_vars['new']->value['views'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['new']->value['published'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['new']->value['alias'];?>
+</td>
+            <!--<td class="del"><a href="delete_template.php?id=<?php echo $_smarty_tpl->tpl_vars['new']->value['id'];?>
+">-</a></td>-->
+        </tr>
+        <?php } ?>
     </tbody>
-  </table>
-
-						
+</table>
+					
 			</div>
      </div></div>
 	<!-- CONTENT // -->
