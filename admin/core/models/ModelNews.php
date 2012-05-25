@@ -62,17 +62,33 @@ class ModelNews
                                     $text, $date, $author, $views, $published, $alias)
 	{
 		$sql = "INSERT INTO news (title, keywords, description, text, date, author,
-                                          views, alias) 
+                                          views, published, alias) 
 		        VALUES ('$title', '$keywords', '$description',
-                                    '$text', '$date', '$author', '$views', '$published', '$alias')";
+                                 '$text', '$date', '$author', '$views', '$published', '$alias')";
 		
 		if (!mysql_query($sql))
 		{
-			$error = "Ошибка добавления новой страницы в базу.Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$error = "Ошибка добавления новости в базу.Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
 			$this->_logs->AddLog($error);
 			throw new Exception($error);
 		}
 	}
+	
+	/*
+	 * Получить новость по ее идентификатору (id)
+	 * @param int $id id новости
+	 * @return associative array: хеш с данными новости
+	 */
+  public function GetNewsFromId ($id)
+  {
+  	$query = "SELECT * FROM news WHERE id=$id";
+  	if(!$result = mysql_query($query))
+  	{
+  		$this->_logs->AddLog(mysql_error());
+  		die (mysql_errno());
+  	}
+  	return mysql_fetch_array($result);
+  }
 }
 
 ?>

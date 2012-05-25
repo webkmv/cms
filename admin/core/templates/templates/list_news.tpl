@@ -1,6 +1,6 @@
 {extends file="main.tpl"}
 {block name=body}
-<a href="windowAddNews.php" class="addPage">Создать</a>
+<a href="windowAddNews.php" class="addNews">Создать</a>
 <table class="modul_table">
     <thead>
 	<tr>

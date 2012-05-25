@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-24 15:26:32
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 12:05:45
          compiled from "core/templates/templates/list_news.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10571623374fbe18795c8be9-52227661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,13 +7,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b0ed43cb7cacaadc5e47a9158dac350e233f30aa' => 
     array (
       0 => 'core/templates/templates/list_news.tpl',
-      1 => 1337858790,
+      1 => 1337928723,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337757961,
+      1 => 1337930961,
       2 => 'file',
     ),
   ),
@@ -46,6 +46,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/news.js"></script>
 
 </head>
 <body>
@@ -77,7 +78,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<!-- left menu -->
 			<div class="content_menu">
 				<a href="pages" class="menu_head ico1">Страницы</a>
-				<a href="#" class="menu_head ico2">Модули</a>			
+				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>
 				<a href="tpls.php" class="menu_head ico5">Шаблоны</a>
@@ -112,7 +113,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 				<br />
 				
-<a href="windowAddNews.php" class="addPage">Создать</a>
+<a href="windowAddNews.php" class="addNews">Создать</a>
 <table class="modul_table">
     <thead>
 	<tr>
