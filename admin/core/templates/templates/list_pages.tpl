@@ -23,7 +23,13 @@
       					<a href="public_page.php?id={$page.id}&state=1">Не публиковать</a>
       				{/if}
       			</td>
-      			<td>{$page.is_index}</td>
+      			<td>
+      			{if $page.is_index == 1}
+      				<a href="set_main.php?id={$page.id}&state=0">Главная</a>
+      			{else}
+      				<a href="set_main.php?id={$page.id}&state=1">Не главная</a>
+      			{/if}
+      			</td>
       			<td class="del"><a href="delete_page.php?id={$page.id}">-</a></td>
     		</tr>
     	{/foreach}

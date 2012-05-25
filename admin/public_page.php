@@ -9,7 +9,7 @@ try
 	$state = $_GET["state"];
 	
 	$model = new ModelPages();
-	$model->UpdatePublished((int)$id, (int)$state);
+	$model->UpdatePublished($id, $state);
 	
 	header('Location: pages.php');
 }

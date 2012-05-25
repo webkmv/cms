@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 14:19:35
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 16:24:40
          compiled from "core/templates/templates/view_page.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21200047044fbf5924728476-25891455%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0a48ee5a363dd003294e0394e806103642ed8494' => 
     array (
       0 => 'core/templates/templates/view_page.tpl',
-      1 => 1337940215,
+      1 => 1337948639,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337941172,
+      1 => 1337945193,
       2 => 'file',
     ),
   ),
@@ -53,6 +53,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
 </head>
 <body>
@@ -122,7 +124,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		
 <a href="windowAddPage.php" class="addPage">Создать</a>
 <div>
-<form method="post" enctype="multipart/form-data" id="formPage" action="save_page.php">
+<form method="post" id="formPage">
 	Title: <input type="text" name="title" id="titlePage" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 " /><br />
 	URL: <input type="text" name="url" id="urlPage" value="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
@@ -146,7 +148,8 @@ $_smarty_tpl->tpl_vars['template']->_loop = true;
 </textarea><br />
 	<input type="hidden" name="idPage" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 "/>
-	<input type="submit" value="Добавить" id="btnPage" />
+	<input type="submit" value="Сохранить" id="btnPage" />
+	<input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'pages.php'";/>
 </div>
 
 						

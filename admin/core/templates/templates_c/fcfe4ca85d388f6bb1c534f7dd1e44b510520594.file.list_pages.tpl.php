@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 14:51:44
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 17:47:49
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10649622144fbf5cbc27a625-46272913%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1337943100,
+      1 => 1337953632,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337941172,
+      1 => 1337945193,
       2 => 'file',
     ),
   ),
@@ -52,6 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
 </head>
 <body>
@@ -149,8 +151,15 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
 &state=1">Не публиковать</a>
       				<?php }?>
       			</td>
-      			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['is_index'];?>
-</td>
+      			<td>
+      			<?php if ($_smarty_tpl->tpl_vars['page']->value['is_index']==1){?>
+      				<a href="set_main.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=0">Главная</a>
+      			<?php }else{ ?>
+      				<a href="set_main.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=1">Не главная</a>
+      			<?php }?>
+      			</td>
       			<td class="del"><a href="delete_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
 ">-</a></td>
     		</tr>

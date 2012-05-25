@@ -121,6 +121,29 @@ class ModelPages
 			throw new Exception($error);
 		}
 	}
+	
+	/**
+	 * Сохранение данных страницы
+	 * @param array $data - массив с данными формы 
+	 * @throws Exception
+	 */
+	public function SavePage ($data)
+	{
+		$sql = "UPDATE pages 
+				SET title='".$data["title"]."', 
+					text='".$data["body"]."', 
+					url='".$data["url"]."', 
+					id_template='".$data["template"]."', 
+					keywords='".$data["keywords"]."', 
+					description='".$data["description"]."' 
+				WHERE id = ".$data["idPage"];
+		if (!mysql_query($sql))
+		{
+			$error = "Ошибка сохранение страницы № ".$data["idPage"]." Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
+		}
+	}
 }
 
 ?>

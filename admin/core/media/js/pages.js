@@ -51,4 +51,23 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+
+	/**
+	 * Сохранение страницы
+	 */
+	$("#formPage").submit(function() {
+		$(".hint").html("<p>Сохраняется...</p>");
+		var str = $(this).serialize();
+		$.ajax({
+			type : "POST",
+			url : "save_page.php",
+			data : str,
+			success : function(msg) {
+				$(".hint").html("<p>" + msg + "</p>");
+			}
+		});
+
+		return false;
+	});
+
 });

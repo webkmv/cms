@@ -1,41 +1,41 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 11:29:28
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 16:17:48
          compiled from "core/templates/templates/list_templates.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12380683794fbf34093cb973-23739610%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2924410064fbf786c9fccf1-64611739%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '097b827695ed5abbb01de3eacb32a2132b0962e2' => 
     array (
       0 => 'core/templates/templates/list_templates.tpl',
-      1 => 1337757961,
+      1 => 1337712761,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1337685569,
+      1 => 1336249720,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337930961,
+      1 => 1337945193,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12380683794fbf34093cb973-23739610',
+  'nocache_hash' => '2924410064fbf786c9fccf1-64611739',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbf340943c585_20501199',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fbf786ca811f0_17953064',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fbf340943c585_20501199')) {function content_4fbf340943c585_20501199($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fbf786ca811f0_17953064')) {function content_4fbf786ca811f0_17953064($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,7 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
-	<script type="text/javascript" src="core/media/js/news.js"></script>
+	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
 </head>
 <body>
