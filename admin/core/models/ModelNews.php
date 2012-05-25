@@ -79,16 +79,31 @@ class ModelNews
 	 * @param int $id id новости
 	 * @return associative array: хеш с данными новости
 	 */
-  public function GetNewsFromId ($id)
-  {
-  	$query = "SELECT * FROM news WHERE id=$id";
-  	if(!$result = mysql_query($query))
-  	{
-  		$this->_logs->AddLog(mysql_error());
-  		die (mysql_errno());
-  	}
-  	return mysql_fetch_array($result);
-  }
+	public function GetNewsFromId ($id)
+	{	
+		$query = "SELECT * FROM news WHERE id=$id";
+		if(!$result = mysql_query($query))
+		{
+			$this->_logs->AddLog(mysql_error());
+			die (mysql_errno());
+		}
+		return mysql_fetch_array($result);
+	}
+  
+       /**
+        *   Удаление новости
+        * 
+        *   @param int $id - id шаблона
+        */
+        public function DeleteNews($id)
+        {
+            if (!mysql_query("DELETE FROM news WHERE id=$id"))
+            {
+                $error = "Не получается удалить новость. Подробнее: ".mysql_error();
+                $this->_logs->AddLog($error);
+                die ($error);
+            }
+        }
 }
 
 ?>

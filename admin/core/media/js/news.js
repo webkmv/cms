@@ -1,39 +1,30 @@
 $(document).ready(function() {
 	/**
-	 * Сохранение страницы
-	 
-	$("#viewTplForm").submit(function() {
-		if ($("#titleViewTemplate").val() == "") {
-			$(".hint").html("<p>Укажите название шаблона.</p>");
-			return false;
-		}
-
-		if ($("#blocksViewTemplate").val() == "") {
-			$(".hint").html("<p>Укажите количество блоков.</p>");
-			return false;
-		}
-
-		var str = $(this).serialize();
-		$.ajax({
-			type : "POST",
-			url : "save_tpl.php",
-			data : str,
-			success : function(msg) {
-				if (msg == "") {
-					document.location.href = 'pages.php';
-				}
-				$(".hint").html("<p>" + msg + "</p>");
-			}
-		});
-		return false;
-	});
-        */
-	/**
 	 * Добавление страницы
 	 */
 	$("#formAddNews").submit(function() {
 		if ($("#titleAddNews").val() == "") {
-			$("#addNewsErrors").html("<p>Укажите title страницы.</p>");
+			$("#addNewsErrors").html("<p>Укажите заголовок страницы.</p>");
+			return false;
+		}
+		if ($("#keywordsAddNews").val() == "") {
+			$("#addNewsErrors").html("<p>Укажите ключевые слова страницы.</p>");
+			return false;
+		}
+		if ($("#descriptionAddNews").val() == "") {
+			$("#addNewsErrors").html("<p>Укажите описание страницы.</p>");
+			return false;
+		}
+		if ($("#textAddNews").val() == "") {
+			$("#addNewsErrors").html("<p>Укажите текст страницы.</p>");
+			return false;
+		}
+		if ($("#aliasAddNews").val() == "") {
+			$("#addNewsErrors").html("<p>Укажите ссылку страницы.</p>");
+			return false;
+		}
+		if ($("#authorAddNews").val() == "") {
+			$("#addNewsErrors").html("<p>Укажите автора страницы.</p>");
 			return false;
 		}
 
@@ -43,6 +34,9 @@ $(document).ready(function() {
 			url : "add_news.php",
 			data : str,
 			success : function(msg) {
+				if (msg == "") {
+				    document.location.href = 'articles.php';
+				}
 				$("#addNewsErrors").html("<p>" + msg + "</p>");
 			}
 		});

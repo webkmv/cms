@@ -10,6 +10,7 @@
 	    <th class="min">Просмотров</th>
             <th class="middle">Опубиковать</th>
             <th class="middle">Ссылка</th>
+	    <th>Удалить</th>
 	</tr>
     </thead>
 
@@ -22,7 +23,7 @@
             <td>{$new.views}</td>
             <td>{$new.published}</td>
             <td>{$new.alias}</td>
-            <!--<td class="del"><a href="delete_template.php?id={$new.id}">-</a></td>-->
+            <td class="del"><a href="delete_news.php?id={$new.id}">-</a></td>
         </tr>
         {/foreach}
     </tbody>

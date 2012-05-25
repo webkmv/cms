@@ -15,7 +15,6 @@
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
-	<script type="text/javascript" src="core/media/js/news.js"></script>
 
 </head>
 <body>
