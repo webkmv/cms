@@ -16,7 +16,13 @@
    		{foreach $pages as $page}
    			<tr>
       			<td><a href="view_page.php?id={$page.id}">{$page.title}</a></td>
-      			<td>{$page.published}</td>
+      			<td>
+      				{if $page.published == 0}
+      					<a href="public_page.php?id={$page.id}&state=0">Публиковать</a>
+      				{else}
+      					<a href="public_page.php?id={$page.id}&state=1">Не публиковать</a>
+      				{/if}
+      			</td>
       			<td>{$page.is_index}</td>
       			<td class="del"><a href="delete_page.php?id={$page.id}">-</a></td>
     		</tr>

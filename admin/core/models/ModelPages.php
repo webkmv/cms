@@ -102,16 +102,24 @@ class ModelPages
 			throw new Exception($error);
 		}
 		
-		//$page = mysql_fetch_array($query);
-		
-		/*$modelTemplates = new ModelTemplates();
-		$templates = $modelTemplates->GetTemplaesByViewPage((int)$page["id_template"]);
-		
-		$result = array();
-		$result[] = $templates;
-		$result[] = $page;*/
-		
 		return mysql_fetch_array($query);
+	}
+	
+	/**
+	 * Обновление состояния публикации страницы
+	 * @param int $idPage номер страницы
+	 * @param int $state состояние
+	 * @throws Exception
+	 */
+	public function UpdatePublished ($idPage, $state)
+	{
+		$sql = "UPDATE pages SET published=".$state." WHERE id=".$idPage;
+		if (!mysql_query($sql))
+		{
+			$error = "Ошибка публикации страницы № $idPage. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
+		}
 	}
 }
 

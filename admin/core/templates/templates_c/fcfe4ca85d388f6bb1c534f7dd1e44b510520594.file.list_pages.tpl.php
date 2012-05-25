@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 14:19:40
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 14:51:44
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10649622144fbf5cbc27a625-46272913%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1337782945,
+      1 => 1337943100,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fbf5cbc2f2d46_52702555',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbf5cbc2f2d46_52702555',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fbf5cbc2f2d46_52702555')) {function content_4fbf5cbc2f2d46_52702555($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
@@ -140,8 +140,15 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
       			<td><a href="view_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['page']->value['title'];?>
 </a></td>
-      			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['published'];?>
-</td>
+      			<td>
+      				<?php if ($_smarty_tpl->tpl_vars['page']->value['published']==0){?>
+      					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=0">Публиковать</a>
+      				<?php }else{ ?>
+      					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=1">Не публиковать</a>
+      				<?php }?>
+      			</td>
       			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['is_index'];?>
 </td>
       			<td class="del"><a href="delete_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
