@@ -103,11 +103,25 @@ class ModelTemplates
    */
   public function DeleteTemplate($idTemplate)
   {
+  	$sql = "SELECT * FROM templates WHERE id=".$idTemplate;
+  	
+  	if (!$query = mysql_query($sql))
+  	{
+  		$error = "Не получается извлеч шаблон шаблон. Подробнее: ".mysql_error();
+  		$this->_logs->AddLog($error);
+  		throw Exception($error);
+  	}
+  	else
+  	{
+  		$template = mysql_fetch_array($query);
+  		unlink($template["path"]);
+  	}
+  	
   	if (!mysql_query("DELETE FROM templates WHERE id=$idTemplate"))
   	{
   		$error = "Не получается удалить шаблон. Подробнее: ".mysql_error();
   		$this->_logs->AddLog($error);
-  		die ($error);
+  		throw Exception($error);
   	}
   }
   
