@@ -71,7 +71,7 @@ class ModelInstallerCMS
 		}
 
 		$added = date("Y-m-j H:i:s");
-		$sql = "INSERT INTO pages (title, published, is_index, added) VALUES ('Главная страница', 1, 1, '$added')";
+		$sql = "INSERT INTO pages (title, is_index, added) VALUES ('Главная страница', 1, '$added')";
 
 		if (!mysql_query($sql))
 		{

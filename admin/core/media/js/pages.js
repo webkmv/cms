@@ -33,9 +33,23 @@ $(document).ready(function() {
 	 */
 	$("#formAddPage").submit(function() {
 		if ($("#titleAddPage").val() == "") {
-			$(".hint").html("<p>Укажите title страницы.</p>");
+			$("#addPageErrors").html("<p>Укажите title страницы.</p>");
 			return false;
 		}
+
+		var str = $(this).serialize();
+		$.ajax({
+			type : "POST",
+			url : "add_page.php",
+			data : str,
+			success : function(msg) {
+				if (msg == '') {
+					document.location.href = 'pages.php';
+				}
+				$("#addPageErrors").html("<p>" + msg + "</p>");
+			}
+		});
+		return false;
 	});
 
 	/**

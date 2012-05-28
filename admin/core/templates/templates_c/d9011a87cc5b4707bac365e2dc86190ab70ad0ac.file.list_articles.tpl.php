@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 13:15:04
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 09:38:33
          compiled from "core/templates/templates/list_articles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19727780964fbf4a55df7e16-27255686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd9011a87cc5b4707bac365e2dc86190ab70ad0ac' => 
     array (
       0 => 'core/templates/templates/list_articles.tpl',
-      1 => 1337930522,
+      1 => 1338190711,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1337685569,
+      1 => 1338150252,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337937300,
+      1 => 1338150252,
       2 => 'file',
     ),
   ),
@@ -52,6 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
 </head>
 <body>
@@ -137,7 +139,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['article']->key => $_smarty_tpl->tpl_v
 $_smarty_tpl->tpl_vars['article']->_loop = true;
 ?>
                 <tr>
-                    <td><a href="view_page.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
+                    <td><a href="view_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['article']->value['title'];?>
 </a></td>
                     <td><?php echo $_smarty_tpl->tpl_vars['article']->value['author'];?>

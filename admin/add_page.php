@@ -21,7 +21,7 @@ try
 	$model = new ModelPages();
 	$model->InsertPage($title, $url, $idTemplate, $keywords, $description, $body, $dateNow);
 	
-	header('Location: pages.php');
+	//header('Location: pages.php');
 }
 catch (Exception $exception)
 {
