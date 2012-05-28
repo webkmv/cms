@@ -1,4 +1,4 @@
-<!--<script type="text/javascript" src="core/media/js/tpls.js"></script>-->
+<script type="text/javascript" src="core/media/js/tpls.js"></script>
 <form method="post" enctype="multipart/form-data" id="formAddTemplate" action="add_tpl.php">
 Название: <input type="text" name="title" id="titleAddTemplate" /><br />
 Количество блоков: <input type="text" name="sum_blocks" id="sumBlocksAddTemplate"><br />

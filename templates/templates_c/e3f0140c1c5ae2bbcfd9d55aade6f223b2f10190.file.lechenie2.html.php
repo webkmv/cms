@@ -1,4 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:31:35
+         compiled from "templates/templates/lechenie2.html" */ ?>
+<?php /*%%SmartyHeaderCode:7899123594fc3522eafaf35-95642236%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e3f0140c1c5ae2bbcfd9d55aade6f223b2f10190' => 
+    array (
+      0 => 'templates/templates/lechenie2.html',
+      1 => 1338201091,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '7899123594fc3522eafaf35-95642236',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc3522eb25c27_01539033',
+  'variables' => 
+  array (
+    'content' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_4fc3522eb25c27_01539033')) {function content_4fc3522eb25c27_01539033($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,7 +63,8 @@
 </head>
 
 <body>
-{$content}
+<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
 	<!-- // PAGE -->
 	<div class="page">
 	
@@ -509,4 +535,4 @@
 			
 			<dl>
 				<dt class="mt20"><label for="wishes">Пожелания</label></dt>
-				<dd><textarea id="wishes">
+				<dd><textarea id="wishes"><?php }} ?>

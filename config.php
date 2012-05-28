@@ -10,9 +10,11 @@ define ('DIR_ADMIN_VIEWS', DIR_ADMIN_CORE."views/");
 define ('DIR_ADMIN_MODELS', DIR_ADMIN_CORE."models/");
 define ('DIR_ADMIN_TEMPLATES', DIR_ADMIN_CORE."templates/templates/");
 define ('DIR_SITE_TEMPLATES', DIR_ROOT."templates/templates/");
+define ('DIR_SITE_CORE', DIR_ROOT."core/");
+define ('DIR_SITE_MODELS', DIR_SITE_CORE."models/");
+define ('DIR_SITE_VIEWS', DIR_SITE_CORE."views/");
 
 // параметры загрузки файлов
-// пока почему-то не работает...???
 define ('UPLOAD_MAX_FILESIZE', (1024 * 1024 * 50)); // максимальный размер загружаемого файла в мегабайтах
 
 // база данных
