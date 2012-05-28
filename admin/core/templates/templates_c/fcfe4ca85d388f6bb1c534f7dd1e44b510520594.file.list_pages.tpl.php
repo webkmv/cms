@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 18:26:03
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 11:33:45
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10649622144fbf5cbc27a625-46272913%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1337955958,
+      1 => 1338190292,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -121,9 +121,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<br />
 				
 		
-<form method="post" id="formListPages">
-<a href="windowAddPage.php" class="addPage">Создать</a>
-<input type="submit" value="Сохранить">
+<a href="windowAddPage.php">Создать</a>
 
   <table class="modul_table">
   <thead>
@@ -146,24 +144,23 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
 </a></td>
       			<td>
       				<?php if ($_smarty_tpl->tpl_vars['page']->value['published']==0){?>
-      					<input type="checkbox" name="!isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-" />
-      					<!--a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=0">Публиковать</a -->
+      					<!--input type="checkbox" name="!isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+" / -->
+      					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=0">Публиковать</a>
       				<?php }else{ ?>
-      					<input type="checkbox" name="isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-" checked="yes" />
-      					<!--a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=1" >Не публиковать</a -->
+      					<!--input type="checkbox" name="isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+" checked="yes" / -->
+      					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=1" >Не публиковать</a>
       				<?php }?>
       			</td>
       			<td>
       			<?php if ($_smarty_tpl->tpl_vars['page']->value['is_index']==1){?>
-      				<input type="radio" name="isIndex" value="0" checked>
-      				<!-- a href="set_main.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=0">Главная</a -->
+      				<!-- input type="radio" name="isIndex" value="0" checked -->
+      				Главная
       			<?php }else{ ?>
-      				<input type="radio" name="notIndex" value="1">
+      				<!-- input type="radio" name="notIndex" value="1" -->
       			<?php }?>
       			</td>
       			<td class="del"><a href="delete_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
@@ -172,7 +169,6 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
     	<?php } ?>
     </tbody>
   </table>
- </form>
 
 						
 			</div>

@@ -27,3 +27,6 @@ ak poadf b'lkdm lkds hbui' at line 2
 |28.05.2012 11:12:13| Run install.
 |28.05.2012 11:12:13| Creating tables...
 |28.05.2012 11:12:13| Teble 'Pages' created
+|28.05.2012 11:45:47| Run install.
+|28.05.2012 11:45:47| Creating tables...
+|28.05.2012 11:45:48| Teble 'Pages' created
