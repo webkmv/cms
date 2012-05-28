@@ -43,20 +43,5 @@ $(document).ready(function() {
 			$("#addTemplateErrors").html("<p>Выберите файл.</p>");
 			return false;
 		}
-
-		var str = $(this).serialize();
-		$.ajax({
-			type : "POST",
-			url : "add_tpl.php",
-			data : str,
-			success : function(msg) {
-				/*if ($("#addTemplateErrors").val() == "") {
-					document.location.href = 'tpls.php';
-				}*/
-
-				$("#addTemplateErrors").html("<p>" + msg + "</p>");
-			}
-		});
-		return false;
 	});
 });

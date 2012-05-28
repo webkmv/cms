@@ -15,6 +15,7 @@ else
 	$sumBlocks = (int)$_POST["sum_blocks"];
 	$tmpFilename = $_FILES["filename"]['tmp_name'];
 	$filename = $_FILES["filename"]['name'];
+	
 	$fileToSave = DIR_SITE_TEMPLATES.$filename;
 	$dateNow = date("Y-m-j");
 	

@@ -4,12 +4,9 @@ require_once 'core/configcore.php';
 require_once DIR_ADMIN_MODELS.'ModelPages.php';
 
 try
-{
-	$id = $_GET["id"];
-	$state = $_GET["state"];
-	
+{	
 	$model = new ModelPages();
-	$model->UpdatePublished($id, $state);
+	$model->UpdatePublished($_GET);
 	
 	header('Location: pages.php');
 }

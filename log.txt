@@ -12,3 +12,18 @@
 |22.05.2012 23:32:19| Ошибка добавления новой страницы в базу.Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '66'. Ошибка: 
 |25.05.2012 14:01:56| Ошибка добавления новой страницы в базу.  Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '67'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sdaj ildsf blkdsa bldfk nbjk;dfn bkj;adf ;adlkpoabdk 
 ak poadf b'lkdm lkds hbui' at line 2
+|28.05.2012 11:00:10| Run install.
+|28.05.2012 11:00:10| Creating tables...
+|28.05.2012 11:00:10| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages ('Главная страница', ' ', ' ', 1, 1, '', '', 201' at line 1
+|28.05.2012 11:00:10| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages ('Главная страница', ' ', ' ', 1, 1, '', '', 201' at line 1
+|28.05.2012 11:07:29| Run install.
+|28.05.2012 11:07:29| Creating tables...
+|28.05.2012 11:07:29| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages (title, is_index, added) VALUES ('Главная страниц' at line 1
+|28.05.2012 11:07:29| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages (title, is_index, added) VALUES ('Главная страниц' at line 1
+|28.05.2012 11:08:58| Run install.
+|28.05.2012 11:08:58| Creating tables...
+|28.05.2012 11:08:58| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11:08:58)' at line 1
+|28.05.2012 11:08:58| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11:08:58)' at line 1
+|28.05.2012 11:12:13| Run install.
+|28.05.2012 11:12:13| Creating tables...
+|28.05.2012 11:12:13| Teble 'Pages' created
