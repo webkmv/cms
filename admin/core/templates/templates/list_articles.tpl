@@ -1,6 +1,5 @@
-{extends file="main_templates.tpl"}
-{block name=title}Статьи{/block}
-{block name=bodyTemplate}
+{extends file="main.tpl"}
+{block name=body}
 <a href="windowAddArticle.php" class="addPage">Создать</a>
 
   <table class="modul_table">
@@ -15,7 +14,7 @@
 	<tbody>
             {foreach $articles as $article}
                 <tr>
-                    <td><a href="view_article.php?id={$article.id}" class="addPage">{$article.title}</a></td>
+                    <td><a href="view_article.php?id={$article.id}">{$article.title}</a></td>
                     <td>{$article.author}</td>
                     <td>{$article.published}</td>
                     <td class="del"><a href="delete_article.php?id={$article.id}">-</a></td>
