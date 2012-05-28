@@ -1,41 +1,49 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 15:06:04
+=======
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 13:10:24
+>>>>>>> 31dee6054a6913eda381b9a0f1aef85cad016c4b
          compiled from "core/templates/templates/view_news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2145604474fc3398ce81b32-35998122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5642690894fc35d20b2af06-54244122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f63c629b4b1d242fb3ba1cfa748afbc29bb778d9' => 
     array (
       0 => 'core/templates/templates/view_news.tpl',
+<<<<<<< HEAD
       1 => 1338203156,
+=======
+      1 => 1338197676,
+>>>>>>> 31dee6054a6913eda381b9a0f1aef85cad016c4b
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1337914462,
+      1 => 1338197676,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337914462,
+      1 => 1338197676,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2145604474fc3398ce81b32-35998122',
+  'nocache_hash' => '5642690894fc35d20b2af06-54244122',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc3398cf04964_38455552',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc35d20ba6052_07907492',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc3398cf04964_38455552')) {function content_4fc3398cf04964_38455552($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc35d20ba6052_07907492')) {function content_4fc35d20ba6052_07907492($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

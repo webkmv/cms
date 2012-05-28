@@ -1,62 +1,40 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 12:41:35
-=======
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 09:38:33
->>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 12:49:15
          compiled from "core/templates/templates/list_articles.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17510295174fc33a3f54d968-77910715%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12552147834fc34cb8937e23-56721510%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd9011a87cc5b4707bac365e2dc86190ab70ad0ac' => 
     array (
       0 => 'core/templates/templates/list_articles.tpl',
-<<<<<<< HEAD
-      1 => 1337914462,
-=======
-      1 => 1338190711,
->>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
-      2 => 'file',
-    ),
-    '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
-    array (
-      0 => 'core/templates/templates/main_templates.tpl',
-<<<<<<< HEAD
-      1 => 1337914462,
-=======
-      1 => 1338150252,
->>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
+      1 => 1338202050,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-<<<<<<< HEAD
-      1 => 1337914462,
-=======
-      1 => 1338150252,
->>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
+      1 => 1338197676,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17510295174fc33a3f54d968-77910715',
+  'nocache_hash' => '12552147834fc34cb8937e23-56721510',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc34cb89a7c51_68292432',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc33a3f6009a3_91091744',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc33a3f6009a3_91091744')) {function content_4fc33a3f6009a3_91091744($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc34cb89a7c51_68292432')) {function content_4fc34cb89a7c51_68292432($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>Статьи</title>	
+    <title>default title</title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link href="core/media/css/style.css" rel="stylesheet" type="text/css" />
@@ -136,16 +114,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 				<br />
 				
-		
 <a href="windowAddArticle.php" class="addPage">Создать</a>
 
   <table class="modul_table">
   <thead>
   	<tr>
-  		<th>Название</th>
-                <th>Автор</th>
-		<th>Публиковать</th>
-		<th>Удалить</th>
+  		<th class="middle">Название</th>
+                <th class="middle">Автор</th>
+		<th class="min">Публиковать</th>
+		<th class="min">Удалить</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -168,8 +145,7 @@ $_smarty_tpl->tpl_vars['article']->_loop = true;
             <?php } ?>
         </tbody>
   </table>
-
-						
+					
 			</div>
      </div></div>
 	<!-- CONTENT // -->

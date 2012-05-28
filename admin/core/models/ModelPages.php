@@ -111,12 +111,12 @@ class ModelPages
 	 * @param int $state состояние
 	 * @throws Exception
 	 */
-	public function UpdatePublished ($idPage, $state)
+	public function UpdatePublished ($array)
 	{
-		$sql = "UPDATE pages SET published=".$state." WHERE id=".$idPage;
+		$sql = "UPDATE pages SET published=".$array["state"]." WHERE id=".$array["id"];
 		if (!mysql_query($sql))
 		{
-			$error = "Ошибка публикации страницы № $idPage. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$error = "Ошибка публикации страницы № ".$array["id"].". Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
 			$this->_logs->AddLog($error);
 			throw new Exception($error);
 		}

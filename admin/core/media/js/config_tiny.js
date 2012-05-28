@@ -1,7 +1,7 @@
 tinyMCE.init({
 		// General options
 		mode : "exact",
-		elements : "bodyPage, textNews, descNews, descriptionPage",
+		elements : "bodyPage, textNews, descNews, descriptionPage, descriptionAddArticle, textAddArticle",
 		//mode : "textareas",
 		theme : "advanced",
 		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",

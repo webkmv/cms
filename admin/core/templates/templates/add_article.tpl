@@ -1,4 +1,6 @@
 <script type="text/javascript" src="core/media/js/articles.js"></script>
+<script type="text/javascript" src="../../core/media/js/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
     <form method="post" enctype="multipart/form-data" id="formAddArticle" action="add_article.php">
         Заголовок: <input type="text" name="title" id="titleAddArticle" /><br />
