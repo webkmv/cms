@@ -1,41 +1,41 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 18:26:03
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:19:13
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10649622144fbf5cbc27a625-46272913%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11768586554fc35049297467-83697608%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1337955958,
+      1 => 1338200350,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1336249720,
+      1 => 1338199570,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337945193,
+      1 => 1338199570,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10649622144fbf5cbc27a625-46272913',
+  'nocache_hash' => '11768586554fc35049297467-83697608',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbf5cbc2f2d46_52702555',
+  'unifunc' => 'content_4fc350493144a2_78474300',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fbf5cbc2f2d46_52702555')) {function content_4fbf5cbc2f2d46_52702555($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc350493144a2_78474300')) {function content_4fc350493144a2_78474300($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -121,9 +121,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<br />
 				
 		
-<form method="post" id="formListPages">
-<a href="windowAddPage.php" class="addPage">Создать</a>
-<input type="submit" value="Сохранить">
+<a href="windowAddPage.php">Создать</a>
 
   <table class="modul_table">
   <thead>
@@ -146,24 +144,19 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
 </a></td>
       			<td>
       				<?php if ($_smarty_tpl->tpl_vars['page']->value['published']==0){?>
-      					<input type="checkbox" name="!isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-" />
-      					<!--a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=0">Публиковать</a -->
+      					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=0">Публиковать</a>
       				<?php }else{ ?>
-      					<input type="checkbox" name="isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-" checked="yes" />
-      					<!--a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=1" >Не публиковать</a -->
+      					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=1" >Не публиковать</a>
       				<?php }?>
       			</td>
       			<td>
       			<?php if ($_smarty_tpl->tpl_vars['page']->value['is_index']==1){?>
-      				<input type="radio" name="isIndex" value="0" checked>
-      				<!-- a href="set_main.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=0">Главная</a -->
+      				<a href="set_main.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=0">Главная</a>
       			<?php }else{ ?>
-      				<input type="radio" name="notIndex" value="1">
+      				<a></a>
       			<?php }?>
       			</td>
       			<td class="del"><a href="delete_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
