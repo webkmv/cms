@@ -42,4 +42,22 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+	
+		/**
+	 * Сохранение страницы
+	 */
+	$("#formNews").submit(function() {
+		$(".hint").html("<p>Сохраняется...</p>");
+		var str = $(this).serialize();
+		$.ajax({
+			type : "GET",
+			url : "save_news.php",
+			data : str,
+			success : function(msg) {
+				$(".hint").html("<p>" + msg + "</p>");
+			}
+		});
+
+		return false;
+	});
 });

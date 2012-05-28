@@ -36,3 +36,4 @@ ak poadf b'lkdm lkds hbui' at line 2
 |28.05.2012 09:53:45| Не получается удалить статью. Подробнее: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 >>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
 |28.05.2012 13:20:50| Ошибка добавления новости в базу.Файл '/var/www/cms/admin/core/models/ModelNews.php'. Строка: '71'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'comic sans ms', sans-serif;"><em><strong>авыфаываываываываы</s' at line 3
+|28.05.2012 15:06:08| Ошибка сохранение новости №  Файл '/var/www/cms/admin/core/models/ModelNews.php'. Строка: '125'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 8

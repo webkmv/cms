@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 13:28:15
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 15:06:04
          compiled from "core/templates/templates/view_news.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2145604474fc3398ce81b32-35998122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f63c629b4b1d242fb3ba1cfa748afbc29bb778d9' => 
     array (
       0 => 'core/templates/templates/view_news.tpl',
-      1 => 1338196154,
+      1 => 1338203156,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -124,10 +124,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		
 <a href="windowAddNews.php" class="addPage">Создать</a>
 <div>
-<form method="post" id="formPage">
+<form method="post" id="formNws" action="save_news.php">
 	Заголовок: <input type="text" name="title" id="titlePage" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 " /><br />  
-	Шаблон: <select name="template" id="listTemplates">
+	<!--Шаблон: <select name="template" id="listTemplates">
 	  <?php  $_smarty_tpl->tpl_vars['template'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['template']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['templates']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['template']->key => $_smarty_tpl->tpl_vars['template']->value){
@@ -137,22 +137,23 @@ $_smarty_tpl->tpl_vars['template']->_loop = true;
 ><?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
 </option>
 	  <?php } ?>
-	</select><br>
+	</select><br>-->
 	Ключевые слова: <input type="text" name="keywords" id="keywordsPage" value="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
 " /><br />
 	Описание: <textarea rows="10" cols="45" name="description" id="descriptionPage"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
 </textarea><br />
-	Текст новости: <textarea rows="10" cols="45" name="body" id="bodyPage"><?php echo $_smarty_tpl->tpl_vars['text']->value;?>
+	Текст новости: <textarea rows="10" cols="45" name="text" id="bodyPage"><?php echo $_smarty_tpl->tpl_vars['text']->value;?>
 </textarea><br />
 	Ссылка: <input type="text" name="alias" id="alias" value="<?php echo $_smarty_tpl->tpl_vars['alias']->value;?>
 " /><br />
         Автор: <input type="text" name="author" id="keywordsPage" value="<?php echo $_smarty_tpl->tpl_vars['author']->value;?>
 " /><br />
-        <input type="hidden" name="idPage" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+        <input type="hidden" name="idNews" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 "/>
 	<input type="submit" value="Сохранить" id="btnPage" />
-	<input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'pages.php'";/>
+	<input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'news.php'";/>
 </div>
+<div class='hint'></div>
 
 						
 			</div>

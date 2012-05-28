@@ -104,6 +104,29 @@ class ModelNews
                 die ($error);
             }
         }
+	
+	/**
+	 * Сохранение данных новости
+	 * @param array $data - массив с данными формы 
+	 * @throws Exception
+	 */
+	public function SaveNews ($data)
+	{
+		$sql = "UPDATE news 
+				SET title='".$data["title"]."', 
+					keywords='".$data["keywords"]."', 
+					description='".$data["description"]."', 
+					text='".$data["text"]."',  
+					author='".$data["author"]."',
+					alias='".$data["alias"]."'
+				WHERE id = ".$data["idNews"];
+		if (!mysql_query($sql))
+		{
+			$error = "Ошибка сохранение новости № ".$data["idNews"]." Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
+		}
+	}
 }
 
 ?>
