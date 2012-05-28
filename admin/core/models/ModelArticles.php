@@ -86,6 +86,29 @@
             }
         }
         
+        /**
+	 * Сохранение данных новости
+	 * @param array $data - массив с данными формы 
+	 * @throws Exception
+	 */
+	public function SaveArticles ($data)
+	{
+		$sql = "UPDATE articles 
+				SET title='".$data["title"]."', 
+					keywords='".$data["keywords"]."', 
+					description='".$data["description"]."', 
+					text='".$data["text"]."',  
+					author='".$data["author"]."'
+					
+				WHERE id = ".$data["id"];
+		if (!mysql_query($sql))
+		{
+			$error = "Ошибка сохранение статьи № ".$data["id"]." Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$this->_logs->AddLog($error);
+			throw new Exception($error);
+		}
+	}
+        
     }
     
 ?>

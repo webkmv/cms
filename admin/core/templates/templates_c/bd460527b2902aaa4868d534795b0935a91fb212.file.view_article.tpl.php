@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 12:45:15
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 13:31:40
          compiled from "core/templates/templates/view_article.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11234170484fc3573b216263-47212902%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bd460527b2902aaa4868d534795b0935a91fb212' => 
     array (
       0 => 'core/templates/templates/view_article.tpl',
-      1 => 1338201861,
+      1 => 1338204652,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc3573b284674_14223315',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc3573b284674_14223315',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc3573b284674_14223315')) {function content_4fc3573b284674_14223315($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
@@ -125,7 +125,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <a href="windowAddArticles.php" class="addPage">Создать</a>
 <div>
 
-    <form method="post" enctype="multipart/form-data" id="formAddArticle" action="add_article.php">
+    <form method="post" enctype="multipart/form-data" id="formAddArticle" action="save_articles.php">
         Заголовок: <input type="text" name="title" id="titleAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 " /><br />
         Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddArticle"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
@@ -136,7 +136,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </textarea><br /> 
         Автор: <input type="text" name="author" id="authorAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['author']->value;?>
 " /><br />
-        <input type="hidden" name="delete" value=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+        <input type="hidden" name="id" value=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
  />
         <input type="submit" value="Добавить" id="btnAddArticle" />
     </form>

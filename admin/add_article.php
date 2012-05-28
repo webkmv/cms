@@ -16,14 +16,7 @@
     
         //сохраняем статью в БД
         $model = new ModelArticles();
-        $model->addArticle($title, $description, $keywords, $text, $author, $dateNow);
-        
-        if(isset($_POST['delete']))
-        {
-            $model->deleteArticle($_POST['delete']);
-            header('Location: articles.php');
-        }
-        
+        $model->addArticle($title, $description, $keywords, $text, $author, $dateNow);        
     }
     
     catch (Exception $exception)
