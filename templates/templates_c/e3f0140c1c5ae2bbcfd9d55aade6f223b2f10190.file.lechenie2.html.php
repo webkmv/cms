@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:23:42
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:31:35
          compiled from "templates/templates/lechenie2.html" */ ?>
 <?php /*%%SmartyHeaderCode:7899123594fc3522eafaf35-95642236%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e3f0140c1c5ae2bbcfd9d55aade6f223b2f10190' => 
     array (
       0 => 'templates/templates/lechenie2.html',
-      1 => 1338199570,
+      1 => 1338201091,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4fc3522eb25c27_01539033',
+  'variables' => 
+  array (
+    'content' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc3522eb25c27_01539033')) {function content_4fc3522eb25c27_01539033($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
@@ -59,6 +63,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body>
+<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
 	<!-- // PAGE -->
 	<div class="page">
 	
@@ -212,19 +218,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="aside-inner">
 			    <a href="#"><img src="uploads/news/img3.jpg" alt=""/></a>
 				<p><b>15 января 2012</b></p>
-			    <p>Цены на санаторно-курортное лечение на 1 полугодие 2012 года <a href="#">подробнее &rarr;</a></p>     
+			    <p>Цены на санаторно-курортное лечение на 1 полугодие 2012 года <a href="#">подробнее →</a></p>     
 		    </div><!--aside-inner-->
 			
 			<div class="aside-inner">
 			    <a href="#"><img src="uploads/news/img2.jpg" alt=""/></a>
 				<p><b>25 декабря 2011</b></p>
-			    <p>Новогодняя сказка в Пятигорском нарзане.  <a href="#">подробнее &rarr;</a></p>     
+			    <p>Новогодняя сказка в Пятигорском нарзане.  <a href="#">подробнее →</a></p>     
 		    </div><!--aside-inner-->
 			
 			<div class="aside-inner">
 			    <a href="#"><img src="uploads/news/img1.jpg" alt=""/></a>
 				<p><b>25 октября 2011</b></p>
-			    <p>Виталий Аксенов в Пятигорском нарзане.  <a href="#">подробнее &rarr;</a></p>     
+			    <p>Виталий Аксенов в Пятигорском нарзане.  <a href="#">подробнее →</a></p>     
 		    </div><!--aside-inner-->
 			
 			
@@ -529,40 +535,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 			<dl>
 				<dt class="mt20"><label for="wishes">Пожелания</label></dt>
-				<dd><textarea id="wishes"></textarea></dd>
-			</dl>
-			
-			<dl>
-				<dt class="mt20"><label>Введите цифры на картинке</label></dt>
-				<dd> <img src="uploads/captcha.png" alt="" /></dd>
-			</dl>
-			
-			<input type="submit"  class="send_message_btn" value="Отправить информацию" name="" />
-			
-
-
-		</form>
-		</div> <!-- end general form -->
-		</div> <!-- end message container -->
-		
-	
-	</div> <!-- end first dialog -->
-	
-	<div class="second_dialog"  style="display:none;">
-		<h2>Спасибо! Ваша заявка принята.</h2>
-		<div class="message_container">
-		<p class="user_mess">Наши специалисты свяжутся с вами в ближайшее время для подтверждения и уточнения деталей.</p>
-		</div>
-	</div> 
-	
-	
-	</div> <!-- end second dialog -->
-	
-	
-	
-	
-	
-	
-</body>
-</html>
-<?php }} ?>
+				<dd><textarea id="wishes"><?php }} ?>

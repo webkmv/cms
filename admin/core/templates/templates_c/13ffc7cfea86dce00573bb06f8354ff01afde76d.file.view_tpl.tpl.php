@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:23:13
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:31:20
          compiled from "core/templates/templates/view_tpl.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7797354144fc352111e8a14-18957906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '13ffc7cfea86dce00573bb06f8354ff01afde76d' => 
     array (
       0 => 'core/templates/templates/view_tpl.tpl',
-      1 => 1338199570,
+      1 => 1338201076,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc3521123a167_07221686',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc3521123a167_07221686',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc3521123a167_07221686')) {function content_4fc3521123a167_07221686($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
@@ -128,13 +128,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " id="titleViewTemplate"><br />
  	Количество блоков: <input type="text" name="sum_block" value="<?php echo $_smarty_tpl->tpl_vars['template']->value['sum_block'];?>
 "  id="blocksViewTemplate"/><br />
- 	<textarea rows="10" cols="45" name="text"><?php echo $_smarty_tpl->tpl_vars['template']->value['text'];?>
-</textarea><br />
  	
  	<input type="hidden" name="idToFile" value="<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
 " />
  	<input type="hidden" name="pathToFile" value="<?php echo $_smarty_tpl->tpl_vars['template']->value['path'];?>
 " />
+ 	
+ 	<textarea rows="10" cols="45" name="text"><?php echo $_smarty_tpl->tpl_vars['template']->value['text'];?>
+</textarea><br />
  	
  	<input type="submit" name="saveTpl" value="Сохранить" />
  	<input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'tpls.php'";/>
