@@ -13,7 +13,7 @@ try
 	$keywords = $_POST['keywords'];
 	$description = $_POST['description'];
 	$text = $_POST['text'];
-	$published = $_POST['published'];
+	//$published = $_POST['published'];
 	$alias = $_POST['alias'];
         $dateNow = date("Y-m-j");
 	$author = $_POST['author'];
