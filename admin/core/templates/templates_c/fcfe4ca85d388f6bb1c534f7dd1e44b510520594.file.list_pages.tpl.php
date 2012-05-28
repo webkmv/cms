@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-22 23:28:35
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 18:26:03
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17740202254fbbe8e3e595d9-44684409%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10649622144fbf5cbc27a625-46272913%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1337708304,
+      1 => 1337955958,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -19,23 +19,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337713595,
+      1 => 1337945193,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17740202254fbbe8e3e595d9-44684409',
+  'nocache_hash' => '10649622144fbf5cbc27a625-46272913',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fbf5cbc2f2d46_52702555',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbbe8e3edc2d4_75364809',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fbbe8e3edc2d4_75364809')) {function content_4fbbe8e3edc2d4_75364809($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fbf5cbc2f2d46_52702555')) {function content_4fbf5cbc2f2d46_52702555($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,6 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
 </head>
 <body>
@@ -83,7 +85,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<!-- left menu -->
 			<div class="content_menu">
 				<a href="pages" class="menu_head ico1">Страницы</a>
-				<a href="#" class="menu_head ico2">Модули</a>			
+				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>
 				<a href="tpls.php" class="menu_head ico5">Шаблоны</a>
@@ -119,7 +121,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<br />
 				
 		
+<form method="post" id="formListPages">
 <a href="windowAddPage.php" class="addPage">Создать</a>
+<input type="submit" value="Сохранить">
 
   <table class="modul_table">
   <thead>
@@ -140,16 +144,35 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
       			<td><a href="view_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['page']->value['title'];?>
 </a></td>
-      			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['published'];?>
-</td>
-      			<td><?php echo $_smarty_tpl->tpl_vars['page']->value['is_index'];?>
-</td>
-      			<td class="del"><a href="delete_template.php?id=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
+      			<td>
+      				<?php if ($_smarty_tpl->tpl_vars['page']->value['published']==0){?>
+      					<input type="checkbox" name="!isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+" />
+      					<!--a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=0">Публиковать</a -->
+      				<?php }else{ ?>
+      					<input type="checkbox" name="isPublic" value="<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+" checked="yes" />
+      					<!--a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=1" >Не публиковать</a -->
+      				<?php }?>
+      			</td>
+      			<td>
+      			<?php if ($_smarty_tpl->tpl_vars['page']->value['is_index']==1){?>
+      				<input type="radio" name="isIndex" value="0" checked>
+      				<!-- a href="set_main.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+&state=0">Главная</a -->
+      			<?php }else{ ?>
+      				<input type="radio" name="notIndex" value="1">
+      			<?php }?>
+      			</td>
+      			<td class="del"><a href="delete_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
 ">-</a></td>
     		</tr>
     	<?php } ?>
     </tbody>
   </table>
+ </form>
 
 						
 			</div>

@@ -42,7 +42,7 @@
         
         public function getArticle($id)
         {
-            $query = "SELECT title, text, author, date FROM articles WHERE id = $id";
+            $query = "SELECT * FROM articles WHERE id = $id";
             $queryResult = mysql_query($query) or die(mysql_error());
             $article = mysql_fetch_array($queryResult);
             return $article;
@@ -51,9 +51,9 @@
         /**
         *   Удаление статей
         * 
-        *   @param int $id - id шаблона
+        *   @param int $id - id статьи
         */
-        public function DeleteArticle($id)
+        public function deleteArticle($id)
         {
             if (!mysql_query("DELETE FROM articles WHERE id=$id"))
             {

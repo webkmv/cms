@@ -3,7 +3,7 @@
     require_once 'core/configcore.php';
     require_once DIR_LIBS.'Forms.php';
     require_once DIR_ADMIN_MODELS.'ModelArticles.php';
-    
+
     try
     {
         //данные формы
@@ -17,10 +17,18 @@
         //сохраняем статью в БД
         $model = new ModelArticles();
         $model->addArticle($title, $description, $keywords, $text, $author, $dateNow);
+        
+        if(isset($_POST['delete']))
+        {
+            $model->deleteArticle($_POST['delete']);
+            header('Location: articles.php');
+        }
+        
     }
+    
     catch (Exception $exception)
     {
-            die ($exception->getMessage());
+       die ($exception->getMessage());
     }
 
 ?>

@@ -1,7 +1,11 @@
 tinyMCE.init({
 		// General options
 		mode : "exact",
+<<<<<<< HEAD
 		elements : "descAddNews", 
+=======
+		elements : "bodyPage",
+>>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
 		//mode : "textareas",
 		theme : "advanced",
 		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",

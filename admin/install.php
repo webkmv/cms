@@ -10,8 +10,8 @@ try
 	$log->AddLog("Creating tables...");
 	$model = new ModelInstallerCMS();
 	
-	$model->CreateTableTemplates();
-	$log->AddLog("Table 'Templates' created.");
+	//$model->CreateTableTemplates();
+	//$log->AddLog("Table 'Templates' created.");
 
 	$model->CreateTablePages();
 	$log->AddLog("Teble 'Pages' created");

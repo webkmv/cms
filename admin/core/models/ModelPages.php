@@ -107,6 +107,7 @@ class ModelPages
 	
 	/**
 	 * Обновление состояния публикации страницы
+<<<<<<< HEAD
 	 * @param int $idPage номер страницы
 	 * @param int $state состояние
 	 * @throws Exception
@@ -114,6 +115,14 @@ class ModelPages
 	public function UpdatePublished ($idPage, $state)
 	{
 		$sql = "UPDATE pages SET published=".$state." WHERE id=".$idPage;
+=======
+	 * @param array $data - массив с номером страницы и статусом публикации
+	 * @throws Exception
+	 */
+	public function UpdatePublished ($data)
+	{
+		$sql = "UPDATE pages SET published='".$data["state"]."' WHERE id='".$data["id"]."'";
+>>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
 		if (!mysql_query($sql))
 		{
 			$error = "Ошибка публикации страницы № $idPage. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();

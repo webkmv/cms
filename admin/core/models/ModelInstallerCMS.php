@@ -51,7 +51,7 @@ class ModelInstallerCMS
 	public function CreateTablePages ()
 	{
 
-		$query = "CREATE TABLE pages
+		$sql = "CREATE TABLE pages
 		(id int auto_increment primary key,
 		title varchar(255),
 		text text,
@@ -63,9 +63,19 @@ class ModelInstallerCMS
 		description text,
 		added datetime)";
 
-		if (!mysql_query($query))
+		if (!mysql_query($sql))
 		{
 			$error = "Ошибка создания таблицы 'pages'. Файл '".__FILE__."'. Строка: ".__LINE__.". Ошибка: ".mysql_error();
+			$this->_log->AddLog($error);
+			throw new Exception ($error);
+		}
+
+		$added = date("Y-m-j H:i:s");
+		$sql = "INSERT INTO pages (title, is_index, added) VALUES ('Главная страница', 1, '$added')";
+
+		if (!mysql_query($sql))
+		{
+			$error = "Ошибка создания главной страницы по умолчанию. Файл '".__FILE__."'. Строка: ".__LINE__.". Ошибка: ".mysql_error();
 			$this->_log->AddLog($error);
 			throw new Exception ($error);
 		}

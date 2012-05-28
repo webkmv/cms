@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 12:41:35
+=======
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 09:38:33
+>>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
          compiled from "core/templates/templates/list_articles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17510295174fc33a3f54d968-77910715%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +11,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd9011a87cc5b4707bac365e2dc86190ab70ad0ac' => 
     array (
       0 => 'core/templates/templates/list_articles.tpl',
+<<<<<<< HEAD
       1 => 1337914462,
+=======
+      1 => 1338190711,
+>>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
+<<<<<<< HEAD
       1 => 1337914462,
+=======
+      1 => 1338150252,
+>>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
+<<<<<<< HEAD
       1 => 1337914462,
+=======
+      1 => 1338150252,
+>>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
       2 => 'file',
     ),
   ),
@@ -139,7 +155,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['article']->key => $_smarty_tpl->tpl_v
 $_smarty_tpl->tpl_vars['article']->_loop = true;
 ?>
                 <tr>
-                    <td><a href="view_page.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
+                    <td><a href="view_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['article']->value['title'];?>
 </a></td>
                     <td><?php echo $_smarty_tpl->tpl_vars['article']->value['author'];?>
