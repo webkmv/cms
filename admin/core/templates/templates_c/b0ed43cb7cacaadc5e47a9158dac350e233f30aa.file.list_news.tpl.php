@@ -1,35 +1,35 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-25 13:34:09
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 12:49:23
          compiled from "core/templates/templates/list_news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10571623374fbe18795c8be9-52227661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16637226764fc339f41c3920-56000197%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b0ed43cb7cacaadc5e47a9158dac350e233f30aa' => 
     array (
       0 => 'core/templates/templates/list_news.tpl',
-      1 => 1337938285,
+      1 => 1338194959,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1337937300,
+      1 => 1337914462,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10571623374fbe18795c8be9-52227661',
+  'nocache_hash' => '16637226764fc339f41c3920-56000197',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fbe18796359c5_12374607',
+  'unifunc' => 'content_4fc339f42696c0_11247269',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fbe18796359c5_12374607')) {function content_4fbe18796359c5_12374607($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc339f42696c0_11247269')) {function content_4fc339f42696c0_11247269($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -46,6 +46,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
 </head>
 <body>
@@ -112,7 +114,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 				<br />
 				
-<a href="windowAddNews.php" class="addNews">Создать</a>
+<a href="windowAddNews.php" class="addPage">Создать</a>
 <table class="modul_table">
     <thead>
 	<tr>

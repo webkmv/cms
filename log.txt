@@ -10,3 +10,5 @@
 |22.05.2012 22:41:25| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
 |22.05.2012 22:41:25| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
 |22.05.2012 23:32:19| Ошибка добавления новой страницы в базу.Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '66'. Ошибка: 
+|25.05.2012 14:01:56| Ошибка добавления новой страницы в базу.  Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '67'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sdaj ildsf blkdsa bldfk nbjk;dfn bkj;adf ;adlkpoabdk 
+ak poadf b'lkdm lkds hbui' at line 2

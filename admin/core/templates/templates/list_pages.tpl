@@ -16,9 +16,21 @@
    		{foreach $pages as $page}
    			<tr>
       			<td><a href="view_page.php?id={$page.id}">{$page.title}</a></td>
-      			<td>{$page.published}</td>
-      			<td>{$page.is_index}</td>
-      			<td class="del"><a href="delete_template.php?id={$template.id}">-</a></td>
+      			<td>
+      				{if $page.published == 0}
+      					<a href="public_page.php?id={$page.id}&state=0">Публиковать</a>
+      				{else}
+      					<a href="public_page.php?id={$page.id}&state=1">Не публиковать</a>
+      				{/if}
+      			</td>
+      			<td>
+      			{if $page.is_index == 1}
+      				<a href="set_main.php?id={$page.id}&state=0">Главная</a>
+      			{else}
+      				<a href="set_main.php?id={$page.id}&state=1">Не главная</a>
+      			{/if}
+      			</td>
+      			<td class="del"><a href="delete_page.php?id={$page.id}">-</a></td>
     		</tr>
     	{/foreach}
     </tbody>

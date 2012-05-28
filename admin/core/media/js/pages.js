@@ -43,9 +43,31 @@ $(document).ready(function() {
 			url : "add_page.php",
 			data : str,
 			success : function(msg) {
+				if (msg == '') {
+					document.location.href = 'pages.php';
+				}
 				$("#addPageErrors").html("<p>" + msg + "</p>");
 			}
 		});
 		return false;
 	});
+
+	/**
+	 * Сохранение страницы
+	 */
+	$("#formPage").submit(function() {
+		$(".hint").html("<p>Сохраняется...</p>");
+		var str = $(this).serialize();
+		$.ajax({
+			type : "POST",
+			url : "save_page.php",
+			data : str,
+			success : function(msg) {
+				$(".hint").html("<p>" + msg + "</p>");
+			}
+		});
+
+		return false;
+	});
+
 });

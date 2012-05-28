@@ -124,8 +124,33 @@ class ModelTemplates
   		$this->_logs->AddLog(mysql_error());
   		die (mysql_errno());
   	}
-  	return mysql_fetch_array($result);
   	
+  	return mysql_fetch_array($result);  	
+  }
+  
+  /**
+   * Получить все шаболоны указанной страницы. 
+   * @param int $idTemplate - номер шаблона, который игнорируем
+   * @throws Exception ошибка извлечения шаблонов
+   * @return array массив шаблонов
+   */
+  public function GetTemplaesByViewPage($idTemplate) 
+  {
+  	$sql = "SELECT * FROM templates WHERE id != '$idTemplate'";
+  	if (!$query = mysql_query($sql))
+  	{
+  		$error = "Ошибка извлечения шаблонов. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+  		$this->_logs->AddLog($error);
+  		throw new Exception($error);
+  	}
+  	
+  	$result = array();
+  	$result[] = $this->GetTemplateFromId($idTemplate);
+  	while ($currentTemplate = mysql_fetch_array($query))
+  	{
+  		$result[] = $currentTemplate;
+  	}
+  	return $result;
   }
 }
 
