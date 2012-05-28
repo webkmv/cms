@@ -112,10 +112,18 @@ class ModelPages
 	 */
 	public function UpdatePublished ($data)
 	{
-		$sql = "UPDATE pages SET published='".$data["state"]."' WHERE id='".$data["id"]."'";
+		$id = 0;
+		$state = 0;
+		
+		$id = (int)$data["id"];
+		$state = (int)$data["state"];
+		
+		$sql = "UPDATE pages SET published=".$state." WHERE id=".$id;
 		if (!mysql_query($sql))
 		{
-			$error = "Ошибка публикации страницы № $idPage. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
+			$error = "Ошибка публикации страницы №";
+			$error .= $id;
+			$error .= " Файл ".__FILE__.". Строка: ".__LINE__.". Ошибка: ".mysql_error();
 			$this->_logs->AddLog($error);
 			throw new Exception($error);
 		}
