@@ -1,6 +1,6 @@
 <?php
 
-require_once "../config.php";
+include_once "core/configcore.php";
 require_once DIR_LIBS."Smarty/Smarty.class.php";
 
 /**

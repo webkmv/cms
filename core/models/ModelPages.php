@@ -23,7 +23,7 @@ class ModelPages
 	/**
 	 * получить данные страницы
 	 * @param string $url - адрес страницы
-	 * @throws Exception Если не удается вытащить даныые о страницы, пробрасывается исключение
+	 * @throws Exception Если не удается вытащить данные о страницы, пробрасывается исключение
 	 * @return array Возвращает хэш с данными страницы:
 	 */
 	public function GetPage($url)
@@ -33,7 +33,7 @@ class ModelPages
 		if (!$query = mysql_query($sql))
 		{
 			$error = "Ошибка извлечения страницы '$url' из базы. Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();
-			$this->_logs->AddLog($error);
+			$this->_log->AddLog($error);
 			throw new Exception($error);
 		}
 		

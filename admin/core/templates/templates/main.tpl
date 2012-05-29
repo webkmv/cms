@@ -47,7 +47,7 @@
 			
 			<!-- left menu -->
 			<div class="content_menu">
-				<a href="pages" class="menu_head ico1">Страницы</a>
+				<a href="pages.php" class="menu_head ico1">Страницы</a>
 				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>

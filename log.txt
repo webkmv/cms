@@ -1,48 +1,8 @@
-|22.05.2012 22:35:22| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
-|22.05.2012 22:35:23| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
-|22.05.2012 22:36:51| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
-|22.05.2012 22:41:03| Run install.
-|22.05.2012 22:41:03| Creating tables...
-|22.05.2012 22:41:03| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
-|22.05.2012 22:41:03| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
-|22.05.2012 22:41:25| Run install.
-|22.05.2012 22:41:25| Creating tables...
-|22.05.2012 22:41:25| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
-|22.05.2012 22:41:25| Ошибка создания таблицы 'templates'. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 40. Ошибка: Table 'templates' already exists
-|22.05.2012 23:32:19| Ошибка добавления новой страницы в базу.Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '66'. Ошибка: 
-|25.05.2012 14:01:56| Ошибка добавления новой страницы в базу.  Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '67'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sdaj ildsf blkdsa bldfk nbjk;dfn bkj;adf ;adlkpoabdk 
-ak poadf b'lkdm lkds hbui' at line 2
-<<<<<<< HEAD
-=======
-|28.05.2012 11:00:10| Run install.
-|28.05.2012 11:00:10| Creating tables...
-|28.05.2012 11:00:10| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages ('Главная страница', ' ', ' ', 1, 1, '', '', 201' at line 1
-|28.05.2012 11:00:10| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages ('Главная страница', ' ', ' ', 1, 1, '', '', 201' at line 1
-|28.05.2012 11:07:29| Run install.
-|28.05.2012 11:07:29| Creating tables...
-|28.05.2012 11:07:29| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages (title, is_index, added) VALUES ('Главная страниц' at line 1
-|28.05.2012 11:07:29| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSER INTO pages (title, is_index, added) VALUES ('Главная страниц' at line 1
-|28.05.2012 11:08:58| Run install.
-|28.05.2012 11:08:58| Creating tables...
-|28.05.2012 11:08:58| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11:08:58)' at line 1
-|28.05.2012 11:08:58| Ошибка создания главной страницы по умолчанию. Файл '/var/www/cms/admin/core/models/ModelInstallerCMS.php'. Строка: 78. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11:08:58)' at line 1
-|28.05.2012 11:12:13| Run install.
-|28.05.2012 11:12:13| Creating tables...
-|28.05.2012 11:12:13| Teble 'Pages' created
-|28.05.2012 09:37:47| Ошибка извлечения страницы. Файл '/opt/lampp/htdocs/cms/admin/core/models/ModelPages.php'. Строка: '100'. Ошибка: Table 'cms.pages' doesn't exist
-|28.05.2012 09:51:07| Не получается удалить статью. Подробнее: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
-|28.05.2012 09:53:11| Не получается удалить статью. Подробнее: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
-|28.05.2012 09:53:15| Не получается удалить статью. Подробнее: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
-|28.05.2012 09:53:45| Не получается удалить статью. Подробнее: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
->>>>>>> 18246f1e275dbc492644b7563217fa2aa8528a41
-|28.05.2012 13:20:50| Ошибка добавления новости в базу.Файл '/var/www/cms/admin/core/models/ModelNews.php'. Строка: '71'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'comic sans ms', sans-serif;"><em><strong>авыфаываываываываы</s' at line 3
-<<<<<<< HEAD
-|28.05.2012 15:06:08| Ошибка сохранение новости №  Файл '/var/www/cms/admin/core/models/ModelNews.php'. Строка: '125'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 8
-=======
-<<<<<<< HEAD
-|28.05.2012 11:39:34| Ошибка сохранение страницы № 1 Файл '/opt/lampp/htdocs/cms/admin/core/models/ModelPages.php'. Строка: '142'. Ошибка: Table 'cms.pages' doesn't exist
-|28.05.2012 13:10:27| Ошибка сохранение страницы № 3 Файл '/opt/lampp/htdocs/cms/admin/core/models/ModelPages.php'. Строка: '142'. Ошибка: Table 'cms.pages' doesn't exist
-=======
-|28.05.2012 14:16:16| Ошибка публикации страницы № Array. Файл '/var/www/cms/admin/core/models/ModelPages.php'. Строка: '119'. Ошибка: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id=Array' at line 1
->>>>>>> 021c27685918b07ccce989afa8402f9bf11a843a
->>>>>>> 31dee6054a6913eda381b9a0f1aef85cad016c4b
+|28.05.2012 20:54:49| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|28.05.2012 23:12:38| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|29.05.2012 01:01:25| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|29.05.2012 01:08:48| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|29.05.2012 01:08:48| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|29.05.2012 01:08:49| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|29.05.2012 01:08:49| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|29.05.2012 01:17:10| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1

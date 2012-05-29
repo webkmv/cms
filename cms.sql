@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.10.1deb1
+-- version 3.2.3
 -- http://www.phpmyadmin.net
 --
--- Хост: localhost
--- Время создания: Май 25 2012 г., 13:01
--- Версия сервера: 5.5.22
--- Версия PHP: 5.3.10-1ubuntu3.1
+-- Host: localhost
+-- Generation Time: May 29, 2012 at 01:17 AM
+-- Server version: 5.1.40
+-- PHP Version: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,13 +16,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `cms`
+-- Database: `cms`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `articles`
+-- Table structure for table `articles`
 --
 
 CREATE TABLE IF NOT EXISTS `articles` (
@@ -40,32 +39,38 @@ CREATE TABLE IF NOT EXISTS `articles` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
 
 --
--- Дамп данных таблицы `articles`
+-- Dumping data for table `articles`
 --
 
-INSERT INTO `articles` (`id`, `title`, `description`, `keywords`, `text`, `author`, `date`, `published`, `alias`) VALUES
-(47, 'fadfads', 'ffdsafa', 'fsadfads', 'dfsafas', 'fasdfa', '2012-05-25', 0, ''),
-(53, 'dfas', '', '', 'ssss', 'aaa', '2012-05-25', 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `modules`
+-- Table structure for table `modules`
 --
 
 CREATE TABLE IF NOT EXISTS `modules` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
+  `path` varchar(255) NOT NULL,
   `published` int(2) NOT NULL,
   `id_block` int(2) NOT NULL,
   `alias` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `modules`
+--
+
+INSERT INTO `modules` (`id`, `title`, `path`, `published`, `id_block`, `alias`) VALUES
+(1, 'Новости', 'news.php', 0, 0, ''),
+(2, 'Статьи', 'articles.php', 0, 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE IF NOT EXISTS `news` (
@@ -83,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
--- Дамп данных таблицы `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `keywords`, `description`, `text`, `date`, `author`, `views`, `published`, `alias`) VALUES
@@ -101,25 +106,55 @@ INSERT INTO `news` (`id`, `title`, `keywords`, `description`, `text`, `date`, `a
 (12, '', '', '', '', '2012-05-25', '', 0, 0, ''),
 (13, '', '', '', '', '2012-05-25', '', 0, 0, ''),
 (14, '', '', '', '', '2012-05-25', '', 0, 0, ''),
-(15, '', '', '', '', '2012-05-26', '', 0, 0, ''),
-(16, '', '', '', '', '2012-05-24', '', 0, 1, '');
+(15, '', '', '', '', '2012-05-25', '', 0, 0, ''),
+(16, '', '', '', '', '2012-05-25', '', 0, 1, '');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `templates`
+-- Table structure for table `pages`
+--
+
+CREATE TABLE IF NOT EXISTS `pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET cp1251 DEFAULT NULL,
+  `text` text CHARACTER SET cp1251,
+  `url` varchar(255) CHARACTER SET cp1251 DEFAULT NULL,
+  `published` int(11) DEFAULT NULL,
+  `is_index` int(11) DEFAULT NULL,
+  `id_template` int(11) DEFAULT NULL,
+  `keywords` varchar(255) CHARACTER SET cp1251 DEFAULT NULL,
+  `description` text CHARACTER SET cp1251,
+  `added` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `title`, `text`, `url`, `published`, `is_index`, `id_template`, `keywords`, `description`, `added`) VALUES
+(1, 'Главная страница', NULL, 'index', 1, 1, NULL, NULL, NULL, '2012-05-28 20:39:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `templates`
 --
 
 CREATE TABLE IF NOT EXISTS `templates` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
-  `title` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
-  `path` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `path` text,
   `created` datetime DEFAULT NULL,
   `sum_block` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Dumping data for table `templates`
+--
+
+INSERT INTO `templates` (`id`, `id_user`, `title`, `path`, `created`, `sum_block`) VALUES
+(1, 1, 'index', 'Z:homelocalhostwwwcms/templates/templates/index.html', '2012-05-29 01:01:15', 5);

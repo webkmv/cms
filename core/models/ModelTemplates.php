@@ -6,12 +6,12 @@ require_once DIR_LIBS.'Logs.php';
 class ModelTemplates
 {
 	private $_logs = null;
-
+	
 	public function __construct()
 	{
 		$this->Init();
 	}
-
+	
 	/**
 	 * Инициализация
 	 */
@@ -21,8 +21,8 @@ class ModelTemplates
 		$db = new DataBase();
 		$db->Connect();
 	}
-
-		
+	
+	
 	/**
 	 * Порлучить название шаблона
 	 * @param int $id id шаблона
