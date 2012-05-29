@@ -26,7 +26,7 @@
            {
                $modules[] = $data;
            }
-           return $modules;
+           return @$modules;
         }
         
     }

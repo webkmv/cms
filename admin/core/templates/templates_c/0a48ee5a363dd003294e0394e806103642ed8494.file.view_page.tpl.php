@@ -1,41 +1,41 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:15:21
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 11:41:09
          compiled from "core/templates/templates/view_page.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4102936234fc35039a3cf76-88225791%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15499807984fc47397da6bf6-80905667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0a48ee5a363dd003294e0394e806103642ed8494' => 
     array (
       0 => 'core/templates/templates/view_page.tpl',
-      1 => 1338199570,
+      1 => 1338197676,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338199570,
+      1 => 1338276806,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338199570,
+      1 => 1338237648,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4102936234fc35039a3cf76-88225791',
+  'nocache_hash' => '15499807984fc47397da6bf6-80905667',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc47397e232a2_87030787',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc35039a9daa9_04509410',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc35039a9daa9_04509410')) {function content_4fc35039a9daa9_04509410($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc47397e232a2_87030787')) {function content_4fc47397e232a2_87030787($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -85,7 +85,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 			<!-- left menu -->
 			<div class="content_menu">
-				<a href="pages" class="menu_head ico1">Страницы</a>
+				<a href="pages.php" class="menu_head ico1">Страницы</a>
 				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>
@@ -121,7 +121,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 				<br />
 				
-		
+    
+        
 <a href="windowAddPage.php" class="addPage">Создать</a>
 <div>
 <form method="post" id="formPage">
@@ -152,7 +153,8 @@ $_smarty_tpl->tpl_vars['template']->_loop = true;
 	<input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'pages.php'";/>
 </div>
 
-						
+        
+    					
 			</div>
      </div></div>
 	<!-- CONTENT // -->

@@ -1,41 +1,41 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:23:11
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 09:45:36
          compiled from "core/templates/templates/list_templates.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7848386674fc3520fbae962-70396371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8756416794fc476145d8b64-80246104%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '097b827695ed5abbb01de3eacb32a2132b0962e2' => 
     array (
       0 => 'core/templates/templates/list_templates.tpl',
-      1 => 1338199570,
+      1 => 1338197676,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338199570,
+      1 => 1338276806,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338199570,
+      1 => 1338237648,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7848386674fc3520fbae962-70396371',
+  'nocache_hash' => '8756416794fc476145d8b64-80246104',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc4761464e392_66427866',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc3520fc0ec64_60146030',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc3520fc0ec64_60146030')) {function content_4fc3520fc0ec64_60146030($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc4761464e392_66427866')) {function content_4fc4761464e392_66427866($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -84,7 +84,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 			<!-- left menu -->
 			<div class="content_menu">
-				<a href="pages" class="menu_head ico1">Страницы</a>
+				<a href="pages.php" class="menu_head ico1">Страницы</a>
 				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>
@@ -120,7 +120,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 				<br />
 				
-		
+    
+        
 <a href="windowAddTemplate.php" class="addTemplate">Добавить</a>
 
   <table class="modul_table">
@@ -153,7 +154,8 @@ $_smarty_tpl->tpl_vars['template']->_loop = true;
     </tbody>
   </table>
 
-						
+        
+    					
 			</div>
      </div></div>
 	<!-- CONTENT // -->

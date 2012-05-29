@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 12:49:15
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 09:07:53
          compiled from "core/templates/templates/list_articles.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12552147834fc34cb8937e23-56721510%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16065446164fc475c9950073-17599503%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,23 +13,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338197676,
+      1 => 1338237648,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12552147834fc34cb8937e23-56721510',
+  'nocache_hash' => '16065446164fc475c9950073-17599503',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc34cb89a7c51_68292432',
   'variables' => 
   array (
     'nameSection' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc475c99b3236_67223202',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc34cb89a7c51_68292432')) {function content_4fc34cb89a7c51_68292432($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc475c99b3236_67223202')) {function content_4fc475c99b3236_67223202($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -78,7 +78,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 			<!-- left menu -->
 			<div class="content_menu">
-				<a href="pages" class="menu_head ico1">Страницы</a>
+				<a href="pages.php" class="menu_head ico1">Страницы</a>
 				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>

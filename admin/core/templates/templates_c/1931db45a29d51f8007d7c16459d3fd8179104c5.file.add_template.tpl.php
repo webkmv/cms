@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:36:31
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 09:09:28
          compiled from "core/templates/templates/add_template.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3892623094fc35431506512-36619541%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11597687174fc476284685a3-58886519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1931db45a29d51f8007d7c16459d3fd8179104c5' => 
     array (
       0 => 'core/templates/templates/add_template.tpl',
-      1 => 1338201377,
+      1 => 1338203606,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3892623094fc35431506512-36619541',
+  'nocache_hash' => '11597687174fc476284685a3-58886519',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc35431539091_71423829',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc47628490305_50215919',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc35431539091_71423829')) {function content_4fc35431539091_71423829($_smarty_tpl) {?><script type="text/javascript" src="core/media/js/tpls.js"></script>
+<?php if ($_valid && !is_callable('content_4fc47628490305_50215919')) {function content_4fc47628490305_50215919($_smarty_tpl) {?><script type="text/javascript" src="core/media/js/tpls.js"></script>
 <form method="post" enctype="multipart/form-data" id="formAddTemplate" action="add_tpl.php">
 Название: <input type="text" name="title" id="titleAddTemplate" /><br />
 Количество блоков: <input type="text" name="sum_blocks" id="sumBlocksAddTemplate"><br />
