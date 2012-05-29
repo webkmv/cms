@@ -113,7 +113,11 @@ class ModelPages
 	 */
 	public function UpdatePublished ($array)
 	{
-		$sql = "UPDATE pages SET published=".$array["state"]." WHERE id=".$array["id"];
+		$state = (int)$array["state"];
+		$id = (int)$array["id"]; 
+		
+		$sql = "UPDATE pages SET published=".$state." WHERE id=".$id;
+		
 		if (!mysql_query($sql))
 		{
 			$error = "Ошибка публикации страницы № ".$array["id"].". Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();

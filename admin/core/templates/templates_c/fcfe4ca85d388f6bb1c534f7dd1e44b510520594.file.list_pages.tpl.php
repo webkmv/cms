@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 14:19:13
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 16:02:04
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11768586554fc35049297467-83697608%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1338200350,
+      1 => 1338206520,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -145,10 +145,10 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
       			<td>
       				<?php if ($_smarty_tpl->tpl_vars['page']->value['published']==0){?>
       					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=0">Публиковать</a>
+&state=1">Публиковать</a>
       				<?php }else{ ?>
       					<a href="public_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-&state=1" >Не публиковать</a>
+&state=0" >Не публиковать</a>
       				<?php }?>
       			</td>
       			<td>
