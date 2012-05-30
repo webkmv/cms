@@ -1,37 +1,29 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 15:06:04
-=======
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-28 13:10:24
->>>>>>> 31dee6054a6913eda381b9a0f1aef85cad016c4b
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 08:14:20
          compiled from "core/templates/templates/view_news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5642690894fc35d20b2af06-54244122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15874194114fc5babcea0239-88916151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f63c629b4b1d242fb3ba1cfa748afbc29bb778d9' => 
     array (
       0 => 'core/templates/templates/view_news.tpl',
-<<<<<<< HEAD
-      1 => 1338203156,
-=======
-      1 => 1338197676,
->>>>>>> 31dee6054a6913eda381b9a0f1aef85cad016c4b
+      1 => 1338203688,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338197676,
+      1 => 1338276806,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338197676,
+      1 => 1338237648,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5642690894fc35d20b2af06-54244122',
+  'nocache_hash' => '15874194114fc5babcea0239-88916151',
   'function' => 
   array (
   ),
@@ -41,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc35d20ba6052_07907492',
+  'unifunc' => 'content_4fc5babd0135c2_21228549',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc35d20ba6052_07907492')) {function content_4fc35d20ba6052_07907492($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc5babd0135c2_21228549')) {function content_4fc5babd0135c2_21228549($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -93,7 +85,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 			<!-- left menu -->
 			<div class="content_menu">
-				<a href="pages" class="menu_head ico1">Страницы</a>
+				<a href="pages.php" class="menu_head ico1">Страницы</a>
 				<a href="modules.php" class="menu_head ico2">Модули</a>			
 				<a href="#" class="menu_head ico3">Пользователи</a>
 				<a href="#" class="menu_head ico4">Настройки</a>
@@ -129,7 +121,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 				<br />
 				
-		
+    
+        
 <a href="windowAddNews.php" class="addPage">Создать</a>
 <div>
 <form method="post" id="formNws" action="save_news.php">
@@ -163,7 +156,8 @@ $_smarty_tpl->tpl_vars['template']->_loop = true;
 </div>
 <div class='hint'></div>
 
-						
+        
+    					
 			</div>
      </div></div>
 	<!-- CONTENT // -->

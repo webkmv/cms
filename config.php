@@ -14,6 +14,9 @@ define ('DIR_SITE_TEMPLATES', DIR_ROOT."templates/templates/");
 define ('DIR_SITE_CORE', DIR_ROOT."core/");
 define ('DIR_SITE_MODELS', DIR_SITE_CORE."models/");
 define ('DIR_SITE_VIEWS', DIR_SITE_CORE."views/");
+define ('DIR_SITE_MEDIA', DIR_SITE_CORE."media/");
+define ('DIR_SITE_IMAGE', DIR_SITE_MEDIA."images/");
+
 
 // параметры загрузки файлов
 define ('UPLOAD_MAX_FILESIZE', (1024 * 1024 * 50)); // максимальный размер загружаемого файла в мегабайтах

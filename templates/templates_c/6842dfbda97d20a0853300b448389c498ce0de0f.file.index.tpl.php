@@ -1,40 +1,44 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 13:36:10
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 10:41:49
          compiled from "templates/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14512029514fc47cb9e7a769-77753955%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5878504594fc4c9c10c1650-08298772%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6842dfbda97d20a0853300b448389c498ce0de0f' => 
     array (
       0 => 'templates/templates/index.tpl',
-      1 => 1338290411,
+      1 => 1338366926,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14512029514fc47cb9e7a769-77753955',
+  'nocache_hash' => '5878504594fc4c9c10c1650-08298772',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc47cb9ea8ad8_86389183',
+  'unifunc' => 'content_4fc4c9c11033f7_21184537',
   'variables' => 
   array (
-    'article' => 0,
+    'title' => 0,
+    'page' => 0,
+    'news' => 0,
+    'new' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc47cb9ea8ad8_86389183')) {function content_4fc47cb9ea8ad8_86389183($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc4c9c11033f7_21184537')) {function content_4fc4c9c11033f7_21184537($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-	<title>Санаторий Пятигорский Нарзан</title>
+	<title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
+	
 	<!-- css -->
 	<link href="core/media/stylesheets/style.css" rel="stylesheet" type="text/css" />
 	<link href="core/media/stylesheets/slider.css" rel="stylesheet" type="text/css" />
 	<link href="core/media/stylesheets/skins/tango/skin.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="core/media/stylesheets/jquery.fancybox.css" media="screen" />
-	
 	
 	<!-- js -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -45,9 +49,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<script type="text/javascript" src="core/media/javascripts/jquery.jcarousel.min.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/interface.js"></script>
-	
 
-	
 	<!--[if lte IE 7.0]>
 		<link href="core/media/stylesheets/ie.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
@@ -57,9 +59,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			DD_belatedPNG.fix('img');
 		</script>
 	<![endif]-->
-	
-	
-	
 </head>
 
 <body>
@@ -79,7 +78,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		
 		<!-- menu -->
 			<ul class="nav_menu">
-				<li><a href="index.php?page=about_as">О санатории</a></li>
+				<li><a href="index.php">О санатории</a></li>
 				<li><a href="index.php?page=lechenie">Лечение</a></li>
 				<li><a href="index.php?page=photogallery">Фотогалерея</a></li>
 				<li><a href="index.php?page=price">Цены на путёвки</a></li>
@@ -175,7 +174,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	
 	<div class="shadow"></div>
 	<div class="main_container-inner">
-	<div class="sidebar_block">		
+	<div class="sidebar_block">
+		
+		
+		
 		
 		<!-- programs -->
 		<div class="s_block">
@@ -192,31 +194,40 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</ul>
 			
 		</div>
-		
 		<!-- news -->
-		<div class="s_block fading">
-			<p class="title"><a href="index.php?page=news">все новости</a> Новости</p>
-			
-			<div class="aside-inner">
-			    <a href="#"><img src="core/media/uploads/news/img3.jpg" alt=""/></a>
-				<p><b>15 января 2012</b></p>
-			    <p>Цены на санаторно-курортное лечение на 1 полугодие 2012 года <a href="#">подробнее &rarr;</a></p>     
-		    </div><!--aside-inner-->
-			
-			<div class="aside-inner">
-			    <a href="#"><img src="core/media/uploads/news/img2.jpg" alt=""/></a>
-				<p><b>25 декабря 2011</b></p>
-			    <p>Новогодняя сказка в Пятигорском нарзане.  <a href="#">подробнее &rarr;</a></p>     
-		    </div><!--aside-inner-->
-			
-			<div class="aside-inner">
-			    <a href="#"><img src="core/media/uploads/news/img1.jpg" alt=""/></a>
-				<p><b>25 октября 2011</b></p>
-			    <p>Виталий Аксенов в Пятигорском нарзане.  <a href="#">подробнее &rarr;</a></p>     
-		    </div><!--aside-inner-->
+		<?php if ($_smarty_tpl->tpl_vars['page']->value!='news'){?>
+			<div class="s_block fading">
+				<p class="title"><a href="index.php?page=news">все новости</a> Новости</p>
 			
 			
-		</div>
+				<?php  $_smarty_tpl->tpl_vars['new'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['new']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['news']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['new']->key => $_smarty_tpl->tpl_vars['new']->value){
+$_smarty_tpl->tpl_vars['new']->_loop = true;
+?>
+				
+				<!--<div class="aside-inner">
+				    <a href="#"><img src="core/media/uploads/news/img3.jpg" alt=""/></a>
+					<p><b>15 января 2012</b></p>
+				    <p>Цены на санаторно-курортное лечение на 1 полугодие 2012 года <a href="#">подробнее &rarr;</a></p>     
+				</div><!--aside-inner-->
+				
+				
+					<div class="aside-inner">
+					<a href="index.php?page=news&id=<?php echo $_smarty_tpl->tpl_vars['new']->value['id'];?>
+"><img src="core/media/images/news/<?php echo $_smarty_tpl->tpl_vars['new']->value['image'];?>
+" alt=""/></a>
+					<p><b><?php echo $_smarty_tpl->tpl_vars['new']->value['date'];?>
+</b></p>
+					<p><?php echo $_smarty_tpl->tpl_vars['new']->value['title'];?>
+<a href="index.php?page=news&id=<?php echo $_smarty_tpl->tpl_vars['new']->value['id'];?>
+">подробнее &rarr;</a></p>
+					</div><!--aside-inner-->
+				
+				<?php } ?>
+			</div>
+		<?php }?>
+		
 		
 		
 		<!-- map -->
@@ -261,8 +272,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	
 	<!-- основной контент -->
 				
-	<?php echo $_smarty_tpl->tpl_vars['article']->value;?>
-
+	
+	
 		
 	<!-- // основной контент -->
 		

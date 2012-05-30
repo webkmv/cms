@@ -116,7 +116,8 @@ class ModelNews
 				SET title='".$data["title"]."', 
 					keywords='".$data["keywords"]."', 
 					description='".$data["description"]."', 
-					text='".$data["text"]."',  
+					text='".$data["text"]."',
+					image='".$data["image"]."',
 					author='".$data["author"]."',
 					alias='".$data["alias"]."'
 				WHERE id = ".$data["idNews"];

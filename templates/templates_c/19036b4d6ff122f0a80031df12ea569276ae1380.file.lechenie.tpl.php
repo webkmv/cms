@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 13:02:35
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 15:11:19
          compiled from "templates/templates/lechenie.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:517838044fc4accbefcfa8-49676418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10259042654fc4c9c3dea692-16607794%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '19036b4d6ff122f0a80031df12ea569276ae1380' => 
     array (
       0 => 'templates/templates/lechenie.tpl',
-      1 => 1338289039,
+      1 => 1338296965,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '517838044fc4accbefcfa8-49676418',
+  'nocache_hash' => '10259042654fc4c9c3dea692-16607794',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc4c9c3e282b4_13767628',
   'variables' => 
   array (
     'article' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc4accbf3ff93_71221844',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc4accbf3ff93_71221844')) {function content_4fc4accbf3ff93_71221844($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc4c9c3e282b4_13767628')) {function content_4fc4c9c3e282b4_13767628($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -79,7 +79,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		
 		<!-- menu -->
 			<ul class="nav_menu">
-				<li><a href="index.php?page=about_as">О санатории</a></li>
+				<li><a href="index.php">О санатории</a></li>
 				<li><a href="index.php?page=lechenie">Лечение</a></li>
 				<li><a href="index.php?page=photogallery">Фотогалерея</a></li>
 				<li><a href="index.php?page=price">Цены на путёвки</a></li>

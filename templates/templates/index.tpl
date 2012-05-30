@@ -3,13 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-	<title>{block name=title}Санаторий Пятигорский Нарзан{/block}</title>
+	<title>{$title}</title>
+	
 	<!-- css -->
 	<link href="core/media/stylesheets/style.css" rel="stylesheet" type="text/css" />
 	<link href="core/media/stylesheets/slider.css" rel="stylesheet" type="text/css" />
 	<link href="core/media/stylesheets/skins/tango/skin.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="core/media/stylesheets/jquery.fancybox.css" media="screen" />
-	
 	
 	<!-- js -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -20,9 +20,7 @@
 	<script type="text/javascript" src="core/media/javascripts/jquery.jcarousel.min.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/interface.js"></script>
-	
 
-	
 	<!--[if lte IE 7.0]>
 		<link href="core/media/stylesheets/ie.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
@@ -32,9 +30,6 @@
 			DD_belatedPNG.fix('img');
 		</script>
 	<![endif]-->
-	
-	
-	
 </head>
 
 <body>
@@ -54,7 +49,7 @@
 		
 		<!-- menu -->
 			<ul class="nav_menu">
-				<li><a href="index.php?page=about_as">О санатории</a></li>
+				<li><a href="index.php">О санатории</a></li>
 				<li><a href="index.php?page=lechenie">Лечение</a></li>
 				<li><a href="index.php?page=photogallery">Фотогалерея</a></li>
 				<li><a href="index.php?page=price">Цены на путёвки</a></li>
@@ -150,7 +145,10 @@
 	
 	<div class="shadow"></div>
 	<div class="main_container-inner">
-	<div class="sidebar_block">		
+	<div class="sidebar_block">
+		
+		{block name=lechenie}
+		{/block}
 		
 		<!-- programs -->
 		<div class="s_block">
@@ -167,31 +165,31 @@
 			</ul>
 			
 		</div>
-		
 		<!-- news -->
-		<div class="s_block fading">
-			<p class="title"><a href="index.php?page=news">все новости</a> Новости</p>
-			
-			<div class="aside-inner">
-			    <a href="#"><img src="core/media/uploads/news/img3.jpg" alt=""/></a>
-				<p><b>15 января 2012</b></p>
-			    <p>Цены на санаторно-курортное лечение на 1 полугодие 2012 года <a href="#">подробнее &rarr;</a></p>     
-		    </div><!--aside-inner-->
-			
-			<div class="aside-inner">
-			    <a href="#"><img src="core/media/uploads/news/img2.jpg" alt=""/></a>
-				<p><b>25 декабря 2011</b></p>
-			    <p>Новогодняя сказка в Пятигорском нарзане.  <a href="#">подробнее &rarr;</a></p>     
-		    </div><!--aside-inner-->
-			
-			<div class="aside-inner">
-			    <a href="#"><img src="core/media/uploads/news/img1.jpg" alt=""/></a>
-				<p><b>25 октября 2011</b></p>
-			    <p>Виталий Аксенов в Пятигорском нарзане.  <a href="#">подробнее &rarr;</a></p>     
-		    </div><!--aside-inner-->
+		{block name=news}
+			<div class="s_block fading">
+				<p class="title"><a href="index.php?page=news">все новости</a> Новости</p>
 			
 			
-		</div>
+				{foreach $news as $new}
+				
+				<!--<div class="aside-inner">
+				    <a href="#"><img src="core/media/uploads/news/img3.jpg" alt=""/></a>
+					<p><b>15 января 2012</b></p>
+				    <p>Цены на санаторно-курортное лечение на 1 полугодие 2012 года <a href="#">подробнее &rarr;</a></p>     
+				</div><!--aside-inner-->
+				
+				
+					<div class="aside-inner">
+					<a href="index.php?page=news&id={$new.id}"><img src="core/media/images/news/{$new.image}" alt=""/></a>
+					<p><b>{$new.date}</b></p>
+					<p>{$new.title}<a href="index.php?page=news&id={$new.id}">подробнее &rarr;</a></p>
+					</div><!--aside-inner-->
+				
+				{/foreach}
+			</div>
+		{/block}
+		
 		
 		
 		<!-- map -->
@@ -236,7 +234,8 @@
 	
 	<!-- основной контент -->
 				
-	{$article}
+	{block name=content}
+	{/block}
 		
 	<!-- // основной контент -->
 		

@@ -10,7 +10,7 @@
  	<input type="hidden" name="idToFile" value="{$template.id}" />
  	<input type="hidden" name="pathToFile" value="{$template.path}" />
  	
- 	<textarea rows="10" cols="45" name="text">{$template.text}</textarea><br />
+ 	<textarea rows="40" cols="150" name="text">{$template.text}</textarea><br />
  	
  	<input type="submit" name="saveTpl" value="Сохранить" />
  	<input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'tpls.php'";/>
