@@ -15,7 +15,10 @@
 	<tbody>
    	    {foreach $pages as $page}
 		  <tr>
-		  <td><a href="view_page.php?id={$page.id}">{$page.title}</a></td>
+		  <td>{$page.title}<br />
+		  <a href="view_page.php?id={$page.id}">редактировать</a>
+		  <a href="../index.php?page={$page.url}">просмотреть</a>
+		  </td>
 		  
 		  <td>
 			{if $page.published == 0}

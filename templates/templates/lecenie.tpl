@@ -5,7 +5,7 @@
 			<p class="title">Лечение</p>
 			<ul>
 				<li class="active_point"><a href="#">Перечень заболеваний</a></li>
-				<li><a href="#">Лечебная база</a></li>
+				<li><a href="index.php?page=lechebnaya_baza">Лечебная база</a></li>
 				<li><a href="#">Консультации врачей</a></li>
 				<li><a href="#">Лечебные процедуры</a></li>
 				<li><a href="#">Перечень и количество процедур, входящих в стоимость путевки</a></li>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 09:12:32
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 15:54:32
          compiled from "core/templates/templates/add_news.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20700257944fc5c860450c16-97936190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4dbef6534d5f27ee3269473fe952fa4e4a1bf5e5' => 
     array (
       0 => 'core/templates/templates/add_news.tpl',
-      1 => 1338197676,
+      1 => 1338470740,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4fc5c8604d20f2_87317391',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc5c8604d20f2_87317391')) {function content_4fc5c8604d20f2_87317391($_smarty_tpl) {?><script type="text/javascript" src="../../core/media/js/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="core/media/js/config_tiny.js"></script>

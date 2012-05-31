@@ -1,5 +1,6 @@
-{extends file="main.tpl"}
-{block name=body}
+{extends file="main_templates.tpl"}
+{block name=title}Новости{/block}
+{block name=bodyTemplate}
 <a href="windowAddNews.php" class="addPage">Создать</a>
 <table class="modul_table">
     <thead>

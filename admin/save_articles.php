@@ -7,8 +7,7 @@ try
 {
 	$model = new ModelArticles();
 	$model->SaveArticles($_POST);
-
-	echo "Статья сохранена";
+	
 	header("Location: articles.php");
 }
 catch (Exception $exc)

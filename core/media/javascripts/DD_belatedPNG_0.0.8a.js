@@ -123,7 +123,7 @@ var DD_belatedPNG = {
 			}
 		}
 		for (h in handlers) {
-			if (handlers.hasOwnProperty(h)) {				handler = function () {					self[handlers[h]](el);				};
+			if (handlers.hasOwnProperty(h)) {				handler = function () {					self[handlers[h]](el);				};
 				el.attachEvent('on' + h, handler);
 			}
 		}
@@ -172,7 +172,7 @@ var DD_belatedPNG = {
 				img = document.createElement('img');
 				lib.imgSize[el.vmlBg] = img;
 				img.className = lib.ns + '_sizeFinder';
-				img.runtimeStyle.cssText = 'behavior:none; position:absolute; left:-10000px; top:-10000px; border:none; margin:0; padding:0;'; /* make sure to set behavior to none to prevent accidental matching of the helper elements! */				imgLoaded = function () {					this.width = this.offsetWidth; /* weird cache-busting requirement! */					this.height = this.offsetHeight;					lib.vmlOffsets(el);				};
+				img.runtimeStyle.cssText = 'behavior:none; position:absolute; left:-10000px; top:-10000px; border:none; margin:0; padding:0;'; /* make sure to set behavior to none to prevent accidental matching of the helper elements! */				imgLoaded = function () {					this.width = this.offsetWidth; /* weird cache-busting requirement! */					this.height = this.offsetHeight;					lib.vmlOffsets(el);				};
 				img.attachEvent('onload', imgLoaded);
 				img.src = el.vmlBg;
 				img.removeAttribute('width');
@@ -237,9 +237,9 @@ var DD_belatedPNG = {
 		else {
 			el.vml.image.shape.style.clip = 'rect('+dC.T+'px '+dC.R+'px '+dC.B+'px '+dC.L+'px)';
 		}
-	},	figurePercentage: function (bg, size, axis, position) {		var horizontal, fraction;		fraction = true;		horizontal = (axis == 'X');		switch(position) {			case 'left':			case 'top':				bg[axis] = 0;				break;			case 'center':				bg[axis] = 0.5;				break;			case 'right':			case 'bottom':				bg[axis] = 1;				break;			default:				if (position.search('%') != -1) {					bg[axis] = parseInt(position, 10) / 100;				}				else {					fraction = false;				}		}		bg[axis] = Math.ceil(  fraction ? ( (size[horizontal?'W': 'H'] * bg[axis]) - (size[horizontal?'w': 'h'] * bg[axis]) ) : parseInt(position, 10)  );		if (bg[axis] % 2 === 0) {			bg[axis]++;		}		return bg[axis];	},
+	},	figurePercentage: function (bg, size, axis, position) {		var horizontal, fraction;		fraction = true;		horizontal = (axis == 'X');		switch(position) {			case 'left':			case 'top':				bg[axis] = 0;				break;			case 'center':				bg[axis] = 0.5;				break;			case 'right':			case 'bottom':				bg[axis] = 1;				break;			default:				if (position.search('%') != -1) {					bg[axis] = parseInt(position, 10) / 100;				}				else {					fraction = false;				}		}		bg[axis] = Math.ceil(  fraction ? ( (size[horizontal?'W': 'H'] * bg[axis]) - (size[horizontal?'w': 'h'] * bg[axis]) ) : parseInt(position, 10)  );		if (bg[axis] % 2 === 0) {			bg[axis]++;		}		return bg[axis];	},
 	fixPng: function (el) {
-		el.style.behavior = 'none';		var lib, els, nodeStr, v, e;
+		el.style.behavior = 'none';		var lib, els, nodeStr, v, e;
 		if (el.nodeName == 'BODY' || el.nodeName == 'TD' || el.nodeName == 'TR') { /* elements not supported yet */
 			return;
 		}

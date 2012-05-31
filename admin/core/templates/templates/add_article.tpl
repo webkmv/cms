@@ -1,4 +1,3 @@
-<script type="text/javascript" src="core/media/js/articles.js"></script>
 <script type="text/javascript" src="../../core/media/js/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 

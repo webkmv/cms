@@ -15,6 +15,7 @@
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/articles.js"></script>
 	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
 	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
@@ -79,7 +80,6 @@
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path">{$nameSection}</div>
 				<br />
 				{block name=body}default body{/block}					
 			</div>

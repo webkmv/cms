@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 09:45:29
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 12:50:53
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1025374964fc47395dec558-33183607%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1338276328,
+      1 => 1338444826,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338276806,
+      1 => 1338444826,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338237648,
+      1 => 1338451630,
       2 => 'file',
     ),
   ),
@@ -29,10 +29,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4fc47395e70191_26261294',
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc47395e70191_26261294')) {function content_4fc47395e70191_26261294($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -52,6 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/articles.js"></script>
 	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
 	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
@@ -116,8 +113,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
-</div>
 				<br />
 				
     
@@ -140,9 +135,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['page']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['page']->_loop = true;
 ?>
 		  <tr>
-		  <td><a href="view_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['page']->value['title'];?>
-</a></td>
+		  <td><?php echo $_smarty_tpl->tpl_vars['page']->value['title'];?>
+<br />
+		  <a href="view_page.php?id=<?php echo $_smarty_tpl->tpl_vars['page']->value['id'];?>
+">редактировать</a>
+		  <a href="../index.php?page=<?php echo $_smarty_tpl->tpl_vars['page']->value['url'];?>
+">просмотреть</a>
+		  </td>
 		  
 		  <td>
 			<?php if ($_smarty_tpl->tpl_vars['page']->value['published']==0){?>

@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="core/media/javascripts/jquery.jcarousel.min.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/interface.js"></script>
+	<script type="text/javascript" src="core/media/javascripts/bronir.js"></script>
 
 	<!--[if lte IE 7.0]>
 		<link href="core/media/stylesheets/ie.css" rel="stylesheet" type="text/css" />
@@ -172,14 +173,7 @@
 			
 			
 				{foreach $news as $new}
-				
-				<!--<div class="aside-inner">
-				    <a href="#"><img src="core/media/uploads/news/img3.jpg" alt=""/></a>
-					<p><b>15 января 2012</b></p>
-				    <p>Цены на санаторно-курортное лечение на 1 полугодие 2012 года <a href="#">подробнее &rarr;</a></p>     
-				</div><!--aside-inner-->
-				
-				
+							
 					<div class="aside-inner">
 					<a href="index.php?page=news&id={$new.id}"><img src="core/media/images/news/{$new.image}" alt=""/></a>
 					<p><b>{$new.date}</b></p>
@@ -233,7 +227,6 @@
 	<div class="content_block">
 	
 	<!-- основной контент -->
-				
 	{block name=content}
 	{/block}
 		
@@ -352,42 +345,44 @@
 		<div class="message_container">
 		<p class="user_mess">Уважаемые клиенты. Просим вас указывать точную информацию в форме, иначе мы не сможем связаться с вами и подтвердить заказ номера.<br />Обязательно заполните поля со звездочкой ( <span class="red">*</span> ).</p>
 				<br />
+				
 		<!-- error_explanation -->			
 		<div class="error_explanation">
 			<ul>
-				<li>— Не заполнено поле «Контактный телефон»</li>
-				<li>— Неправильно указаны цифры на картинке</li>
-				<li>— Какие-либо данные неверны</li>
+				<li class ="user_field">— Поле ФИО не заполнено</li>
+				<li class="phone_field">— Не заполнено поле «Контактный телефон»</li>
+				<li class="mail_field">— Неправильно указаны цифры на картинке</li>
 			</ul>
 		</div>
 		
 		
 		<div class="general_form">
-		<form method="post" action="#">
+		<form method="post" id="booking">
 			<p class="bron_title">Персональные данные</p>
 
 			<dl>
 				<dt><label for="user">Фамилия, имя, отчество <span>*</span></label></dt>
-				<dd><input id="user" type="text" /></dd>
+				<dd><input id="user" type="text" name="booking_name" /></dd>
 			</dl>
 				
 			<dl>
 				<dt><label for="data">Дата рождения <span>*</span></label></dt>
 				<dd>
-					<select id="data" class="first_select">
-            		  	<option>28</option>
+			<select id="data" class="first_select" name="day_of_birth">
+            		  	
             		  	<option>01</option>
             		  	<option>02</option>
             		  	<option>03</option>
+				<option>28</option>
             		</select>
             	
-            		<select class="second_select">
+            		<select class="second_select" name="month_of_birth">
             		  	<option>сентябрь</option>
             		  	<option>октябрь</option>
             		  	<option>ноябрь</option>
             		</select>
             	
-            		<select class="third_select">
+            		<select class="third_select" name="year_of_birth">
             		  	<option>1980</option>
             		  	<option>2009</option>
             		  	<option>2010</option>
@@ -397,16 +392,16 @@
 			</dl>
 			
 			<dl>
-				<dt><div class="two_label"><label for="phone">Контактный телефон <span>*</span></label> <label for="email">Элекстронная почта <span>*</span></label></div></dt>
+				<dt><div class="two_label"><label for="phone">Контактный телефон <span>*</span></label> <label for="email">Электронная почта <span>*</span></label></div></dt>
 				<dd>
-					<div class="two_input"><input id="phone" type="text" /> <input id="email" type="text" /></div>
+					<div class="two_input"><input id="phone" type="text" name="phone" /> <input id="email" type="text" name="email" /></div>
 				</dd>
 			</dl>
 			
 			
 			<dl>
 				<dt><label for="city">Населенный пункт</label></dt>
-				<dd><input id="city" type="text" /></dd>
+				<dd><input id="city" type="text" name="locality" /></dd>
 			</dl>
 			
 			
@@ -418,27 +413,27 @@
 				<dd>
 					<div class="second_input">
 					
-					<select id="data_in" class="first_select">
+			<select id="data_in" class="first_select" name="day_of_arrival" >
             		  	<option>28</option>
             		  	<option>01</option>
             		  	<option>02</option>
             		  	<option>03</option>
             		</select>
             	
-            		<select class="second_select">
+            		<select class="second_select" name="month_of_arrival" >
             		  	<option>сентябрь</option>
             		  	<option>октябрь</option>
             		  	<option>ноябрь</option>
             		</select>
             	
-            		<select class="third_select">
+            		<select class="third_select" name="year_of_arrival">
             		  	<option>1980</option>
             		  	<option>2009</option>
             		  	<option>2010</option>
             		  	<option>2011</option>
             		</select>
 					
-					<select id="score_day" class="first_select">
+			<select id="score_day" class="first_select" name="number_of_days" >
             		  	<option>28</option>
             		  	<option>01</option>
             		  	<option>02</option>
@@ -450,7 +445,7 @@
 			
 			<dl>
 				<dt class="mt20"><label for="category">Категория номера <span>*</span></label></dt>
-				<dd><select class="four_select" id="category">
+			<dd><select class="four_select" id="category" name="category">
             		  	<option>Cтандартный номер (2770 руб. 1 чел/сутки) </option>
             		  	<option>Номера класса «Люкс» (4200 руб. 1 чел/сутки)</option>
             		  	<option>«Апартаменты» (8900 руб. 1 чел/сутки)</option>
@@ -463,7 +458,7 @@
 				<dt class="mt20"><label for="score_user">Количество проживающих <span>*</span></label></dt>
 				<dd class="passport">
 					<span>взрослые</span>
-					<select id="score_user" class="first_select">
+					<select id="score_user" class="first_select" name="number_of_people" >
             		  	<option>28</option>
             		  	<option>01</option>
             		  	<option>02</option>
@@ -471,18 +466,18 @@
             		</select>
 					
 					<span>дети 4—14 лет</span>
-					<select class="first_select">
-            		  	<option>28</option>
+			<select class="first_select" name="number_of_child" >
             		  	<option>01</option>
             		  	<option>02</option>
             		  	<option>03</option>
+				<option>28</option>
             		</select>
 				</dd>
 			</dl>
 			
 			<dl>
 				<dt class="mt20"><label for="wishes">Пожелания</label></dt>
-				<dd><textarea id="wishes"></textarea></dd>
+				<dd><textarea id="wishes" name="wishes" ></textarea></dd>
 			</dl>
 			
 			<dl>
@@ -490,7 +485,7 @@
 				<dd> <img src="core/media/uploads/captcha.png" alt="" /></dd>
 			</dl>
 			
-			<input type="submit"  class="send_message_btn" value="Отправить информацию" name="" />
+			<input type="submit" class="send_message_btn" value="Отправить информацию" name="" />
 			
 
 

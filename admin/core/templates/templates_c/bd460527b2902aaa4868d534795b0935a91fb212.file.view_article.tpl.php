@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 11:36:58
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 07:54:16
          compiled from "core/templates/templates/view_article.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7949073314fc498ba7a53f3-93223961%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bd460527b2902aaa4868d534795b0935a91fb212' => 
     array (
       0 => 'core/templates/templates/view_article.tpl',
-      1 => 1338204652,
+      1 => 1338443296,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338237648,
+      1 => 1338380577,
       2 => 'file',
     ),
   ),
@@ -27,20 +27,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4fc498ba80c981_61085830',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc498ba80c981_61085830')) {function content_4fc498ba80c981_61085830($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>Страница <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+    <title>Статья <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
@@ -117,32 +113,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
-</div>
 				<br />
 				
     
         
-<a href="windowAddArticles.php" class="addPage">Создать</a>
-<div>
 
-    <form method="post" enctype="multipart/form-data" id="formAddArticle" action="save_articles.php">
-        Заголовок: <input type="text" name="title" id="titleAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-" /><br />
-        Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddArticle"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
-</textarea><br /> 
-        Ключевые слова: <input type="text" name="keywords" id="keywordsAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
-" /><br />
-        Содержание: <textarea rows="30" cols="80" name="text" id="textAddArticle" ><?php echo $_smarty_tpl->tpl_vars['text']->value;?>
-</textarea><br /> 
-        Автор: <input type="text" name="author" id="authorAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['author']->value;?>
-" /><br />
-        <input type="hidden" name="id" value=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
- />
-        <input type="submit" value="Добавить" id="btnAddArticle" />
-    </form>
+    <a href="windowAddArticles.php" class="addPage">Создать</a>
     
-<div id="addArticleErrors"></div>
+    <div>
+        <form method="post" enctype="multipart/form-data" id="formAddArticle" action="save_articles.php">
+            Заголовок: <input type="text" name="title" id="titleAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+" /><br />
+            Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddArticle"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</textarea><br /> 
+            Ключевые слова: <input type="text" name="keywords" id="keywordsAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+" /><br />
+            Содержание: <textarea rows="30" cols="80" name="text" id="textAddArticle" ><?php echo $_smarty_tpl->tpl_vars['text']->value;?>
+</textarea><br /> 
+            Автор: <input type="text" name="author" id="authorAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['author']->value;?>
+" /><br />
+            <input type="hidden" name="id" value=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
+ />
+            <input type="submit" value="Сохранить" id="btnAddArticle" />
+            <input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'articles.php'";/>
+        </form> 
+    <div id="addArticleErrors"></div>
 
 
         

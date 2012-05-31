@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 08:14:20
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 15:54:38
          compiled from "core/templates/templates/view_news.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15874194114fc5babcea0239-88916151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f63c629b4b1d242fb3ba1cfa748afbc29bb778d9' => 
     array (
       0 => 'core/templates/templates/view_news.tpl',
-      1 => 1338203688,
+      1 => 1338470739,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338276806,
+      1 => 1338470739,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338237648,
+      1 => 1338470739,
       2 => 'file',
     ),
   ),
@@ -27,20 +27,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4fc5babd0135c2_21228549',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc5babd0135c2_21228549')) {function content_4fc5babd0135c2_21228549($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>Страница <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+    <title>Новость <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
@@ -53,6 +49,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/articles.js"></script>
 	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
 	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
@@ -117,8 +114,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
-</div>
 				<br />
 				
     
@@ -128,17 +123,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <form method="post" id="formNws" action="save_news.php">
 	Заголовок: <input type="text" name="title" id="titlePage" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 " /><br />  
-	<!--Шаблон: <select name="template" id="listTemplates">
-	  <?php  $_smarty_tpl->tpl_vars['template'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['template']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['templates']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['template']->key => $_smarty_tpl->tpl_vars['template']->value){
-$_smarty_tpl->tpl_vars['template']->_loop = true;
-?>
-	  	<option value=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
-><?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
-</option>
-	  <?php } ?>
-	</select><br>-->
 	Ключевые слова: <input type="text" name="keywords" id="keywordsPage" value="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
 " /><br />
 	Описание: <textarea rows="10" cols="45" name="description" id="descriptionPage"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>

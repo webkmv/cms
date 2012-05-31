@@ -9,9 +9,9 @@
 	  	<option value={$template.id}>{$template.title}</option>
 	  {/foreach}
 	</select>
-	Keywords: <input type="text" name="keywords" id="keywordsAddPage"><br />
-	Description: <textarea rows="10" cols="45" name="description" id="descriptionAddPage"></textarea><br />
-	<textarea rows="10" cols="45" name="body" id="bodyPage"></textarea><br />
+	Ключевые слова: <input type="text" name="keywords" id="keywordsAddPage"><br />
+	Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddPage"></textarea><br />
+	Контент:<textarea rows="10" cols="45" name="body" id="bodyPage"></textarea><br />
 	<input type="submit" value="Добавить" id="btnAddPage" />
 </form>
 {/block}

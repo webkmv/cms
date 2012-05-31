@@ -8,7 +8,6 @@ try {
 	$model = new ModelPages();
 	$view = new ViewIndex();
 
-	$view->assign("nameSection", "Страницы");
 	$view->assign("pages", $model->GetAllPages());
 	$view->display("list_pages.tpl");
 }

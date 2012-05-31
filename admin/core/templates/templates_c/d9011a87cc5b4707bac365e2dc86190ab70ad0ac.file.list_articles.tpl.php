@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 09:07:53
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 14:27:56
          compiled from "core/templates/templates/list_articles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16065446164fc475c9950073-17599503%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338237648,
+      1 => 1338380577,
       2 => 'file',
     ),
   ),
@@ -21,13 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4fc475c99b3236_67223202',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc475c99b3236_67223202')) {function content_4fc475c99b3236_67223202($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
@@ -110,8 +106,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
-</div>
 				<br />
 				
 <a href="windowAddArticle.php" class="addPage">Создать</a>

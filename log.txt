@@ -86,3 +86,29 @@
 |30.05.2012 09:53:27| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 |30.05.2012 10:27:19| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 |30.05.2012 10:27:21| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 11:14:55| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 13:32:14| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:21| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:22| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:22| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:22| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:22| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:23| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:23| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:39:23| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:41:33| Ошибка извлечения страницы 'lechenie' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 13:43:45| Ошибка извлечения страницы 'index' из базы. Файл '/home/mup/public_html/tasks/site/core/models/ModelPages.php'. Строка: '35'. Ошибка: Table 'mup_tasks.pages' doesn't exist
+|30.05.2012 14:02:30| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 14:02:38| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 14:02:43| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 14:02:55| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 14:22:55| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 14:57:32| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 14:57:34| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 15:02:37| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 15:02:44| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|30.05.2012 17:24:19| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|31.05.2012 09:35:13| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|31.05.2012 14:54:23| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|31.05.2012 15:53:13| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+|31.05.2012 15:53:18| You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1

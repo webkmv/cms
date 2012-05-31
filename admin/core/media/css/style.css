@@ -106,7 +106,7 @@ h6 {font: 10px 'PT Sans Narrow',Arial,Helvetica,sans-serif;}
 .add{color:#03bd37;}
 .del{color:#ff0000;}
 
-.hint{min-height:30px;}
+.hint{min-height:30px; color: red;}
 
 
 

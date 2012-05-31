@@ -192,9 +192,9 @@ ol li{ margin-bottom: 14px;}
 .bron_title{font-size:18px; color:#000; display:block;}
 
 /* error explanation */
-.error_explanation{padding:10px 20px; color:#fff; margin-bottom:30px; background-color:#f00;}
+.error_explanation{color:#fff; margin-bottom:30px; background-color:#f00;}
 .error_explanation ul{margin:0px!important;}
-.error_explanation li{line-height:20px; list-style:none outside none!important; margin-bottom:0px!important;}
+.error_explanation li{line-height:30px; list-style:none outside none!important; margin-bottom:0px!important;}
 .reg_info{color: #666666;  float: right; font-size: 12px; width: 350px;}
 .red{color:#f00;}
 

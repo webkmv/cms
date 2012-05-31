@@ -15,7 +15,6 @@ try
 	$pageData = $model->GetPageById($id);
 	$templates = $mTemplates->GetTemplaesByViewPage((int)$pageData["id_template"]);
 	
-	$view->assign("nameSection", $pageData["title"]);
 	$view->assign("id", $pageData["id"]);
 	$view->assign("title", $pageData["title"]);
 	$view->assign("url", $pageData["url"]);

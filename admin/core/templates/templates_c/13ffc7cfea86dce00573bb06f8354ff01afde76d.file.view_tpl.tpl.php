@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 08:10:29
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 10:53:26
          compiled from "core/templates/templates/view_tpl.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21129875754fc4ac7141fea0-47228526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '13ffc7cfea86dce00573bb06f8354ff01afde76d' => 
     array (
       0 => 'core/templates/templates/view_tpl.tpl',
-      1 => 1338358226,
+      1 => 1338444825,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338276806,
+      1 => 1338444826,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338237648,
+      1 => 1338444826,
       2 => 'file',
     ),
   ),
@@ -29,10 +29,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4fc4ac714871f4_49772005',
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4fc4ac714871f4_49772005')) {function content_4fc4ac714871f4_49772005($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -116,8 +112,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
-</div>
 				<br />
 				
     

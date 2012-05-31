@@ -1,32 +1,31 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 10:41:49
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-30 14:45:21
          compiled from "templates/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5878504594fc4c9c10c1650-08298772%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20387401774fc5fa4155af29-49312907%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6842dfbda97d20a0853300b448389c498ce0de0f' => 
     array (
       0 => 'templates/templates/index.tpl',
-      1 => 1338366926,
+      1 => 1338370051,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5878504594fc4c9c10c1650-08298772',
+  'nocache_hash' => '20387401774fc5fa4155af29-49312907',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc4c9c11033f7_21184537',
   'variables' => 
   array (
     'title' => 0,
-    'page' => 0,
     'news' => 0,
     'new' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc5fa4161a852_77757543',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc4c9c11033f7_21184537')) {function content_4fc4c9c11033f7_21184537($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc5fa4161a852_77757543')) {function content_4fc5fa4161a852_77757543($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -195,7 +194,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			
 		</div>
 		<!-- news -->
-		<?php if ($_smarty_tpl->tpl_vars['page']->value!='news'){?>
+		
 			<div class="s_block fading">
 				<p class="title"><a href="index.php?page=news">все новости</a> Новости</p>
 			
@@ -226,7 +225,7 @@ $_smarty_tpl->tpl_vars['new']->_loop = true;
 				
 				<?php } ?>
 			</div>
-		<?php }?>
+		
 		
 		
 		
@@ -271,7 +270,6 @@ $_smarty_tpl->tpl_vars['new']->_loop = true;
 	<div class="content_block">
 	
 	<!-- основной контент -->
-				
 	
 	
 		
