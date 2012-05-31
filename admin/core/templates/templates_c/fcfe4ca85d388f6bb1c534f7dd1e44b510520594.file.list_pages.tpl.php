@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 12:50:53
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 16:06:15
          compiled from "core/templates/templates/list_pages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1025374964fc47395dec558-33183607%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,19 +7,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcfe4ca85d388f6bb1c534f7dd1e44b510520594' => 
     array (
       0 => 'core/templates/templates/list_pages.tpl',
-      1 => 1338444826,
+      1 => 1338470739,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
     array (
       0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338444826,
+      1 => 1338470739,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
     array (
       0 => 'core/templates/templates/main.tpl',
-      1 => 1338451630,
+      1 => 1338470739,
       2 => 'file',
     ),
   ),

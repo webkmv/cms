@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 16:06:22
-         compiled from "core/templates/templates/list_articles.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16065446164fc475c9950073-17599503%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 16:11:26
+         compiled from "core/templates/templates/list_reviews.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12772038574fc77c0e20cb47-77576485%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'd9011a87cc5b4707bac365e2dc86190ab70ad0ac' => 
+    '1ab9f84a45609e2ecfaeabdb91ae9ab9791b0564' => 
     array (
-      0 => 'core/templates/templates/list_articles.tpl',
-      1 => 1338470740,
+      0 => 'core/templates/templates/list_reviews.tpl',
+      1 => 1338472827,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
@@ -17,15 +17,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16065446164fc475c9950073-17599503',
+  'nocache_hash' => '12772038574fc77c0e20cb47-77576485',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc475c99b3236_67223202',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc77c0e281bb2_15791551',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc475c99b3236_67223202')) {function content_4fc475c99b3236_67223202($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc77c0e281bb2_15791551')) {function content_4fc77c0e281bb2_15791551($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -109,37 +109,47 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 				<br />
 				
-<a href="windowAddArticle.php" class="addPage">Создать</a>
-
-  <table class="modul_table">
-  <thead>
-  	<tr>
-  		<th class="middle">Название</th>
-                <th class="middle">Автор</th>
-		<th class="min">Публиковать</th>
-		<th class="min">Удалить</th>
+<a href="windowReviewsSettings.php" class="addPage">Настроить</a>
+<table class="modul_table">
+    <thead>
+	<tr>
+            <th class="middle">Заголовок</th>
+	    <th class="middle">Текст</th>
+	    <th class="min">Автор</th>
+	    <th class="min">E-mail</th>
+            <th class="middle">Опубликовано</th>
+            <th class="middle">Дата</th>
+	    <th>Удалить</th>
 	</tr>
-	</thead>
-	<tbody>
-            <?php  $_smarty_tpl->tpl_vars['article'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['article']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['articles']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['article']->key => $_smarty_tpl->tpl_vars['article']->value){
-$_smarty_tpl->tpl_vars['article']->_loop = true;
-?>
-                <tr>
-                    <td><a href="view_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['article']->value['title'];?>
+    </thead>
+
+    <tbody>
+	<?php  $_smarty_tpl->tpl_vars['review'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['review']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['reviews']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['review']->key => $_smarty_tpl->tpl_vars['review']->value){
+$_smarty_tpl->tpl_vars['review']->_loop = true;
+?>        
+        <tr>
+            <td><a href="view_news.php?id='<?php echo $_smarty_tpl->tpl_vars['review']->value['id'];?>
+'"><?php echo $_smarty_tpl->tpl_vars['review']->value['title'];?>
 </a></td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['article']->value['author'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['review']->value['text'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['article']->value['published'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['review']->value['name'];?>
 </td>
-                    <td class="del"><a href="delete_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['review']->value['email'];?>
+</td>
+            <td><a href="reviews_published.php?id=<?php echo $_smarty_tpl->tpl_vars['review']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['review']->value['published'];?>
+</a></td>
+            <td><?php echo $_smarty_tpl->tpl_vars['review']->value['date'];?>
+</td>
+            <td class="del"><a href="delete_news.php?id=<?php echo $_smarty_tpl->tpl_vars['review']->value['id'];?>
 ">-</a></td>
-                </tr>
-            <?php } ?>
-        </tbody>
-  </table>
+        </tr>
+	<?php } ?>
+    </tbody>
+</table>
 					
 			</div>
      </div></div>
