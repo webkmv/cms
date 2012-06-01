@@ -26,7 +26,7 @@ try
         $model->InsertNews($title, $keywords, $description, $text, $dateNow,
                            $author, $views, $published,$alias);
 	
-	//header('Location: news.php');
+	header('Location: news.php');
 }
 catch (Exception $exception)
 {

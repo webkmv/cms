@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 16:06:22
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-01 07:45:11
          compiled from "core/templates/templates/list_articles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16065446164fc475c9950073-17599503%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd9011a87cc5b4707bac365e2dc86190ab70ad0ac' => 
     array (
       0 => 'core/templates/templates/list_articles.tpl',
-      1 => 1338470740,
+      1 => 1338529503,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>default title</title>	
+    <title>Новости</title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link href="core/media/css/style.css" rel="stylesheet" type="text/css" />

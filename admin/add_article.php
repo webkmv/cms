@@ -16,7 +16,9 @@
     
         //сохраняем статью в БД
         $model = new ModelArticles();
-        $model->addArticle($title, $description, $keywords, $text, $author, $dateNow);        
+        $model->addArticle($title, $description, $keywords, $text, $author, $dateNow);
+        
+        header('Location: articles.php');
     }
     
     catch (Exception $exception)

@@ -8,5 +8,4 @@
     $model = new ModelArticles();
     $template->assign("articles", $model->getAllArticles());
     $template->display("add_article.tpl");
-    
 ?>

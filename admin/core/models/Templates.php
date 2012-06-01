@@ -148,7 +148,7 @@ class ModelTemplates
    * @throws Exception ошибка извлечения шаблонов
    * @return array массив шаблонов
    */
-  public function GetTemplaesByViewPage($idTemplate) 
+  public function GetTemplatesByViewPage($idTemplate) 
   {
   	$sql = "SELECT * FROM templates WHERE id != '$idTemplate'";
   	if (!$query = mysql_query($sql))

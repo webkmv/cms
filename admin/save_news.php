@@ -8,7 +8,6 @@ try
 	$model = new ModelNews();
 	$model->SaveNews($_POST);
 
-	echo "Страница сохранена!";
 	header("Location: news.php");
 }
 catch (Exception $exc)

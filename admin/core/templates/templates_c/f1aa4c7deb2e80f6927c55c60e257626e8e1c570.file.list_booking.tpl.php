@@ -1,19 +1,13 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-01 10:00:25
-         compiled from "core/templates/templates/view_article.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7949073314fc498ba7a53f3-93223961%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-01 09:25:20
+         compiled from "core/templates/templates/list_booking.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:3696212384fc85d85797431-74449091%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'bd460527b2902aaa4868d534795b0935a91fb212' => 
+    'f1aa4c7deb2e80f6927c55c60e257626e8e1c570' => 
     array (
-      0 => 'core/templates/templates/view_article.tpl',
-      1 => 1338537621,
-      2 => 'file',
-    ),
-    '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
-    array (
-      0 => 'core/templates/templates/main_templates.tpl',
-      1 => 1338470739,
+      0 => 'core/templates/templates/list_booking.tpl',
+      1 => 1338535517,
       2 => 'file',
     ),
     'e87d9a6c06ef593309a45181120117a8e676c5eb' => 
@@ -23,21 +17,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7949073314fc498ba7a53f3-93223961',
+  'nocache_hash' => '3696212384fc85d85797431-74449091',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc498ba80c981_61085830',
+  'unifunc' => 'content_4fc85d85811b83_37713807',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc498ba80c981_61085830')) {function content_4fc498ba80c981_61085830($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc85d85811b83_37713807')) {function content_4fc85d85811b83_37713807($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>Статья <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-</title>	
+    <title>модуль бронирования</title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link href="core/media/css/style.css" rel="stylesheet" type="text/css" />
@@ -116,31 +109,63 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 				<br />
 				
-    
-        
-    
-    <div>
-        <form method="post" enctype="multipart/form-data" id="formAddArticle" action="save_articles.php">
-            Заголовок: <input type="text" name="title" id="titleAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-" /><br />
-            Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddArticle"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
-</textarea><br /> 
-            Ключевые слова: <input type="text" name="keywords" id="keywordsAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
-" /><br />
-            Содержание: <textarea rows="30" cols="80" name="text" id="textAddArticle" ><?php echo $_smarty_tpl->tpl_vars['text']->value;?>
-</textarea><br /> 
-            Автор: <input type="text" name="author" id="authorAddArticle" value="<?php echo $_smarty_tpl->tpl_vars['author']->value;?>
-" /><br />
-            <input type="hidden" name="id" value=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
- />
-            <input type="submit" value="Сохранить" id="btnAddArticle" />
-            <input type="button" name="cancelSaveTpl" value="Назад" onClick="javascript: document.location.href = 'articles.php'";/>
-        </form> 
-    <div id="addArticleErrors"></div>
 
+<a href="windowBookingSettings.php" class="addPage">Настроить</a>
 
-        
-    					
+  <table class="modul_table">
+  <thead>
+  	<tr>
+  		<th class="middle">ФИО</th>
+                <th class="min">Дата рождения</th>
+		<th class="min">Телефон</th>
+		<th class="min">email</th>
+                <th class="min">Населенный пункт</th>
+                <th class="min">Дата заселения</th>
+		<th class="min">Количество дней</th>
+		<th class="min">Категория</th>
+                <th class="min">Взрослых</th>
+                <th class="min">Детей</th>
+		<th class="middle">Пожелания</th>
+                <th class="min">Удалить</th>
+	</tr>
+	</thead>
+	<tbody>
+            <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['booking']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+?>
+                <tr>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['date_of_birth'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['phone'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['email'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['locality'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['date_of_arrival'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['number_of_days'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['category'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['number_of_people'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['number_of_child'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['item']->value['wishes'];?>
+</td>
+                    <td class="del"><a href="booking.php?action=delete&id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+">-</a></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+  </table>
+  
+					
 			</div>
      </div></div>
 	<!-- CONTENT // -->

@@ -9,7 +9,6 @@
 	$model = new ModelArticles();
 	$view = new ViewIndex();
 
-	$view->assign("nameSection", "Статьи");
 	$view->assign("articles", $model->getAllArticles());
 	$view->display("list_articles.tpl");
     }
@@ -17,4 +16,5 @@
     {
         die ($exception->getMessage());
     }
+    
 ?>

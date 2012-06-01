@@ -10,7 +10,6 @@ try
     $model = new ModelNews();
     $view = new ViewIndex();
 
-    $view->assign("nameSection", "Новости");
     $view->assign("news", $model->GetAllNews());
     $view->display("list_news.tpl");
 }

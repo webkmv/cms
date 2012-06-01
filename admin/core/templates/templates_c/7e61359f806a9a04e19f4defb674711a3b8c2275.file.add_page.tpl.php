@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 16:06:16
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-01 10:04:29
          compiled from "core/templates/templates/add_page.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13450960824fc4a7ddcc60a4-70359262%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e61359f806a9a04e19f4defb674711a3b8c2275' => 
     array (
       0 => 'core/templates/templates/add_page.tpl',
-      1 => 1338470740,
+      1 => 1338537634,
       2 => 'file',
     ),
     '94cda4a6fae88d46fed317da1ccbd07ea9766df0' => 
@@ -117,25 +117,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				
     
         
-<form method="post" enctype="multipart/form-data" id="formAddPage" action="add_page.php">
-	Title: <input type="text" name="title" id="titleAddPage" /><br />
-	URL: <input type="text" name="url" id="urlAddPage"><br />    
-	Шаблон: <select name="template" id="listTemplates">
-	  <?php  $_smarty_tpl->tpl_vars['template'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['template']->_loop = false;
+
+	<form method="post" enctype="multipart/form-data" id="formAddPage" action="add_page.php">
+		Title: <input type="text" name="title" id="titleAddPage" /><br />
+		URL: <input type="text" name="url" id="urlAddPage"><br />    
+		Шаблон: <select name="template" id="listTemplates">
+		  <?php  $_smarty_tpl->tpl_vars['template'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['template']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['templates']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['template']->key => $_smarty_tpl->tpl_vars['template']->value){
 $_smarty_tpl->tpl_vars['template']->_loop = true;
 ?>
-	  	<option value=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
+			<option value=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
 ><?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
 </option>
-	  <?php } ?>
-	</select>
-	Ключевые слова: <input type="text" name="keywords" id="keywordsAddPage"><br />
-	Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddPage"></textarea><br />
-	Контент:<textarea rows="10" cols="45" name="body" id="bodyPage"></textarea><br />
-	<input type="submit" value="Добавить" id="btnAddPage" />
-</form>
+		  <?php } ?>
+		</select>
+		Ключевые слова: <input type="text" name="keywords" id="keywordsAddPage"><br />
+		Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddPage"></textarea><br />
+		Контент:<textarea rows="10" cols="45" name="body" id="bodyPage"></textarea><br />
+		<input type="submit" value="Добавить" id="btnAddPage" />
+	</form>
+	
 
         
     					

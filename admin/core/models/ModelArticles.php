@@ -100,7 +100,7 @@
 					text='".$data["text"]."',  
 					author='".$data["author"]."'
 					
-				WHERE id = ".$data["id"];
+				WHERE id = '".$data["id"]."';
 		if (!mysql_query($sql))
 		{
 			$error = "Ошибка сохранение статьи № ".$data["id"]." Файл '".__FILE__."'. Строка: '".__LINE__."'. Ошибка: ".mysql_error();

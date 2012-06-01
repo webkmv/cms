@@ -1,4 +1,5 @@
 {extends file="main.tpl"}
+{block name=title}Новости{/block}
 {block name=body}
 <a href="windowAddArticle.php" class="addPage">Создать</a>
 
