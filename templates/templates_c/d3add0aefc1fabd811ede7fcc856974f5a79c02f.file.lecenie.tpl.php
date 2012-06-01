@@ -1,28 +1,26 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 15:53:07
-         compiled from "templates/templates/lecenie.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7821591074fc5e50a02b461-17829362%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 21:30:49
+         compiled from "templates/templates\lecenie.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:325724fc7aac9e1a0c0-62406737%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'c6d0dbf072fb1f120a83b770de4fdfd8652fb549' => 
+    'd3add0aefc1fabd811ede7fcc856974f5a79c02f' => 
     array (
-      0 => 'templates/templates/lecenie.tpl',
-      1 => 1338470770,
+      0 => 'templates/templates\\lecenie.tpl',
+      1 => 1338434004,
       2 => 'file',
     ),
-    '6842dfbda97d20a0853300b448389c498ce0de0f' => 
+    'c402e4049acba88b612d65c78c6b7d2548b11e89' => 
     array (
-      0 => 'templates/templates/index.tpl',
-      1 => 1338470770,
+      0 => 'templates/templates\\index.tpl',
+      1 => 1338434004,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7821591074fc5e50a02b461-17829362',
+  'nocache_hash' => '325724fc7aac9e1a0c0-62406737',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc5e50a098172_82984103',
   'variables' => 
   array (
     'title' => 0,
@@ -30,8 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'new' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4fc7aac9ef42e7_75738966',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc5e50a098172_82984103')) {function content_4fc5e50a098172_82984103($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc7aac9ef42e7_75738966')) {function content_4fc7aac9ef42e7_75738966($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

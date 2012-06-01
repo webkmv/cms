@@ -1,35 +1,25 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 00:48:30
-         compiled from "core/templates/templates\list_articles.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:225964fc3e49e2d7a20-57350722%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 20:57:45
+         compiled from "core/templates/templates\main.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:106604fc7a3092dd986-42442061%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'bcceb9bac758691e663e8e863e3185641b0776d9' => 
-    array (
-      0 => 'core/templates/templates\\list_articles.tpl',
-      1 => 1338202050,
-      2 => 'file',
-    ),
     'd0ef76e1138847bc4e35399103e1ac09105d3577' => 
     array (
       0 => 'core/templates/templates\\main.tpl',
-      1 => 1338237647,
+      1 => 1338434004,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '225964fc3e49e2d7a20-57350722',
+  'nocache_hash' => '106604fc7a3092dd986-42442061',
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc3e49e39f2e5_97678564',
+  'unifunc' => 'content_4fc7a30941a025_55953447',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc3e49e39f2e5_97678564')) {function content_4fc3e49e39f2e5_97678564($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc7a30941a025_55953447')) {function content_4fc7a30941a025_55953447($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -46,6 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/articles.js"></script>
 	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
 	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
@@ -110,42 +101,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
-</div>
 				<br />
-				
-<a href="windowAddArticle.php" class="addPage">Создать</a>
-
-  <table class="modul_table">
-  <thead>
-  	<tr>
-  		<th class="middle">Название</th>
-                <th class="middle">Автор</th>
-		<th class="min">Публиковать</th>
-		<th class="min">Удалить</th>
-	</tr>
-	</thead>
-	<tbody>
-            <?php  $_smarty_tpl->tpl_vars['article'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['article']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['articles']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['article']->key => $_smarty_tpl->tpl_vars['article']->value){
-$_smarty_tpl->tpl_vars['article']->_loop = true;
-?>
-                <tr>
-                    <td><a href="view_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['article']->value['title'];?>
-</a></td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['article']->value['author'];?>
-</td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['article']->value['published'];?>
-</td>
-                    <td class="del"><a href="delete_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
-">-</a></td>
-                </tr>
-            <?php } ?>
-        </tbody>
-  </table>
-					
+				default body					
 			</div>
      </div></div>
 	<!-- CONTENT // -->

@@ -1,28 +1,28 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 15:53:07
-         compiled from "templates/templates/lecenie.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7821591074fc5e50a02b461-17829362%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 23:05:39
+         compiled from "templates/templates\content.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:243344fc7aac5ef14f5-62485357%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'c6d0dbf072fb1f120a83b770de4fdfd8652fb549' => 
+    '09dd0f3ba4807df05b060325868e729631acd067' => 
     array (
-      0 => 'templates/templates/lecenie.tpl',
-      1 => 1338470770,
+      0 => 'templates/templates\\content.tpl',
+      1 => 1338434004,
       2 => 'file',
     ),
-    '6842dfbda97d20a0853300b448389c498ce0de0f' => 
+    'c402e4049acba88b612d65c78c6b7d2548b11e89' => 
     array (
-      0 => 'templates/templates/index.tpl',
-      1 => 1338470770,
+      0 => 'templates/templates\\index.tpl',
+      1 => 1338487812,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7821591074fc5e50a02b461-17829362',
+  'nocache_hash' => '243344fc7aac5ef14f5-62485357',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc5e50a098172_82984103',
+  'unifunc' => 'content_4fc7aac606aa87_67370609',
   'variables' => 
   array (
     'title' => 0,
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc5e50a098172_82984103')) {function content_4fc5e50a098172_82984103($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc7aac606aa87_67370609')) {function content_4fc7aac606aa87_67370609($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,6 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<script type="text/javascript" src="core/media/javascripts/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/interface.js"></script>
 	<script type="text/javascript" src="core/media/javascripts/bronir.js"></script>
+	<script type="text/javascript" src="core/media/javascripts/reviews.js"></script>
 
 	<!--[if lte IE 7.0]>
 		<link href="core/media/stylesheets/ie.css" rel="stylesheet" type="text/css" />
@@ -183,21 +184,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div class="sidebar_block">
 		
 		
-		<div class="s_block">
-			<p class="title">Лечение</p>
-			<ul>
-				<li class="active_point"><a href="#">Перечень заболеваний</a></li>
-				<li><a href="index.php?page=lechebnaya_baza">Лечебная база</a></li>
-				<li><a href="#">Консультации врачей</a></li>
-				<li><a href="#">Лечебные процедуры</a></li>
-				<li><a href="#">Перечень и количество процедур, входящих в стоимость путевки</a></li>
-				<li><a href="#">Перечень медицинских услуг, осуществляемых в санатории</a></li>
-				<li><a href="#">Радоновая лечебница</a></li>
 		
-			</ul>
-			
-		</div>
-	
 		
 		<!-- programs -->
 		<div class="s_block">
@@ -285,7 +272,7 @@ $_smarty_tpl->tpl_vars['new']->_loop = true;
 	
 	<!-- основной контент -->
 	
-		<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+            <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
 	
 		

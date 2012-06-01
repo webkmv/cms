@@ -1,40 +1,42 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-05-29 00:48:30
-         compiled from "core/templates/templates\list_articles.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:225964fc3e49e2d7a20-57350722%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.8, created on 2012-05-31 21:44:39
+         compiled from "core/templates/templates\add_page.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:168704fc7ae07537f84-47938753%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'bcceb9bac758691e663e8e863e3185641b0776d9' => 
+    '5ef48dc9df5cb511f6df047b6cb4cdd75a5be1ee' => 
     array (
-      0 => 'core/templates/templates\\list_articles.tpl',
-      1 => 1338202050,
+      0 => 'core/templates/templates\\add_page.tpl',
+      1 => 1338434004,
+      2 => 'file',
+    ),
+    '003ce6510ead167a61d2ec216eb10cab402e967d' => 
+    array (
+      0 => 'core/templates/templates\\main_templates.tpl',
+      1 => 1338434004,
       2 => 'file',
     ),
     'd0ef76e1138847bc4e35399103e1ac09105d3577' => 
     array (
       0 => 'core/templates/templates\\main.tpl',
-      1 => 1338237647,
+      1 => 1338434004,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '225964fc3e49e2d7a20-57350722',
+  'nocache_hash' => '168704fc7ae07537f84-47938753',
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'nameSection' => 0,
-  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fc3e49e39f2e5_97678564',
+  'unifunc' => 'content_4fc7ae075cd4e7_52221718',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fc3e49e39f2e5_97678564')) {function content_4fc3e49e39f2e5_97678564($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_4fc7ae075cd4e7_52221718')) {function content_4fc7ae075cd4e7_52221718($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <title>default title</title>	
+    <title>Страницы</title>	
     
     <link href="core/media/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <link href="core/media/css/style.css" rel="stylesheet" type="text/css" />
@@ -46,6 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<!--script type="text/javascript" src="core/media/js/interface.js"></script-->
 	<script type="text/javascript" src="core/media/js/tpls.js"></script>
 	<script type="text/javascript" src="core/media/js/pages.js"></script>
+	<script type="text/javascript" src="core/media/js/articles.js"></script>
 	<script type="text/javascript" src="core/media/js/tiny_mce/tiny_mce.js"></script>
 	<script type="text/javascript" src="core/media/js/config_tiny.js"></script>
 
@@ -110,42 +113,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="main_content">
 			<div class="hint">
 			</div>
-				<div class="path"><?php echo $_smarty_tpl->tpl_vars['nameSection']->value;?>
-</div>
 				<br />
 				
-<a href="windowAddArticle.php" class="addPage">Создать</a>
-
-  <table class="modul_table">
-  <thead>
-  	<tr>
-  		<th class="middle">Название</th>
-                <th class="middle">Автор</th>
-		<th class="min">Публиковать</th>
-		<th class="min">Удалить</th>
-	</tr>
-	</thead>
-	<tbody>
-            <?php  $_smarty_tpl->tpl_vars['article'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['article']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['articles']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['article']->key => $_smarty_tpl->tpl_vars['article']->value){
-$_smarty_tpl->tpl_vars['article']->_loop = true;
+    
+        
+<form method="post" enctype="multipart/form-data" id="formAddPage" action="add_page.php">
+	Title: <input type="text" name="title" id="titleAddPage" /><br />
+	URL: <input type="text" name="url" id="urlAddPage"><br />    
+	Шаблон: <select name="template" id="listTemplates">
+	  <?php  $_smarty_tpl->tpl_vars['template'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['template']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['templates']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['template']->key => $_smarty_tpl->tpl_vars['template']->value){
+$_smarty_tpl->tpl_vars['template']->_loop = true;
 ?>
-                <tr>
-                    <td><a href="view_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['article']->value['title'];?>
-</a></td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['article']->value['author'];?>
-</td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['article']->value['published'];?>
-</td>
-                    <td class="del"><a href="delete_article.php?id=<?php echo $_smarty_tpl->tpl_vars['article']->value['id'];?>
-">-</a></td>
-                </tr>
-            <?php } ?>
-        </tbody>
-  </table>
-					
+	  	<option value=<?php echo $_smarty_tpl->tpl_vars['template']->value['id'];?>
+><?php echo $_smarty_tpl->tpl_vars['template']->value['title'];?>
+</option>
+	  <?php } ?>
+	</select>
+	Ключевые слова: <input type="text" name="keywords" id="keywordsAddPage"><br />
+	Описание: <textarea rows="10" cols="45" name="description" id="descriptionAddPage"></textarea><br />
+	Контент:<textarea rows="10" cols="45" name="body" id="bodyPage"></textarea><br />
+	<input type="submit" value="Добавить" id="btnAddPage" />
+</form>
+
+        
+    					
 			</div>
      </div></div>
 	<!-- CONTENT // -->

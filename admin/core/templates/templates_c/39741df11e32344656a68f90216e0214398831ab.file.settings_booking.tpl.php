@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-01 09:37:06
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-01 15:25:54
          compiled from "core/templates/templates/settings_booking.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:131556664fc86e61117c49-96719992%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39741df11e32344656a68f90216e0214398831ab' => 
     array (
       0 => 'core/templates/templates/settings_booking.tpl',
-      1 => 1338536220,
+      1 => 1338549013,
       2 => 'file',
     ),
   ),
